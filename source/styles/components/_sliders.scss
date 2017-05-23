@@ -206,18 +206,22 @@
 			margin: auto;
 		}
 		img {
-			transition: transform $speed*2, opacity $speed*2;
-			transform: scale(.75) translateZ(0);
-			opacity: .5;
 			width: $f !important;
 			height: auto !important;
 			display: block;
 			margin: 0 auto;
 		}
-		figcaption {
-			opacity: 0;
-			transition: transform $speed*2 $speed*2, opacity $speed*2;
-			transform: translate3d(0, $f, 0);
+		&.slick-active {
+			img {
+				transition: transform $speed*2, opacity $speed*2;
+				transform: scale(.75) translateZ(0);
+				opacity: .5;
+			}
+			figcaption {
+				opacity: 0;
+				transition: transform $speed*2 $speed*2, opacity $speed*2;
+				transform: translate3d(0, $f, 0);
+			}
 		}
 		&.slick-center {
 			img, figcaption {
