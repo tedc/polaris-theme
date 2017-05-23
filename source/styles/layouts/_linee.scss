@@ -1,0 +1,213 @@
+.single-linee {
+	background-color: $lighter-color;
+}
+
+.linee {
+	@include grow('lg', 'top');
+	@include grow('lg');
+	position: relative;
+	&__slider {
+		position: relative;
+		overflow: hidden;
+		.slick-track {
+			display: flex;
+			width: $f;
+		}
+		.linee__title {
+			@include breakpoint($bp) {
+				$p: percentage(130px/573px);
+				transform: translate3d($p*-1,0,0);		
+			}
+			display: inline-block;
+			strong {
+				display: inline-block;
+			}
+		}
+		.linee__content, .linee__title, .button {
+			overflow: hidden;
+		}
+		.slick-slide:not(.slick-active) {
+			.linee__title {
+				strong {	
+					transition: transform $speed*2;
+					transform: translate3d(0, 150%, 0) skewY(-2deg);
+				}
+			}
+			.linee__content {
+				p {
+					transition: transform $speed*2;
+					transform: translate3d(0, 150%, 0) skewY(-2deg);;
+				}
+
+			}
+			.button {
+				> * {
+					transition: color $speed*2, transform $speed*2;
+					transform: translate3d(0, 150%, 0) skewY(-2deg);;
+				}
+			}
+		}
+		.slick-active {
+			.button > *, .linee__content p, .linee__title strong {
+				transition: color $speed*2, transform $speed*2;
+			}
+			.linee__title strong {
+				transition-delay: $speed;
+			}
+			.linee__content p {
+				transition-delay: $speed*1.25;
+			}
+			.button > * {
+				transition-delay: $speed*1.5;
+			}
+			.button {
+				&:hover {
+					> * {
+						transition-delay: 0;
+					}
+				}
+			}
+		}
+	}
+	&__item {
+		width: $f;
+		flex: 0 0 auto;
+		position: relative;
+		@include grow('lg', 'top');
+		@include grow('lg');
+		.linee--menu & {
+			color: $w;
+			overflow: hidden;
+			border: {
+				top: em($p*2) $w solid;
+			}
+			background: {
+				size: cover;
+				repeat: no-repeat;
+				position: center;
+			}
+			&:before {
+				content: '';
+				background-color: $b;
+				opacity: 0.7;
+				transition: opacity $speed;
+				@include full;
+			}
+			.linee__title {
+				position: relative;
+				overflow: hidden;
+				z-index: 1;
+				strong {
+					position: relative;
+					display: inline-block;
+				}
+			}
+			.linee__header {
+				@extend %rect;
+				position: relative;
+				&:before {
+					top: auto;
+					bottom: em($p/2)*-1;
+					left: em($p*-1);
+					width: em(90px);
+					height: em($p);
+					transform-origin: left center;
+				}
+			}
+			@include breakpoint($bp) {
+				.desktop & {
+					&:before {
+						opacity: 0;
+					}
+					.linee__title {
+						strong {
+							transition: transform $speed;
+							transform: translate3d(0, $f, 0);
+						}
+					}
+					.linee__header {
+						&:before {
+							transform: translate3d($f*-1, 0, 0) scaleX(0);
+							transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+						}
+					}
+					p {
+						transform: translate3d(0, 20px, 0);
+						opacity: 0;
+						transition: $speed transform, $speed opacity;
+					}
+					&:hover {
+						&:before {
+							opacity: .7;
+						}
+						p, .linee__title, .linee__title strong, .linee__header:before {
+							transform: translate3d(0, 0, 0) scaleX(1);
+							opacity: 1;
+						}
+					}
+				}
+			}
+		}
+	}
+	&__cell {
+		margin: 0;
+		@include grow('lg');
+		@include grow('lg', 'top');
+		&--text {
+			.linee__slider & {
+				padding-bottom: em(126px);
+			}
+		}
+	}
+	&__content {
+		@include grow();
+		position: relative;
+		z-index: 1;
+		p {
+			max-width: 320px;
+			padding-top: em($p*2, $p);
+			font-size: em($p);
+			line-height: percentage(30px/$p);
+		}
+	}
+	
+	&__button {
+		
+	}
+	&-header {
+		@include breakpoint($bp) {
+			min-height: mh($p*4);
+		}
+		&__cell {
+			@include grow();
+			&--content {
+				display: flex;
+				flex-wrap: wrap;
+				> * {
+					width: $f;
+				}
+				align-items: center;
+				align-content: center;
+				p {
+					font-size: em(22px);
+					padding-top: em($p, 22px);
+				}
+			}
+		}
+		&__title {
+			$per: percentage(137px/400px);
+			strong {
+				display: inline-block;
+			}
+			@include breakpoint($bp) {
+				transform: translate3d($per*-1, 0, 0);
+			}
+			&--dm {
+				$per: percentage(200px/400px);
+				@include breakpoint($bp) {
+					transform: translate3d($per*-1, 0, 0);
+				}
+			}
+		}
+	}
+}

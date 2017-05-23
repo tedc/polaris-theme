@@ -1,0 +1,31 @@
+{
+  "dependencies": {
+    "main.js": {
+      "files": [
+        "scripts/modernizr/modernizr.build.js",
+        "../bower_components/gsap/src/uncompressed/TweenMax.js",
+        "../bower_components/gsap/src/uncompressed/plugins/ScrollToPlugin.js",
+        "../bower_components/scrollmagic/scrollmagic/uncompressed/plugins/animation.gsap.js",
+        "scripts/jquery.data.scrollmagic.js",
+        "../bower_components/perfect-scrollbar/js/perfect-scrollbar.jquery.min.js",
+        "scripts/main.js"
+      ],
+      "bower" : ["fastclick", "scrollmagic", "slick-carousel"],
+      "main": true
+    },
+    "main.css": {
+      "files": [
+        "styles/main.scss"
+      ],
+      "bower" : ["normalize.css"],
+      "main": true
+    }
+  },
+  "config": {
+    "devUrl": "http://polaris.dnative.com"
+  },
+  "paths": {
+    "dist": "assets/",
+    "source": "source/"
+  }
+}

@@ -1,0 +1,68 @@
+%input {
+	border: 1px solid $lighter-color;
+	@include appearance(none);
+	background-color: $w;
+	transition: color $speed, background-color $speed;
+	width: $f;
+	border-radius: 0;
+	color: $main-color;
+	font-size: em($p);
+	@include input-placeholder {
+		color: $gray;
+		font-family: $main-font;
+		font-size: 1em;
+	}
+	&.wpcf7-not-valid {
+		color: $brand-light !important;
+		background-color: #f9e7e9  !important;
+		@include input-placeholder {
+			color: $brand-light !important;
+		}
+	}
+}
+
+.wpcf7 {
+	&-form{
+		&.invalid {
+			.required {
+				transition: color $speed;
+				color: $brand-light;
+			}
+		}
+	}
+	.input{
+		&s {
+			padding-bottom: em($p);
+			&-row {
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+				flex-wrap: wrap;
+				.acceptance {
+					font-size: 9px;
+					color: $gray;
+				}
+			}
+		}
+	}
+	input {
+		&[type="text"], &[type="email"], &[type="tel"] {
+			@extend %input;
+			padding: 0 em($p/2, $p);
+			height: em(50px, $p);
+		}
+	}
+	textarea {
+		@extend %input;
+		padding: em($p/2, $p);
+		height: em(200px, $p);
+	}
+	.screen-reader-response, &-response-output {
+		display: none !important;
+	}
+	&-not-valid {
+		&-tip {
+			display: none;
+		}
+	}
+}

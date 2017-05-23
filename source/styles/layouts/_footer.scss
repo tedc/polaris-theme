@@ -1,0 +1,38 @@
+.footer {
+	background-color: $light-color;	@include grow('lg');
+	a {
+		color: $main-color;
+		font-weight: bold;
+		&:hover {
+			color: $brand-main;
+		}
+	}
+	p {
+		padding-bottom: em($p*2, 12px);
+		font-size: em(12px);
+	}
+	&__logo {
+		margin-bottom: em($p);
+		left: -2px;
+		position: relative;
+		display: inline-block;
+		line-height: 1;
+		svg {
+			width: em(102px);
+			height: em(12px);
+		}
+		path, rect, polygon {
+			fill: $main-color !important;
+			transition: fill $speed;
+		}
+		&:hover {
+			path, rect, polygon {
+				fill: $brand-main !important;
+			}
+		}
+	}
+	&__content {
+		align-items: center;
+		justify-content: space-between;
+	}
+}

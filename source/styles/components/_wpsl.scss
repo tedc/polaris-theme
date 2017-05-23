@@ -1,0 +1,190 @@
+.wpsl {
+	&-default-filters {
+		display: flex;
+		flex-wrap: wrap;
+	}
+	&-search {
+		width: $f;
+		flex: 0 0 auto;
+		padding: {
+			top: 0;
+			bottom: em($p*4);
+		}
+		margin-bottom: em($p*4);
+		background-color: $lighter-color;
+		@include normalize_padding;
+		&-btn-wrap {
+			margin: 0 !important;
+			flex: 0 0 auto;
+			background-color: $brand-main !important;
+			cursor: pointer;
+			border: 0 !important;
+			border-radius: 0 !important;
+			position: relative;
+			display: flex !important;
+			align-items: center;
+			justify-content: center;
+			width: percentage((645px-555px)/645px);
+			input {
+				@include full;
+				opacity: 0;
+			}
+			&:before {
+				font-family: "polaris-icons";
+				color: $w;
+				@extend .icon-arrow:before;
+			}
+		}
+	}
+	&-gmap-canvas {
+		width: $f !important;
+		@include breakpoint($bp) {
+			order: 2;
+			width: $f/2 !important;
+		}
+	}
+	&-input {
+		margin: 0 !important;
+		width: percentage(555px/645px) !important;
+		label{
+			&[for="wpsl-search-input"] {
+				display: none !important;
+			}
+		}
+	}
+	&-directions {
+		color: $main-color;
+		font-weight: bold;
+		text-transform: uppercase;
+		&:hover {
+			color: $brand-main;
+		}
+	}
+}
+
+#wpsl-search-input {
+	border-radius: 0 !important;
+	border: 0 !important;
+	display: block !important;
+	width: $f !important;
+	height: 50px;
+}
+#wpsl-search-wrap {
+	display: flex !important;
+	float: none !important;
+	justify-content: flex-end;
+	form {
+		width: $f/2;
+		flex: 0 0 auto;
+		display: flex !important;
+	}
+}
+
+#wpsl-map-controls {
+	display: none !important;
+}
+
+#wpsl-wrap {
+	margin: 0;
+	#wpsl-result-list {
+		$m: percentage(20px/1207px);
+		width: $f;
+		@include breakpoint($bp) {
+			margin-right: percentage(20px/1207px) !important;
+			width: 50% - $m !important;
+		}
+		li {
+			border-bottom: 0;
+			@include normalize_padding;
+			padding: {
+				top: 0;
+				bottom: em($p*4);
+			}	
+			position: relative;
+			@extend %rect;
+			&:before {
+				transform: scaleX(0) translateZ(0);
+        		left: $f/5*-1;
+			}	   
+		    &:hover {
+		        &:before {
+		            left: 0;
+		            transform: scaleX(1) translateZ(0);
+		            transition: left $speed $speed/3, transform $speed;
+		        }
+		    }
+		}
+	}
+	.wpsl-store-location {
+		p {
+			position: relative;
+			z-index: 1;
+		}
+		strong {
+			font-size: em(28px);
+			padding-bottom: em($p*2, 28px);
+			text-transform: uppercase;
+			display: inline-block;
+		}
+	}
+}
+
+#wpsl-stores {
+	overflow: hidden;
+}
+
+.gmnoprint.gm-bundled-control:not(.gm-bundled-control-on-bottom) {
+	margin: 0 !important;
+	left: auto !important;
+	top: auto !important;
+	bottom: 0;
+	right: 0;
+	> .gmnoprint {
+		margin: 0 !important;
+		left: auto !important;
+		top: auto !important;
+		bottom: 0;
+		right: 0;
+		font-size: 16px !important;
+		> [draggable] {
+			border-radius: 0 !important;
+			width: em(50px) !important;
+			background-color: $main-color !important;
+			height: em(100px) !important;
+			> div {
+				&:nth-child(2) {
+					display: none !important;
+				}
+				&:nth-child(1), &:nth-child(3) {
+					position: relative !important;
+					margin: 0 !important;
+					height: em(50px) !important;
+					width: em(50px) !important;
+					background-color: $main-color;
+					transition: background-color $speed;
+					&:before, &:after {
+						width: 1em;
+						height: 4px;
+						background-color: $w;
+						content: '';
+						position: absolute;
+						top: 50%;
+						left: 50%;
+						margin: -2px 0 0 em(8px)*-1;
+					}
+					&:hover {
+						background-color: $brand-main;
+					}
+				}
+				&:nth-child(1) {
+					&:after {
+						transform: rotate(90deg) translateZ(0);
+					}
+				}
+			}
+		}
+		img {
+			visibility: hidden;
+		}
+	}
+}

@@ -1,0 +1,106 @@
+.row {
+	@include grow('lg');
+	color: $w;
+	position: relative;
+	background: {
+		size: cover;
+		repeat: no-repeat;
+		position: center;
+	}
+	&__button {
+		@include grow('lg', 'top');
+	}
+	&__title {
+		position: relative;
+		z-index: 1;
+		color: $w;
+		@extend %rect;
+		&:before {
+			width: 90px;
+			height: $p;
+			top: auto;
+			left: $p*-1;
+			bottom: $p*-0.5;
+			transform-origin: left center;
+			transform: scaleX(0) translateZ(0);
+			transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+			.row__content--active & {
+				transform: scaleX(1) translateZ(0);
+			}
+		}
+		strong {
+			position: relative;
+			z-index: 1;
+			display: inline-block;
+		}
+	}
+	p {
+		position: relative;
+		z-index: 1;
+		padding-top: em($p*2, $p);
+		font-size: em($p);
+	}
+	&__content {
+		@include grow();
+	}
+}
+
+.divider {
+	border: 0;
+	margin: 0;
+	height: em($p*4);
+}
+
+.store-row {
+	@include grow('lg');
+	background: {
+		position: center;
+		repeat: no-repeat;
+		size: cover;
+	}
+	align-items: center;
+	&__content {
+		@include grow('small', 'top');
+	}
+	&__cell {
+		@include grow('md');
+	}
+	&--form {
+		justify-content: flex-end;
+		height: 50px;
+		input[type="text"] {
+			flex: 0 0 auto;
+			margin: 0;
+			width: percentage(362px/452px);
+			padding: 0 em(10px);
+			border: 0;
+			border-radius: 0;
+			@include appearance(none);
+			@include input-placeholder {
+				font-size: 1em;
+				color: $main-color;
+				font-family: $main-font;
+			}
+		}
+		.button {
+			flex: 0 0 auto;
+			width: percentage((452px-362px)/452px);
+			text-align: center;
+			justify-content: center;
+		}
+	}
+}
+
+.container {
+	@include grow('lg');
+	&__content {
+		p {
+			font-size: em(18px);
+			line-height: percentage(32px/18px);
+			padding-bottom: em($p*2, 18px);
+			&:nth-last-child(1) {
+				padding-bottom: 0;
+			}
+		}
+	}
+}

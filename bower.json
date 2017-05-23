@@ -1,0 +1,17 @@
+{
+  "name": "sage",
+  "homepage": "https://roots.io/sage/",
+  "authors": [
+    "Ben Word <ben@benword.com>"
+  ],
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "gsap": "~1.19.1",
+    "scrollmagic": "~2.0.5",
+    "normalize-css": "normalize.css#~5.0.0",
+    "fastclick": "~1.0.6",
+    "perfect-scrollbar": "~0.6.16",
+    "slick-carousel": "~1.6.0"
+  }
+}

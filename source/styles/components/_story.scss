@@ -1,0 +1,135 @@
+.story {
+	position: relative;
+	.slick-track {
+		@include breakpoint($bp){
+			min-height: em(500px);
+		}
+		display: flex;
+	}
+	&__cell {
+		@include grow('lg');
+		@include breakpoint($bp) {
+			display: flex;
+			align-items: center;
+			align-content: center;
+			flex-wrap: wrap;
+		}
+	}
+	&__header {
+		position: relative;
+		width: $f;
+		@extend %rect;
+		&:before {
+			height: em(27px);
+			width: em(125px);
+			bottom: em(6px*-1);
+			top: auto;
+			left: auto;
+			display: none;
+			margin-right: em(100px);
+			transform-origin: right center;
+			transform: scaleX(0) translate3d(0,0,0);
+			.slick-current & {
+				transform: scaleX(1) translate3d(0,0,0);
+				transition-delay: $speed;
+			}
+			@include breakpoint($bp) {
+				right: em($p*2);
+				display: block;
+			}
+		}
+	}
+	&__title {
+		&--huge {
+			overflow: hidden;
+			position: relative;
+			z-index: 1;
+			letter-spacing: (45/1000)*-1em;
+			//transform: translate3d(percentage(75px/270px)*-1, 0, 0);
+			strong {
+				display: inline-block;
+				transform: translate3d(0, 100%, 0);
+				transition: transform $speed;
+				@for $i from 1 through 4 {
+					&:nth-child(#{$i}) {
+						$d: $i - 1;
+						transition-delay: 0.05s * $i;
+					}
+				}
+				
+				.slick-current & {
+					transform: translate3d(0, 0%, 0);
+					@for $i from 1 through 4 {
+						&:nth-child(#{$i}) {
+							$d: $i - 1;
+							transition-delay: $speed + (0.05s * $i);
+						}
+					}
+				}
+			}
+		}
+	}
+	&__content {
+		@include grow('md', 'top');
+		width: $f;
+		overflow: hidden;
+		p {
+			transform: translate3d(0, $f, 0);
+			transition: transform $speed;
+			font-size: em(20px);
+			line-height: percentage(26px/20px);
+			@include breakpoint($bp) {
+				padding-left: em($p*2, $p);
+				max-width: percentage(225px/360px);
+			}
+			.slick-current & {
+				transform: translate3d(0, 0, 0);
+				transition-delay: $speed;
+			}
+		}
+	}
+	&__nav {
+		position: absolute;
+		bottom: 0;
+		right: 0;
+		z-index: 9995;
+		transform: translate3d(0, -50%, 0);	
+		@include breakpoint($bp) {
+			top: 50%;
+			bottom: auto;
+		}
+		li {
+			display: flex;
+			align-items: flex-end;
+			justify-content: flex-end;
+			cursor: pointer;
+			h4 {
+				opacity: 0;
+				transform: translate3d(-50%, 0, 0);
+				transition: transform $speed, opacity $speed;
+				font-size: em(22px);
+				line-height: 0.7;
+			}
+			&:after {
+				content: '';
+				transition: background-color $speed, transform $speed;
+				transform-origin: right bottom;
+				width: em(20px);
+				height: 1px;
+				background-color: $gray;
+				flex: 0 0 auto;
+				margin-left: em($p);
+			}
+			&.slick-active {
+				h4 {
+					opacity: 1;
+					transform: translate3d(0%, 0, 0);
+				}
+				&:after {
+					transform: scaleX(1.5) scaleY(6) translate3d(0,0,0);
+					background-color: $brand-light;
+				}
+			}
+		}
+	}
+}

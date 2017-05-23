@@ -1,0 +1,36 @@
+.page {
+	&__header {
+		position: relative;
+		&--full {
+			min-height: mh(80px);
+			display: flex;
+			flex-direction: column;
+		}
+		&-figure {
+			position: relative;
+			margin: 0;
+			overflow: hidden;
+			height: 0;
+			background: {
+				position: center;
+				size: cover;
+				repeat: no-repeat;
+			}
+			padding-top: percentage(290px/1286px);
+			img {
+				visibility: hidden;
+				@include full;
+			}
+			&--top {
+				margin-bottom: em($p*-2);
+			}
+			&--bottom {
+				margin-top: em($p*-2);
+			}
+		}
+	}
+	&__title {
+		position: relative;
+		z-index: 1;
+	}
+}

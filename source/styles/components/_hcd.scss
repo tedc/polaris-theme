@@ -1,0 +1,77 @@
+.hcd {
+	position: relative;
+	&__cell {
+		position: relative;
+		@include grow('lg');
+		&--svg {
+			&:before {
+				content: '';
+				display: block;
+				padding-top: percentage(546px/610px);
+			}
+		}
+		.slick-track {
+			overflow: hidden;
+			display: flex;
+		}
+	}
+	&__svg {
+		position: absolute;
+		top: em($p*2);
+		left: em($p*2);
+		width: calc(#{$f} - #{em($p*4)});
+		height: calc(#{$f} - #{em($p*4)});
+		overflow: visible !important;
+	}
+	&__text {
+		text-transform: uppercase;
+		font-weight: bold;
+	}
+	&__path {
+		stroke-dasharray: 8px 3px;
+		transition: stroke-dasharray $speed;
+	}
+	&__title {
+		&--big-upper {
+			overflow: hidden;
+			strong {
+				display: inline-block;
+				transform: translate3d(0,$f, 0);
+				transition: transform $speed;
+				.slick-current & {
+					transform: translate3d(0, 0, 0);
+					transition-delay: $speed;
+				}
+			}
+		}
+	}
+	&__header {
+		padding-bottom: em($p/2);
+		@include grow('md', 'top');
+	}
+	&__content {
+		padding-top: em($p/2);
+		overflow: hidden;
+		p {
+			transform: translate3d(0,$f, 0);
+			transition: transform $speed;
+			font-size: em($p);
+			line-height: percentage(30px/$p);
+			.slick-current & {
+				transform: translate3d(0, 0, 0);
+				transition-delay: $speed;
+			}
+		}
+	}
+	&__group {
+		cursor: pointer;
+		opacity: .5;
+		transition: opacity $speed;
+		&--active {
+			opacity: 1;
+			.hcd__path {
+				stroke-dasharray: 8px 0px;
+			}
+		}
+	}
+}

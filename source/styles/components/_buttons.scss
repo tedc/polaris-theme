@@ -1,0 +1,74 @@
+%button {
+	color: $main-color;
+	text-transform: uppercase;
+	display: flex;
+	border: 0;
+	cursor: pointer;
+}
+
+.button {
+	@extend %button;
+	&:hover {
+		color: $brand-main;
+	}
+	&__label {
+		font-size: em(20px);
+		position: relative;
+		z-index: 1;
+	}
+	.icon-arrow-big {
+		font-size: 10px;
+		margin-left: 10px;
+		transition: transform $speed, color $speed;
+		display: flex;
+		align-items: center;
+	}
+	&:hover {
+		.button__label {
+			color: $main-color;
+		}
+		.icon-arrow-big {
+			transform: translate3d(10px, 0, 0);
+			color: $brand-main;
+		}
+	}
+	&--form {
+		background-color: $brand-light;
+		transition: background-color $speed;
+		margin: 0;
+		border-radius: 0;
+		.icon-arrow {
+			color: $w;
+			margin: 0 auto;
+		}
+		&:hover {
+			background-color: $main-color;
+		}
+	}
+	&--square {
+		@extend %rect;
+		background-color: transparent;
+		border-radius: 0;
+		@include appearance(none);
+		margin: 0;
+		font-size: em(14px);
+		font-weight: bold;
+		padding: em($p/2) em($p);
+		position: relative;
+		&:before {
+			top: auto;
+			bottom: 0;
+			left: 0;
+			width: $f;
+			transform-origin: left center;
+			transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+		}
+		&:hover {
+			&:before {
+				transform: scaleX(0) translate3d(0, 0, 0);
+				transform-origin: right center;
+			}
+		}
+	}
+}
+

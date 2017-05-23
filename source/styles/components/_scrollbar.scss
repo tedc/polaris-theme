@@ -1,0 +1,23 @@
+.ps-container {
+	position: relative;
+	.ps-scrollbar-y {
+		width: 10px;
+		background-color: $light-color;
+		position: relative;
+		transition: background-color $speed;
+		.banner & {
+			background-color: $main-color;
+		}
+		&:hover {
+			background-color: $brand-main;
+		}
+		&-rail {
+			width: 10px;
+			position: absolute;
+			background-color: $lighter-color;
+			.banner & {
+				background-color: transparent;
+			}
+		}
+	}
+}

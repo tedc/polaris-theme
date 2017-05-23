@@ -1,0 +1,242 @@
+[data-slick] {
+	visibility: hidden;
+	opacity: 0;
+	transition: {
+		property: visibility, opacity;
+		duration: $speed;
+		delay: $speed;
+	}
+	&.slick-initialized {
+		visibility: visible;
+		opacity: 1;
+	}
+}
+.arrows {
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	.linee & {
+		right: em($p*2);
+	}
+	z-index: 9995;
+	display: flex;
+	.icon-arrow {
+		cursor: pointer;
+		width: em(68px);
+		height: em(86px);
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		color: $w;
+		background-color: $main-color;
+		transition: background-color $speed;
+		&:hover {
+			background-color: $brand-main;
+		}
+		&.arrows__prev {
+			transform: scaleX(-1);
+		}
+	}
+}
+
+.full-slider {
+	height: mh($p*4);
+	&__container {
+		position: relative;
+		height: $f;
+	}
+}
+.slider {
+	@include full;
+	display: flex;
+	overflow: hidden;
+	flex-wrap: nowrap;
+	&__item {
+		overflow: hidden;
+		width: $f;
+		flex: 0 0 auto;
+		background: {
+			size: cover;
+			repeat: no-repeat;
+			position: center;
+		}
+	}
+	.slick {
+		&-list {
+			@include full;
+		}
+		&-track {
+			@include full;
+			display: flex;
+			flex-wrap: nowrap;
+			overflow: hidden;
+		}
+		&-dots {
+			position: absolute;
+			bottom: em($p*2);
+			left: 50%;
+			transform: translate3d(-50%, 0, 0);
+			z-index: 9999;
+			li {
+				display: inline-block;
+				width: 10px;
+				height: 10px;
+				border-radius: 10px;
+				background-color: $w;
+				margin: 0 3px;
+				transform: scale(.6) translateZ(0);
+				opacity: .5;
+				transition: opacity $speed, transform $speed;
+				overflow: hidden;
+				position: relative;
+				cursor: pointer;
+				button {
+					@include full;
+					visibility: hidden;
+				}
+				&.slick-active {
+					opacity: 1;
+					transform: scale(1) translateZ(0);
+				}
+			}
+		}
+	}
+}
+
+.custom {
+	@include grow('lg');
+	.slick{
+		&-dots {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+			li {
+				flex: 0 0 auto;
+				width: $f/2;
+				padding-bottom: em($p);
+				@include breakpoint(640px) {
+					width: $f/4;
+					padding-bottom: 0;
+				}
+			}
+		}
+		&-list {
+			overflow: hidden;
+		}
+		&-track {
+			display: flex;
+			overflow: hidden;
+		}
+	}
+	&__title {
+		position: relative;
+		.custom__nav & {
+			text-align: center;
+			font-weight: normal;
+			cursor: pointer;
+			span {
+				display: inline-block;
+				position: relative;
+				z-index: 1;
+				transition: color $speed;
+				color: $gray;
+			}
+			&:before {
+				z-index: 0;
+				position: absolute;
+				top: 0;
+				left: auto;
+				width: em(76px, 18px);
+				height: em(16px, 18px);
+				background-color: $brand-light;
+				transform: translate3d(-20%, -50%, 0) scaleX(0);
+				transform-origin: left center;
+				transition: transform $speed*2 cubic-bezier(0.175, 0.885, 0.32, 1.275);
+				content: '';
+			}
+		}
+		.slick-active & {
+			span {
+				color: $main-color;
+				font-weight: bold;
+			}
+			&:before {
+				transform: translate3d(-20%, -50%, 0) scaleX(1);
+			}
+		}
+	}
+	&__nav {
+		@include grow('lg', 'top');
+	}
+	&__bottom {
+		position: relative;
+	}
+	&__arrow {
+		position: absolute;
+		top: 50%;
+		cursor: pointer;
+		z-index: 20;
+		transition: color $speed, visibility $speed, opacity $speed;
+		&--prev {
+			left: 0;
+			transform: translate3d(0, -50%, 0) scaleX(-1);
+		}
+		&--next {
+			right: 0;
+			transform: translate3d(0, -50%, 0);
+		}
+		&:hover {
+			color: $brand-main;
+		}
+		&.slick-hidden {
+			visibility: hidden;
+			opacity: 0;
+		}
+	}
+	&__figure {
+		@include grow('small');
+		margin: 0;
+		flex: 0 0 auto;
+		display: flex;
+		align-items: center;
+		text-align: center;
+		&-wrapper {
+			display: inline-block;
+			max-width: $f;
+			margin: auto;
+		}
+		img {
+			transition: transform $speed*2, opacity $speed*2;
+			transform: scale(.75) translateZ(0);
+			opacity: .5;
+			width: $f !important;
+			height: auto !important;
+			display: block;
+			margin: 0 auto;
+		}
+		figcaption {
+			opacity: 0;
+			transition: transform $speed*2 $speed*2, opacity $speed*2;
+			transform: translate3d(0, $f, 0);
+		}
+		&.slick-center {
+			img, figcaption {
+				transform: scale(1) translate3d(0, 0, 0);
+				opacity: 1;
+			}
+		}
+	}
+	&__content {
+		flex: 0 0 auto;
+		text-align: center;
+		@include grow('md');
+	}
+}
+
+[data-scrollmagic] {
+	@include breakpoint($bp, false) {
+		opacity: 1 !important;
+		transform: none !important;
+		background-position: center !important;
+	}
+}

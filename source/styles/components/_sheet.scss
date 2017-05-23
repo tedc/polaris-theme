@@ -1,0 +1,111 @@
+.sheet {
+	@include grow('lg');
+	&__detail {
+		&s {
+			@include grow('lg');
+		}
+		@include grow('md', 'bottom');
+	}
+	&__content {
+		@include grow('small', 'top');
+		p {
+			padding-bottom: em($p);
+			line-height: percentage(26px/16px);
+			&:nth-last-of-type(1) {
+				padding-bottom: 0;
+			}
+		}
+	}
+	&__materials {
+		.sheet__cell {
+			text-align: center;
+			img {
+				margin: 0 auto;
+				display: block;
+				margin-bottom: em($p);
+			}
+			@include breakpoint(640px) {
+				width: $f/3;
+			}
+			@include breakpoint($bp) {
+				width: $f/5;
+			}
+		}
+	}
+	&__element {
+		font-size: em(22px);
+		position: relative;
+		span {
+			position: relative;
+			z-index: 1;
+		}
+		@extend %rect;
+		&:before {
+			display: none;
+		}
+		@include breakpoint($bp) {
+			position: absolute;
+			top: 50%;
+			&:before {
+				display: block;
+				transform: scaleX(0) translate3d(0, 0, 0);
+				transition-delay: $speed;
+			}
+			.sheet__cell--odd & {
+				right: 0;
+				margin-top: em($p*-1.5, 22px);
+				&:before {
+					left: percentage(50px/230px)*-1;
+					transform-origin: left center;
+				}
+			}
+			.sheet__cell--even & {
+				left: 0;
+				margin-top: em($p*1.5, 22px);
+				&:before {
+					left: auto;
+					right: percentage(50px/230px)*-1;
+					transform-origin: right center;
+				}
+			}
+			&--active {
+				&:before {
+					transform: scaleX(1) translate3d(0, 0, 0);
+				}
+			}
+		}
+	}
+	&__figures {
+		img {
+			width: em(256px);
+			display: inline-block;
+			border: 1px solid $light-color;
+		}
+		.sheet__cell {
+			position: relative;
+			text-align: center;
+			@include breakpoint($bp) {
+				&--even {
+					text-align: right;
+				}
+				&--odd {
+					text-align: left;
+				}
+			}
+		}
+	}
+	&__cell {
+		@include grow();
+		&--image {
+			img {
+				border-radius: $f;
+			}
+			&.sheet__cell--nocircle {
+				img {
+					border-radius: 0;
+					border: 0;
+				}
+			}
+		}
+	}
+}

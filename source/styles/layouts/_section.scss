@@ -1,0 +1,85 @@
+.section {
+	@include grow();
+	.blog &, .category & {
+		overflow: visible;
+	}
+	&__cell {
+		position: relative;
+		@include grow();
+		&--slider {
+			$mw: (475*50) / 683;
+			min-height: #{$mw}vw;
+		}
+		&--odd, &--even {
+			order: 0;
+		}
+		&--even {
+			&.section__cell--text {
+				@include breakpoint($bp, false) {
+					order: 1;
+				}
+			}
+		}
+	}
+	&__content {
+		@include grow();
+		position: relative;
+		z-index: 1;
+		[class*="title"] {
+			position: relative;
+			z-index: 1;
+		}
+		text-align: center;
+		@include breakpoint($bp) {
+			text-align: left;
+		}
+		p {
+			padding-top: em($p*2);
+			position: relative;
+			z-index: 1;
+		}
+	}	
+	&__button {
+		@include grow('md', 'top');
+		position: relative;
+		z-index: 1;
+	}
+	&__background {
+		@include full;
+		&--image {
+			height: 0;
+			img {
+				height: $f;
+				width: auto;
+				display: block;
+				position: absolute;
+				top: 0;
+				left: 0;
+			}
+		}
+	}
+	&__figure {
+		margin: 0;
+		position: relative;
+		img {
+			width: $f !important;
+			height: auto !important;
+			transition: transform $speed*2;
+		}
+		&-container {
+			overflow: hidden;
+			position: relative;
+			&:hover {
+				img {
+					transform: scale(1.25) translateZ(0);
+				}
+			}
+		}
+	}
+	&__title {
+		text-align: center;
+		@include breakpoint($bp) {
+			text-align: left;
+		}
+	}
+}

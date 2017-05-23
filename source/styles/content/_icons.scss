@@ -1,0 +1,28 @@
+@font-face {
+  font-family: "polaris-icons";
+  src: url('../fonts/polaris-icons.eot');
+  src: url('../fonts/polaris-icons.eot?#iefix') format('eot'),
+    url('../fonts/polaris-icons.woff2') format('woff2'),
+    url('../fonts/polaris-icons.woff') format('woff'),
+    url('../fonts/polaris-icons.ttf') format('truetype'),
+    url('../fonts/polaris-icons.svg#polaris-icons') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon"], [class*=" icon"] {
+  display: inline-block;
+  font-family: "polaris-icons";
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-arrow-big:before { content: "\EA01" }
+.icon-arrow:before { content: "\EA02" }
+.icon-facebook:before { content: "\EA03" }
+.icon-houzz:before { content: "\EA04" }
+.icon-instagram:before { content: "\EA05" }
+.icon-pinterest:before { content: "\EA06" }
