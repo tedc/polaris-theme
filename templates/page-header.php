@@ -2,13 +2,13 @@
 	use Roots\Sage\Titles; 
 	$kind = get_field('header_kind');
 ?>
-<header id="header" class="page__header<?php echo ($kind==2) ? ' page__header--grow-lg' : ''; ?><?php echo ($kind == 3) ? ' page__header--full' : ''; ?> <?php the_field('header_background'); ?>">
+<header id="header" class="page__header<?php echo ($kind == 3) ? ' page__header--full' : ''; ?> <?php the_field('header_background'); ?>">
 <?php 
 	if($kind == 3 ) {
 			include(locate_template( 'templates/header-gallery.php', false, false ) );
 	}
 	if($kind == 2) { ?>
-	<div class="page__header-content page__header-content--shrink<?php echo ($kind==2) ? ' page__header-content--grow-lg' : ''; ?>">
+	<div class="page__header-content page__header-content--shrink page__header-content--grow-lg">
 		<h1 class="page__title page__title--huge-upper"><strong><?php echo Titles\title(); ?></strong></h1>
 	</div>
 <?php 
