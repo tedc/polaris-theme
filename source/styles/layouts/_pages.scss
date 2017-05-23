@@ -1,6 +1,7 @@
 .page {
 	&__header {
 		position: relative;
+		@include grow();
 		&--full {
 			min-height: mh(80px);
 			display: flex;
@@ -27,6 +28,9 @@
 			&--bottom {
 				margin-top: em($p*-2);
 			}
+		}
+		&-content {
+			@include grow();
 		}
 	}
 	&__title {
