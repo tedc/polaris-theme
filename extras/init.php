@@ -15,7 +15,6 @@ $sage_includes = [
   'extras/scripts.php',
   'extras/styles.php',
   'extras/utils.php',
-  'extras/api.php',
   'extras/wpml.php',
   'extras/wpsl.php',
 ];
