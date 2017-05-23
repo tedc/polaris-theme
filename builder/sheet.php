@@ -34,7 +34,7 @@
 				<?php $m = 1;while(have_rows('details_materals')) : the_row('details_materals'); ?>
 				<figure class="sheet__cell sheet__cell--image sheet__cell--grow-md-top"<?php 
 				$hook = 1 - ($m/10);
-				scrollmagic('"tween":[{"opacity":0},{"opacity":1,"delay":.25}],"triggerHook": '.$hook.',"duration":0'); ?>>
+				scrollmagic('"tween":[{"opacity":0},{"opacity":1,"delay":0.25}],"triggerHook":'.$hook.',"duration":0'); ?>>
 					<img src="<?php echo get_sub_field('materiale')['sizes']['medium']; ?>" alt="<?php the_sub_field('descrizione'); ?>">
 					<figcaption>
 					<?php the_sub_field('descrizione'); ?>
