@@ -30,15 +30,17 @@
 					echo $p;
 				?>
 				<?php if(have_rows('details_materals')) : ?>
-				<div class="sheet__materials sheet__materials--grid"<?php scrollmagic($sm); ?>>
-				<?php while(have_rows('details_materals')) : the_row('details_materals'); ?>
-				<figure class="sheet__cell sheet__cell--image sheet__cell--grow-top">
+				<div class="sheet__materials sheet__materials--grid">
+				<?php $m = 1;while(have_rows('details_materals')) : the_row('details_materals'); ?>
+				<figure class="sheet__cell sheet__cell--image sheet__cell--grow-md-top"<?php 
+				$hook = 1 - ($m/10);
+				scrollmagic('"tween":[{"opacity":0},{"opacity":1,"delay":.25}],"triggerHook": '.$hook.',"duration":0'); ?>>
 					<img src="<?php echo get_sub_field('materiale')['sizes']['medium']; ?>" alt="<?php the_sub_field('descrizione'); ?>">
 					<figcaption>
 					<?php the_sub_field('descrizione'); ?>
 					</figcaption>
 				</figure>
-				<?php endwhile; ?>
+				<?php $m++; endwhile; ?>
 				</div>
 				<?php endif; ?>
 			</div>

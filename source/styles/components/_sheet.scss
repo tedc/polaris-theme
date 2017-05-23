@@ -19,7 +19,7 @@
 	&__materials {
 		.sheet__cell {
 			text-align: center;
-			@include grow('small', 'top');
+			@include grow('md', 'top');
 			img {
 				margin: 0 auto;
 				display: block;
