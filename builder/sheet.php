@@ -30,9 +30,9 @@
 					echo $p;
 				?>
 				<?php if(have_rows('details_materals')) : ?>
-				<div class="sheet__materials"<?php scrollmagic($sm); ?>>
+				<div class="sheet__materials sheet__materials--grid"<?php scrollmagic($sm); ?>>
 				<?php while(have_rows('details_materals')) : the_row('details_materals'); ?>
-				<figure class="sheet__cell sheet__cell--image">
+				<figure class="sheet__cell sheet__cell--image sheet__cell--grow-top">
 					<img src="<?php echo get_sub_field('materiale')['sizes']['medium']; ?>" alt="<?php the_sub_field('descrizione'); ?>">
 					<figcaption>
 					<?php the_sub_field('descrizione'); ?>
