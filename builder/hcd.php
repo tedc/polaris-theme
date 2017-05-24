@@ -48,7 +48,7 @@
 			}
 		?>
 		<clipPath id="mask_<?php echo $mask; ?>">
-			<rec x="<?php echo $x; ?>" y="<?php echo $y; ?>" width="<?php echo $width; ?>" height="<?php echo $height; ?>" <?php scrollmagic('"tween":[{"y" : "'.$translate.'%"},{"y":"0%"}],"triggerElement":".hcd","triggerHook":0.5,"duration":0'); ?>/>
+			<rect x="<?php echo $x; ?>" y="<?php echo $y; ?>" width="<?php echo $width; ?>" height="<?php echo $height; ?>" <?php scrollmagic('"tween":[{"y" : "'.$translate.'%"},{"y":"0%"}],"triggerElement":".hcd","triggerHook":0.5,"duration":0'); ?>/>
 		</clipPath>
 	  	<?php $mask++; endwhile; ?>
 	  	</defs>
