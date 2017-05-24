@@ -1,6 +1,6 @@
 <?php 
 	$mv = ($col%2==0) ? -100 : 100;
-	$sm = '"tween":[{"x":'.$mv.',"opacity":0},{"x":0,"opacity":1}],"triggerElement":"#col_'.$col.'_'.$row.'","duration":0,"triggerHook":0.5';
+	$sm = '"tween":[{"x":'.$mv.',"opacity":0},{"x":0,"opacity":1}],"triggerElement":"#col_'.$col.'_'.$row.'","duration":0,"triggerHook":0.35';
 ?>
 <div class="section__content<?php echo (get_sub_field('move_text')) ? ' section__content--move' : ''; ?> section__content--grow-lg section__content--shrink"<?php $mv = ($col%2==0) ? '"80"' : '"-80"'; if(!$anim) {scrollmagic('"tween":{"y":'. $mv . '},"triggerElement":"#col_'.$col.'_'.$row.'", "triggerHook":1,"duration":"150vh"');} ?>>
 	<?php if(get_sub_field('title_text')) { ?>
