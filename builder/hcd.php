@@ -126,11 +126,11 @@
 			if ($e > 7 && $e < 12) {
 				$plus = -10;
 			}
-			echo $y + 26 + $plus; ?>">
+			echo $y + 26 + $plus; ?>"<?php scrollmagic('"tween":[{"opacity" : "0"},{"opacity":"1","delay":'.(0.05 * $e).'}],"triggerElement":".hcd","triggerHook":0.5,"duration":0'); ?>>
 				<?php the_sub_field('nome'); ?>
 			</text>
 			<path data-item="<?php echo $e; ?>" class="hcd__path" d="<?php echo $path; ?>" fill="none" stroke="<?php the_sub_field('colore'); ?>" clip-path="url(#mask_<?php echo $e; ?>)" />
-			<circle data-item="<?php echo $e; ?>" r="4" cx="<?php echo $x; ?>" cy="<?php echo $y + 26; ?>" fill="<?php the_sub_field('colore'); ?>" />
+			<circle data-item="<?php echo $e; ?>" r="4" cx="<?php echo $x; ?>" cy="<?php echo $y + 26; ?>" fill="<?php the_sub_field('colore'); ?>" <?php scrollmagic('"tween":[{"opacity" : "0"},{"opacity":"1","delay":'.(0.05 * $e).'}],"triggerElement":".hcd","triggerHook":0.5,"duration":0'); ?>/>
 
 		</g>
 		<?php $e++; endwhile; ?>
