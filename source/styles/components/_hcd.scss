@@ -28,8 +28,13 @@
 		font-weight: bold;
 	}
 	&__path {
-		stroke-dasharray: 8px 3px;
+		stroke-dasharray: 1000px;
+		stroke-dashoffset: 0px;
 		transition: stroke-dasharray $speed;
+		.hcd--active & {
+			stroke-dasharray: 8px 3px;
+			stroke-dashoffset: 1000px;
+		}
 	}
 	&__title {
 		&--big-upper {
