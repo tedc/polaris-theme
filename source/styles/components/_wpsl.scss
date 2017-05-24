@@ -89,6 +89,7 @@
 	#wpsl-result-list {
 		$m: percentage(20px/1207px);
 		width: $f;
+		margin-right: 0 !important;
 		@include normalize_padding;
 		@include breakpoint($bp) {
 			//margin-right: percentage(20px/1207px) !important;
