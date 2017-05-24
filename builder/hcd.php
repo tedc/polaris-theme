@@ -39,7 +39,7 @@
 			}
 		?>
 		<clipPath id="mask_<?php echo $mask; ?>">
-			<rec x="<?php echo $x; ?>" y="<?php echo $y; ?>" width="273" height="305" <?php scrollmagic('"tween":[{"scaleY" : 0, "svgOrigin" : "'.$origin.'"}, {"scaleY" : 1, "svgOrigin" : "'.$origin.'"}],"triggerElemenet":".hcd","triggerHook":0.5,"duration":0'); ?>/>
+			<rec x="<?php echo $x; ?>" y="<?php echo $y; ?>" width="273" height="305" <?php scrollmagic('"tween":[{"scaleY" : 0, "svgOrigin" : "'.$origin.'"}, {"scaleY" : 1, "svgOrigin" : "'.$origin.'"}],"triggerElement":".hcd","triggerHook":0.5,"duration":0'); ?>/>
 		</clipPath>
 	  	<?php $mask++; endwhile; ?>
 	  	</defs>
