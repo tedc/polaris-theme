@@ -216,7 +216,7 @@
 			display: block;
 			margin: 0 auto;
 		}
-		&.slick-active {
+		&.slick-active, &.slick-cloned {
 			img {
 				transition: transform $speed*2, opacity $speed*2;
 				transform: scale(.75) translateZ(0);
