@@ -1,1 +1,1 @@
-<hr class="divider" />
+<hr class="divider divider<?php the_sub_field('background_color'); ?>" />
