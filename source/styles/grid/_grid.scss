@@ -294,23 +294,31 @@ $unit: $p;
 }
 
 @mixin flex-align {  
-    [class~="align"] {
+    [class*="-align-start"] {
+        align-content: flex-start;
+        align-items: flex-start;
         display: flex;
         > * {
             width: $f;
             flex: 0 0 auto;
         }
     }
-    [class*="-align-start"] {
-        align-content: flex-start;
-        align-items: flex-start;
-    }
     [class*="-align-center"] {
         align-content: center;
         align-items: center;
+        display: flex;
+        > * {
+            width: $f;
+            flex: 0 0 auto;
+        }
     }
     [class*="-align-end"] {
         align-content: flex-end;
         align-items: flex-end;
+        display: flex;
+        > * {
+            width: $f;
+            flex: 0 0 auto;
+        }
     }
 }

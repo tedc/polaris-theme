@@ -175,6 +175,7 @@ figure {
 }
 
 @include grid();
+@include flex-align();
 @include shrink();
 
 %rect {

@@ -6,7 +6,8 @@
 	<?php if(get_sub_field('title_text')) { ?>
 		<h4 class="section__title <?php the_sub_field('title_size'); echo (get_sub_field('red_square')) ? ' section__title--square' : ''; echo (get_sub_field('uppercase')) ? ' section__title--upper' : ''; ?>"<?php 
 		$classTo = (get_sub_field('red_square')) ? ',"class":"section__title--active"' : ''; 
-			if(get_sub_field('move_text')):scrollmagic($sm.',"triggerHook":1'.$classTo);endif; ?>>
+			if(get_sub_field('move_text')):scrollmagic($sm.',"triggerHook":1'.$classTo);endif;
+			if(get_sub_field('red_square')):scrollmagic('"duration":0,"triggerHook":0.5,'.$classTo);endif; ?>>
 			<strong><?php the_sub_field('title_text') ?></strong>
 		</h4>
 	<?php }?>
