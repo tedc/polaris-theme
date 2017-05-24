@@ -87,16 +87,21 @@
 				transition-delay: $speed;
 			}
 		}
+		@include breakpoint($bp, false) {
+			padding-bottom: em(100px);
+		}
 	}
 	&__nav {
 		position: absolute;
 		bottom: 0;
 		right: 0;
 		z-index: 9995;
-		transform: translate3d(0, -50%, 0);	
+		transform: translate3d(0, -50%, 0);
+		display: none;
 		@include breakpoint($bp) {
 			top: 50%;
 			bottom: auto;
+			display: inherit;
 		}
 		li {
 			display: flex;
@@ -130,6 +135,11 @@
 					background-color: $brand-light;
 				}
 			}
+		}
+	}
+	.arrows {
+		@include breakpoint($bp) {
+			display: none;
 		}
 	}
 }

@@ -25,9 +25,10 @@
         {
           slidesToShow: 1,
           dots:true,
-          arrows:false,
           appendDots:$('.'+c+'__nav'),
           fade: true,
+          prevArrow: '.'+c+' .arrows__prev',
+          nextArrow: '.'+c+' .arrows__next',
           swipe: false,
           customPaging: function(slider,i){
             var title = $(slider.$slides[i]).attr("data-title");

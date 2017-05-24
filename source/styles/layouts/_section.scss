@@ -29,7 +29,6 @@
 			position: relative;
 			z-index: 1;
 		}
-		text-align: center;
 		@include breakpoint($bp) {
 			text-align: left;
 		}
