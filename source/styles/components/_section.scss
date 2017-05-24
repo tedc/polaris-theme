@@ -37,7 +37,6 @@
 		}
 		&--move {
 			@include breakpoint($bp) {	
-				overflow: hidden;
 				.section__title {
 					white-space: nowrap;
 				}

@@ -2,6 +2,11 @@
     box-sizing: border-box !important;
 }
 
+html {
+    overflow-x: hidden;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+}
 
 body {
     font-size: $base_font_size - 4px;
