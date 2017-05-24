@@ -1,9 +1,11 @@
 <?php $sm = '"tween":[{"opacity":0,"y":20},{"opacity":1,"y":0}],"triggerHook":0.85,"duration":0'; ?>
 <section class="sheet sheet--grow-lg sheet--shrink">
-	<h2 class="sheet__title sheet__title--huge-upper"><?php the_title(); ?></h2>
+	<header class="sheet__header sheet__header--shrink"<?php scrollmagic('"tween":{"y": -100},"triggerHook":1,"triggerElement":".sheet","duration":"200vh"'); ?>>
+		<h2 class="sheet__title sheet__title--huge-upper"><?php the_title(); ?></h2>
 	<?php if(get_sub_field('designers')) : ?>
 		<em class="sheet__designer">Design by <?php if(get_sub_field('designers_url')) : ?><a href="<?php the_sub_field('designers_url'); ?>" target="_blank" class="sheet__link"><?php the_sub_field('designers'); ?></a><?php else : ?><strong><?php the_sub_field('designers'); ?></strong><?php endif; ?></em>
 	<?php endif; ?>
+	</header>
 	<?php if(have_rows('circles')) : ?>
 	<div class="sheet__figures sheet__figures--grid sheet__figures--mw">
 		<?php $c = 0; while(have_rows('circles')) : the_row('circles'); ?>
