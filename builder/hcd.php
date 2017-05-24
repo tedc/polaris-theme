@@ -44,7 +44,7 @@
 				}
 				$y = ($mask>11) ? 610-305 : 0;
 				$translate = ($mask>11) ? -100 : 100;
-				$height = ($mask>11) ? 610 - $y : 305;
+				$height = 305;
 			}
 		?>
 		<clipPath id="mask_<?php echo $mask; ?>">
