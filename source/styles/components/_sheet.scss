@@ -34,6 +34,11 @@
 			}
 		}
 	}
+	&__designer {
+		display: inline-block;
+		position: relative;
+		z-index: 1;
+	}
 	&__link {
 		color: $main-color;
 		font-weight: bold;

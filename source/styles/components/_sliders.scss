@@ -239,6 +239,9 @@
 		flex: 0 0 auto;
 		text-align: center;
 		@include grow('md');
+		p {
+			line-height: percentage(26px/16px);
+		}
 	}
 }
 
