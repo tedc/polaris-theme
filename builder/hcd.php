@@ -1,4 +1,4 @@
-<div class="hcd hcd--shrink hcd--grow-lg hcd--grid"<?php scrollmagic('"class":"hcd--active","duration":0,"triggerHook":0.5')>
+<div class="hcd hcd--shrink hcd--grow-lg hcd--grid"<?php scrollmagic('"class":"hcd--active","duration":0,"triggerHook":0.5'); ?>>
 	<?php if(have_rows('elements')) : ?>
 	<div class="hcd__cell hcd__cell--s6 hcd__cell--svg">
 	<svg class="hcd__svg" viewBox="0 0 546 662">
