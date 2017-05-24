@@ -38,10 +38,10 @@
 				</div>
 			</div>
 		<?php endwhile; ?>
-		<nav class="arrows">
-			<i class="icon-arrow arrows__prev"></i>
-			<i class="icon-arrow arrows__next"></i>
-		</nav>
 	</div>
+	<nav class="arrows">
+		<i class="icon-arrow arrows__prev"></i>
+		<i class="icon-arrow arrows__next"></i>
+	</nav>
 	<nav class="story__nav"></nav>
 </section>
