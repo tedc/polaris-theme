@@ -25,7 +25,7 @@
 		}
 	}
 </style>
-<div class="store-row store-row--shrink store-row--grow-lg store-row--grid-align-center" id="store_row_<?php echo $row; ?>">
+<div class="store-row store-row--shrink store-row--grow-lg store-row--grid-center" id="store_row_<?php echo $row; ?>">
 	<div class="store-row__cell store-row__cell--grow-md store-row__cell--s6-shrink"<?php scrollmagic($sm); ?>>
 	<h3 class="store-row__title store-row__title--big-upper">
 		<strong><?php _e('Store', 'polaris'); ?></strong>
