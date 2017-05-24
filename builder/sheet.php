@@ -2,7 +2,7 @@
 <section class="sheet sheet--grow-lg sheet--shrink">
 	<h2 class="sheet__title sheet__title--huge-upper"><?php the_title(); ?></h2>
 	<?php if(get_sub_field('designers')) : ?>
-		<em>Design by <?php if(get_sub_field('designers_url')) : ?><a href="<?php the_sub_field('designers_url'); ?>" target="_blank"><?php the_sub_field('designers'); ?></a><?php else : ?><?php the_sub_field('designers'); ?><?php endif; ?></em>
+		<em>Design by <?php if(get_sub_field('designers_url')) : ?><a href="<?php the_sub_field('designers_url'); ?>" target="_blank" class="sheet__link"><?php the_sub_field('designers'); ?></a><?php else : ?><strong><?php the_sub_field('designers'); ?></strong><?php endif; ?></em>
 	<?php endif; ?>
 	<?php if(have_rows('circles')) : ?>
 	<div class="sheet__figures sheet__figures--grid sheet__figures--mw">

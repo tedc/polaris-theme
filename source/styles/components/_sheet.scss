@@ -1,5 +1,6 @@
 .sheet {
 	@include grow('lg');
+	background-color: $w;
 	&__detail {
 		&s {
 			@include grow('lg');
@@ -31,6 +32,13 @@
 			@include breakpoint($bp) {
 				width: $f/5;
 			}
+		}
+	}
+	&__link {
+		color: $main-color;
+		font-weight: bold;
+		&:hover {
+			color: $brand-main;
 		}
 	}
 	&__element {
