@@ -85,7 +85,7 @@
 			echo $y + 26 + $plus; ?>">
 				<?php the_sub_field('nome'); ?>
 			</text>
-			<path data-item="<?php echo $e; ?>" class="hcd__path" d="<?php echo $path; ?>" fill="none" stroke="<?php the_sub_field('colore'); ?>" <?php scrollmagic('"tween":[{"scale" : 0, "svgOrigin" : "273 305"}, {"scale" : 1, "svgOrigin" : "273 305"}],"triggerElement":".hcd","triggerHook":0.5,"duration":0'); ?> />
+			<path data-item="<?php echo $e; ?>" class="hcd__path" d="<?php echo $path; ?>" fill="none" stroke="<?php the_sub_field('colore'); ?>" <?php scrollmagic('"tween":[{"scaleY" : 0, "svgOrigin" : "273 305"}, {"scaleY" : 1, "svgOrigin" : "273 305"}],"triggerElement":".hcd","triggerHook":0.5,"duration":0'); ?> />
 			<circle data-item="<?php echo $e; ?>" r="4" cx="<?php echo $x; ?>" cy="<?php echo $y + 26; ?>" fill="<?php the_sub_field('colore'); ?>" />
 
 		</g>
