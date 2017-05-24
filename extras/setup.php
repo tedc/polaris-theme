@@ -196,6 +196,11 @@
 	}
 	add_filter('the_content', 'filter_images');
 
+	add_action( 'init', 'my_add_excerpts_to_pages' );
+	function my_add_excerpts_to_pages() {
+	     add_post_type_support( 'page', 'excerpt' );
+	}
+
 	// add_filter('wpcf7_form_elements', function($content) {
 	//     $content = preg_replace('/<(span).*?class="\s*(?:.*\s)?acceptance(?:\s[^"]+)?\s*"[^\>]*>(.*)<\/\1>/i', '\2', $content);
 

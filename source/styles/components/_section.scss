@@ -32,6 +32,7 @@
 		p {
 			padding-top: em($p*2);
 			position: relative;
+			line-height: percentage(25px/16px);
 			z-index: 1;
 		}
 		&--move {

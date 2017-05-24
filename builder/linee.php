@@ -2,7 +2,7 @@
 	$linee = new WP_Query(array('post_type'=>'linee', 'posts_per_page'=>-1, 'orderby'=>'title', 'order'=>'ASC')); 	
 	if(get_sub_field('linee_kind') > 0) :
 ?>
-<section class="linee linee--grow-lg-top" id="linee_slider_<?php echo $row; ?>">
+<section class="linee linee--grow-lg-top linee<?php the_sub_field('background_color'); ?>" id="linee_slider_<?php echo $row; ?>">
 	<div class="linee__slider" data-slick='{"fade":true,"speed":1000, "dots":false,"infinite":true,"prevArrow":"#linee_slider_<?php echo $row; ?> .arrows__prev","nextArrow":"#linee_slider_<?php echo $row; ?> .arrows__next"}'>
 	<?php $count=0; while($linee->have_posts()) : $linee->the_post(); ?>
 	<div class="linee__item linee--grid">
@@ -33,7 +33,7 @@
 	else : 
 ?>
 <?php if($linee->have_posts()) : ?>
-<section class="linee linee--grow-lg linee--menu" id="linee_list_<?php echo $row; ?>">
+<section class="linee linee<?php the_sub_field('background_color'); ?> linee--grow-lg linee--menu" id="linee_list_<?php echo $row; ?>">
 	<style>
 	
 	<?php 
