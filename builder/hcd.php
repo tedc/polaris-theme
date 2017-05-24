@@ -8,6 +8,43 @@
 	c34.8,0,52.1-28.4,52.1-63.2L223,412c31.3-3.7,55.7-30.5,55.7-62.7c0,0,11.1-107.8,11.1-120.7C289.9,183.8,242.5,146.5,178.9,136.5z
 	"/> 
 	  	</symbol>
+	  	<defs>
+	  	<?php $mask = 0; while(have_rows('elements')) : the_row('elements'); ?>
+	  	<?php
+			if($mask <=3) {
+				$x = ($mask%2==0) ? 140 : 546-140-273;
+				$y = ($mask>1) ? 610-165-305 : 165;
+				$origin = ($mask>1) ? $x.' 305' : $x .' '.$y;
+				$path = 'M'.$x.','.($y + 26).' A180,180,0 0 '.$angle.' 273,305';
+			}
+			if($mask > 3 && $mask <=7) {
+				$x = ($mask%2==0) ? 75 : 546-75-273;
+				$y = ($mask>5) ? 610-95-305 : 95;
+				$origin = ($mask>5) ? $x.' 305' : $x .' '.$y;
+				$path = 'M'.$x.','.($y + 26).' A200,220,0 0 '.$angle.' 273,305';
+			}
+			if($mask > 7) {
+				if($mask == 8 || $mask == 12) {
+					$x = 0;
+				}
+				if($mask == 9 || $mask == 13) {
+					$x = 195;
+				}
+				if($mask == 10 || $mask == 14) {
+					$x = 546-195-273;
+				}
+				if($mask == 11 || $mask == 15) {
+					$x = 546-273;
+				}
+				$y = ($mask>11) ? 610-305 : 0;
+				$origin = ($mask>11) ? $x.' 305' : $x .' '.$y;
+			}
+		?>
+		<clipPath id="mask_<?php echo $mask; ?>">
+			<rec x="<?php echo $x; ?>" y="<?php echo $y; ?>" width="273" height="305" <?php scrollmagic('"tween":[{"scaleY" : 0, "svgOrigin" : "'.$origin.'"}, {"scaleY" : 1, "svgOrigin" : "'.$origin.'"}],"triggerElemenet":".hcd","triggerHook":0.5,"duration":0'); ?>/>
+		</clipPath>
+	  	<?php $mask++; endwhile; ?>
+	  	</defs>
 		<?php $e = 0; while(have_rows('elements')) : the_row('elements'); ?>
 		<g class="hcd__group<?php echo ($e==0) ? ' hcd__group--active' : ''; ?>" data-element="<?php echo $e; ?>">
 			<?php
@@ -85,7 +122,7 @@
 			echo $y + 26 + $plus; ?>">
 				<?php the_sub_field('nome'); ?>
 			</text>
-			<path data-item="<?php echo $e; ?>" class="hcd__path" d="<?php echo $path; ?>" fill="none" stroke="<?php the_sub_field('colore'); ?>"/>
+			<path data-item="<?php echo $e; ?>" class="hcd__path" d="<?php echo $path; ?>" fill="none" stroke="<?php the_sub_field('colore'); ?>" clip-path="url(#mask_<?php echo $e; ?>)" />
 			<circle data-item="<?php echo $e; ?>" r="4" cx="<?php echo $x; ?>" cy="<?php echo $y + 26; ?>" fill="<?php the_sub_field('colore'); ?>" />
 
 		</g>
