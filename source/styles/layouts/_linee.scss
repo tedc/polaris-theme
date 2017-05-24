@@ -81,9 +81,6 @@
 			border: {
 				top: em($p*2) $w solid;
 			}
-			.linee--gray & {
-				boarder-top-color: $lighter-color;
-			}
 			background: {
 				size: cover;
 				repeat: no-repeat;
@@ -150,6 +147,9 @@
 					}
 				}
 			}
+		}
+		.linee--gray & {
+			boarder-top-color: $lighter-color;
 		}
 	}
 	&__cell {
