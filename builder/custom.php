@@ -9,13 +9,13 @@ $responsive = ', "responsive":[{"breakpoint" : 850,"settings" :{"slidesToShow": 
 	<?php endwhile; ?> -->
 	</nav>
 	<div class="custom__for custom__for--grid">
-	<?php while(have_rows('items')) : the_row(); ?>
-		<div class="custom__cell" data-title="<?php the_sub_field('item_title'); ?>" id="<?php echo sanitize_title(get_sub_field('item_title')); ?>">
+	<?php $item = 0; while(have_rows('items')) : the_row(); ?>
+		<div class="custom__cell" data-title="<?php the_sub_field('item_title'); ?>" id="<?php echo sanitize_title(get_sub_field('item_title')); ?>_<?php echo $item; ?>">
 		<div class="custom__content custom__content--shrink custom__content--grow-md">
 			<?php the_sub_field('item_text'); ?>
 		</div>
 	<div class="custom__bottom">
-	<div class="custom__carousel" data-slick='{"slidesToShow": 3, "slidesToScroll": 1, "centerMode" : true,"infinite":true,"asNavFor": ".custom__nav", "speed" : 1000, "cssEase" : "linear","prevArrow":"#<?php echo sanitize_title(get_sub_field('item_title')); ?> .custom__arrow--prev","nextArrow":"#<?php echo sanitize_title(get_sub_field('item_title')); ?> .custom__arrow--next", "responsive":[{"breakpoint" : 640,"settings" :{"slidesToShow": 1,"variableWidth":true}}]}'>
+	<div class="custom__carousel" data-slick='{"slidesToShow": 3, "slidesToScroll": 1, "centerMode" : true,"infinite":true,"asNavFor": ".custom__nav", "speed" : 1000, "cssEase" : "linear","prevArrow":"#<?php echo sanitize_title(get_sub_field('item_title')); ?>_<?php echo $item; ?> .custom__arrow--prev","nextArrow":"#<?php echo sanitize_title(get_sub_field('item_title')); ?> .custom__arrow--next", "responsive":[{"breakpoint" : 640,"settings" :{"slidesToShow": 1,"variableWidth":true}}]}'>
 	<?php foreach(get_sub_field('item_images') as $img) : ?>
 		<figure class="custom__figure custom__figure--shrink custom__figure--grow">
 			<div class="custom__figure-wrapper">
@@ -31,7 +31,7 @@ $responsive = ', "responsive":[{"breakpoint" : 850,"settings" :{"slidesToShow": 
 	<i class="icon-arrow custom__arrow custom__arrow--next"></i>
 	</div>
 	</div>
-	<?php endwhile; ?>
+	<?php $item++; endwhile; ?>
 	</div>
 	</div>
 </div>
