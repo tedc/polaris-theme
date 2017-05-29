@@ -34,8 +34,9 @@
 		<p><?php _e('Trova il rivenditore Polaris più vicino a te.', 'polaris'); ?></p>
 	</div>
 	</div>
-	<form class="store-row__cell store-row__cell--s6-shrink store-row--form store-row--grid" action="<?php the_permalink(  ); ?>">
 	<?php if (is_active_sidebar('map-search-widget')) : dynamic_sidebar('map-search-widget'); endif; ?>
+	<form class="store-row__cell store-row__cell--s6-shrink store-row--form store-row--grid" action="<?php the_permalink(  ); ?>">
+
 		<input type="text" name="wpsl-search-input" placeholder="<?php _e('La tua città', 'polaris'); ?>">
 		<button class="button button--form"><i class="icon-arrow"></i></button>
 	</form>
