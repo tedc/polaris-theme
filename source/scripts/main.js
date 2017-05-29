@@ -108,7 +108,7 @@
         if(qs.indexOf('?') !== -1) {
           qs = qs.split('?');
           qs = qs[1].split('=');
-          $('[name="'+qs[0]+'"]').val(decodeURIComponent(qs[1]));
+          $('[name="'+qs[0]+'"]').val(decodeURIComponent(qs[1])).trigger('change');
           setTimeout(function() {
             $('#wpsl-search-btn').trigger('click');
           }, 200)
