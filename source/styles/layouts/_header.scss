@@ -103,7 +103,7 @@
 		top: $f;
 		width: $f;
 		left: 0;
-		transform: translate3d($f*-1, 0, 0);
+		transform: translate3d(0, $f*-1, 0);
 		height: calc(100vh - #{em(80px)});
 		background-color: $lighter-color;
 		display: flex;

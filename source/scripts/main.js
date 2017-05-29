@@ -41,8 +41,9 @@
   var MenuTL = new TimelineMax({
     pause: true
   });
+  MenuTL.paused(true);
   MenuTL
-    .to('.banner__nav', .3, {x : '0%', autoAlpha : true})
+    .to('.banner__nav', .3, {y : '0%', autoAlpha : true})
     .staggerTo(['.menu--pages .menu__item', '.menu--line .menu__item'], .3, {y: '0%', opacity: 0}, .05, '-=.25');
   // Use this variable to set up the common and page specific functions. If you
   // rename this variable, you will also need to rename the namespace below.
