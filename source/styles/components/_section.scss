@@ -106,11 +106,6 @@
 		&-container {
 			overflow: hidden;
 			position: relative;
-			&:hover {
-				img {
-					transform: scale(1.25) translateZ(0);
-				}
-			}
 			.section__figure--full & {
 				@include breakpoint($bp) {
 					display: none;
