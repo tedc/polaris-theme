@@ -37,6 +37,13 @@
         }
     );
   }
+
+  var MenuTL = new TimelineMax({
+    pause: true
+  });
+  MenuTL
+    .to('.banner__nav', {x : '0%', autoAlpha : true})
+    .staggerTo(['.menu--pages .menu__item', '.manu--line .menu__item'], {y: '0%', opacity: 0}, .05, '-=.25');
   // Use this variable to set up the common and page specific functions. If you
   // rename this variable, you will also need to rename the namespace below.
   var Sage = {
@@ -47,6 +54,13 @@
           $(this).on('click', function() {
             var opts = JSON.parse($(this).attr('data-open'));
             $(opts.el).toggleClass(opts.class);
+            if(opts.el == '#banner') {
+              if($(opts.el).hasClass(opts.class)) {
+                MenuTL.play()
+              } else {
+                MenuTL.reverse()
+              }
+            }
           });
         });
         $('[data-slick]').slick();

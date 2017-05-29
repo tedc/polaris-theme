@@ -99,10 +99,11 @@
 		position: absolute;
 		visibility: hidden;
 		opacity: 0;
-		transition: visibility $speed $speed, opcity $speed $speed;
+		//transition: visibility $speed $speed, opcity $speed $speed,;
 		top: $f;
 		width: $f;
 		left: 0;
+		transform: translate3d($f*-1, 0, 0);
 		height: calc(100vh - #{em(80px)});
 		background-color: $lighter-color;
 		display: flex;
@@ -116,11 +117,11 @@
 			width: $f;
 			overflow: hidden;
 		}
-		.banner--active & {	
-			visibility: visible;
-			opacity: 1;
-			transition-delay: 0;
-		}
+		// .banner--active & {	
+		// 	visibility: visible;
+		// 	opacity: 1;
+		// 	transition-delay: 0;
+		// }
 	}
 	&__footer {
 		width: $f;
@@ -206,21 +207,21 @@
 	.menu__item {
 		transform: translate3d(0, $f, 0);
 		opacity: 0;
-		transition: transform $speed, opacity $speed;
-		@for $i from 1 through 20 {
-			&:nth-child(#{$i}) {
-				$d: (20 - $i) * 0.15s;
-				transition-delay: $d;
-				.banner--active & {
-					$da: $i * 0.15s; 
-					transition-delay: $da;
-				}
-			}
-		}
-		.banner--active & {
-			opacity: 1;
-			transform: translate(0, $f, 0);
-		}
+		// transition: transform $speed, opacity $speed;
+		// @for $i from 1 through 20 {
+		// 	&:nth-child(#{$i}) {
+		// 		$d: (20 - $i) * 0.15s;
+		// 		transition-delay: $d;
+		// 		.banner--active & {
+		// 			$da: $i * 0.15s; 
+		// 			transition-delay: $da;
+		// 		}
+		// 	}
+		// }
+		// .banner--active & {
+		// 	opacity: 1;
+		// 	transform: translate(0, $f, 0);
+		// }
 	}
 }
 

@@ -1,4 +1,4 @@
-<header class="banner" ng-class="{'banner--active' : isMenu}" id="banner">
+<header class="banner" id="banner">
     <div class="banner__container banner__container--shrink">
         <a class="banner__logo" href="<?= esc_url(home_url('/')); ?>" title="<?php bloginfo('name'); ?>">
         <?php 
@@ -25,7 +25,7 @@
             <div class="banner__scroller banner__scroller--grid">
                 <?php
                 if (has_nav_menu('primary_navigation')) :
-                    bem_menu('primary_navigation', 'menu', 'menu--shrink menu--grow-lg', __('Polaris', 'polaris'));
+                    bem_menu('primary_navigation', 'menu', 'menu--shrink menu--pages menu--grow-lg', __('Polaris', 'polaris'));
                 endif;
                 get_template_part( 'templates/linee' );
                 
