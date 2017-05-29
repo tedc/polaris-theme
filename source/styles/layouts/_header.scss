@@ -217,6 +217,10 @@
 				}
 			}
 		}
+		.banner--active & {
+			opacity: 1;
+			transform: translate(0, $f, 0);
+		}
 	}
 }
 
