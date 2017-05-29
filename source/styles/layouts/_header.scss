@@ -28,6 +28,8 @@
 	&__container {
 		display: flex;
 		align-items: center;
+		position: relative;
+		z-index: 2;
 	}
 	&__toggle {
 		display: flex;
@@ -126,8 +128,10 @@
 	&__footer {
 		width: $f;
 		text-align: right;
+		visibility: hidden;
+			opacity: 0;
 		transform: translate3d(0, 100%, 0);
-		transition: transform $speed;
+		transition: $speed;
 		@include grow('small');
 		a {
 			font-size: em(22px);
@@ -135,6 +139,8 @@
 		}
 		.banner--active & {
 			transform: translate3d(0, 0, 0);
+			visibility: visible;
+			opacity: 1;
 		}
 	}
 	&__scroller {
@@ -169,6 +175,8 @@
 	}
 	@include breakpoint($bp) {
 		display: inherit;
+		position: relative;
+		z-index: 2;
 	}
 }
 
