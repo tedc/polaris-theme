@@ -39,7 +39,10 @@
   }
 
   var MenuTL = new TimelineMax({
-    pause: true
+    pause: true,
+    onComplete : function() {
+       $('[data-ps]').perfectScrollbar('update');
+    }
   });
   MenuTL.paused(true);
   MenuTL
