@@ -200,3 +200,15 @@
 
 	//     return $content;
 	// });
+
+	function searchWidget () {
+		register_sidebar([
+	    'name'          => __('Mappa', 'polaris'),
+	    'id'            => 'map-search-widget',
+	    'before_widget' => '',
+	    'after_widget'  => '',
+	    'before_title'  => '',
+	    'after_title'   => ''
+	  ]);
+	}
+	add_action('widgets_init', 'searchWidget');
