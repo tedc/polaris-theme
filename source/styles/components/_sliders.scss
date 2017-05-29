@@ -80,7 +80,7 @@
 			bottom: em($p*2);
 			left: 50%;
 			transform: translate3d(-50%, 0, 0);
-			z-index: 9999;
+			z-index: 9995;
 			li {
 				display: inline-block;
 				box-shadow: 0 0 5px transparentize($b, .5);

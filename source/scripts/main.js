@@ -45,7 +45,7 @@
   MenuTL
     .to('.banner__nav', .25, {y : '0%'})
     .staggerTo('.menu--pages .menu__item', .25, {y: '0%', opacity: 1}, .05, '-=.125')
-    .staggerTo('.menu--linee .menu__item', .25, {y: '0%', opacity: 1}, .075, '-=.325');
+    .staggerTo('.menu--linee .menu__item', .25, {y: '0%', opacity: 1}, .075, '-=.275');
   // Use this variable to set up the common and page specific functions. If you
   // rename this variable, you will also need to rename the namespace below.
   var Sage = {
