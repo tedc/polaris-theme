@@ -4,7 +4,7 @@
 if($count == 0) : ?><header id="header" class="header header--shrink"><h1 class="news__title news__title--huge-upper"><?php echo $title; ?></h1></header><?php endif; 
 include(locate_template('templates/content.php', false, false));
 if($count==0) : echo '<hr id="down"/>'; endif;
-if($count == 2) : echo '<div class="instagram instagram--grow-lg instagram--"><header class="instagram__header instagramm__header--shrink"><h3 class="instagram__title instagram__title--big-upper">'._('@Polaris.life', 'polaris').'</h3></header>'.do_shortcode('[instagram-feed]').'</div>'; endif; ?>
+if($count == 2) : echo '<div class="instagram instagram--grow-lg instagram--"><header class="instagram__header instagramm__header--shrink"><h3 class="instagram__title instagram__title--big-upper">'.__('@Polaris.life', 'polaris').'</h3></header>'.do_shortcode('[instagram-feed]').'</div>'; endif; ?>
 <?php if($count == 4) : 
 	acf_set_language_to_default();
 	$header = '<style>.cff__header {background-image:url('.get_field('fb_cover', 'options').')}</style><figure class="cff__picture"><img src="'.get_field('fb_profile', 'options').'" /><h4 class="cff__title cff__title--normal"><a href="'.get_field('fb_link', 'options').'">'.get_bloginfo('name').'</a></h4></figure>';

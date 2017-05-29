@@ -177,18 +177,18 @@
 	@include breakpoint($bp) {
 		min-width: $f/3;
 	}
-	opacity: 0;
-	transition: opacity $speed;
-	.banner--active & {
-		opacity: 1;
-		transition-delay: $speed/2;
-	}
-	&--linee {
-		transition-delay: $speed/2;
-		.banner--active & {
-			transition-delay: 0;
-		}
-	}
+	// opacity: 0;
+	// transition: opacity $speed;
+	// .banner--active & {
+	// 	opacity: 1;
+	// 	transition-delay: $speed/2;
+	// }
+	// &--linee {
+	// 	transition-delay: $speed/2;
+	// 	.banner--active & {
+	// 		transition-delay: 0;
+	// 	}
+	// }
 	&__title {
 		color: $brand-main;
 	}
@@ -203,6 +203,21 @@
 		color: $main-color;
 	}
 	@include grow('lg');
+	.menu__item {
+		transform: translate3d(0, $f, 0);
+		opacity: 0;
+		transition: transform $speed, opacity $speed;
+		@for $i from 1 through 20 {
+			&:nth-child(#{$i}) {
+				$d: (20 - $i) * 0.25s;
+				transition-delay: $d;
+				.banner--active & {
+					$da: $i * 0.25s; 
+					transition-delay: $da;
+				}
+			}
+		}
+	}
 }
 
 .aside {
