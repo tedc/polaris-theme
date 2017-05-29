@@ -56,9 +56,9 @@
             $(opts.el).toggleClass(opts.class);
             if(opts.el == '#banner') {
               if($(opts.el).hasClass(opts.class)) {
-                MenuTL.play()
+                MenuTL.play();
               } else {
-                MenuTL.reverse()
+                MenuTL.reverse();
               }
             }
           });
