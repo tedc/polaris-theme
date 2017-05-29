@@ -40,6 +40,9 @@
 
   var MenuTL = new TimelineMax({
     pause: true,
+    onStart : function() {
+       $('[data-ps]').perfectScrollbar('update');
+    },
     onComplete : function() {
        $('[data-ps]').perfectScrollbar('update');
     }
