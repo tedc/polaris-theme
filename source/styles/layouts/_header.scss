@@ -209,10 +209,10 @@
 		transition: transform $speed, opacity $speed;
 		@for $i from 1 through 20 {
 			&:nth-child(#{$i}) {
-				$d: (20 - $i) * 0.25s;
+				$d: (20 - $i) * 0.15s;
 				transition-delay: $d;
 				.banner--active & {
-					$da: $i * 0.25s; 
+					$da: $i * 0.15s; 
 					transition-delay: $da;
 				}
 			}
