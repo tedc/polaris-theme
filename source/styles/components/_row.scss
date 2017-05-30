@@ -7,6 +7,13 @@
 		repeat: no-repeat;
 		position: center;
 	}
+	&:before {
+		@include full;
+		content: '';
+		background-color: $b;
+		opacity: 0;
+		transition: opacity $speed;
+	}
 	&__button {
 		@include grow('lg', 'top');
 	}
@@ -47,11 +54,18 @@
 		font-size: em($p);
 		transition: transform $speed;
 	}
-	&:hover p {
-		transform: translate3d(0, $p*-1.5, 0);
+	&:hover {
+		&:before {
+			opacity: .35;
+		}
+		p {
+			transform: translate3d(0, $p*-0.5, 0);
+		}
 	}
 	&__content {
 		@include grow();
+		position: relative;
+		z-index: 1;
 	}
 }
 
