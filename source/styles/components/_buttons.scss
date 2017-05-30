@@ -73,16 +73,18 @@
 	&--more {
 		overflow: hidden;
 		display: inline-block;
+		position: relative;
 		&:after {
 			content: '';
 			@include full;
 			z-index: 2;
-			background-color: $brand-main;
+			background-color: $brand-light;
 			transform: scaleX(0) translate3d(0, 0, 0);
 			transform-origin: right center;
 			transition: transform $speed $speed, left $speed $speed;
 		}
 		&:hover {
+			color: $main-color;
 			&:after {
 				transform: scaleX(1) translate3d(0, 0, 0);
 				left: $f;
