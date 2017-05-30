@@ -14,6 +14,7 @@
 		position: relative;
 		z-index: 1;
 		color: $w;
+		display: inline-block;
 		@extend %rect;
 		&:before {
 			width: 90px;
