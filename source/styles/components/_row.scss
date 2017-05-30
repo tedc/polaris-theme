@@ -27,6 +27,11 @@
 			.row__content--active & {
 				transform: scaleX(1) translateZ(0);
 			}
+			.row:hover & {
+				left: $f;
+				transform: scaleX(0) translateZ(0);
+				transition: left $speed, transform $speed $speed;
+			}
 		}
 		strong {
 			position: relative;
