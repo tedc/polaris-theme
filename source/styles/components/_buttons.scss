@@ -70,5 +70,26 @@
 			}
 		}
 	}
+	&--more {
+		overflow: hidden;
+		display: inline-block;
+		&:after {
+			content: '';
+			@include full;
+			z-index: 2;
+			background-color: $brand-main;
+			transform: scaleX(0) translate3d(0, 0, 0);
+			transform-origin: right center;
+			transition: transform $speed $speed, left $speed $speed;
+		}
+		&:hover {
+			&:after {
+				transform: scaleX(1) translate3d(0, 0, 0);
+				left: $f;
+				transform-origin: left center;
+				transition: transform $speed, left $speed $speed;
+			}
+		}
+	}
 }
 

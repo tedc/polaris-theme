@@ -22,5 +22,5 @@ if(!isset($blog)) {
 	<div class="post__summary post__summary--grow-md">
 		<?php the_excerpt(); ?>
 	</div>
-	<a href="<?php the_permalink(  ); ?>" class="button"><strong><?php _e('Scopri di più', 'polaris'); ?></strong></a>
+	<a href="<?php the_permalink(  ); ?>" class="button button--more"><strong><?php _e('Scopri di più', 'polaris'); ?></strong></a>
 </article>
