@@ -31,7 +31,7 @@
 			.row:hover & {
 				left: $f;
 				transform: scaleX(0) translateZ(0);
-				transition: left $speed, transform $speed $speed;
+				transition: left $speed*2, transform $speed $speed*2;
 			}
 		}
 		strong {
