@@ -46,9 +46,10 @@
 		padding-top: em($p*2, $p);
 		font-size: em($p);
 		transition: transform $speed;
-		.row:hover & {
-			transform: translate3d(0, $p*-1.5, 0);
-		}
+		.row
+	}
+	&:hover p {
+		transform: translate3d(0, $p*-1.5, 0);
 	}
 	&__content {
 		@include grow();
