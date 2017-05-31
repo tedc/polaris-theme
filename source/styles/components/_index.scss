@@ -1,1 +1,34 @@
+%mask {
+	top: 0;
+	height: $f;
+	position: absolute;
+	z-index: 10;
+	[class*="-gray"] & {
+		background-color: $lighter-color;
+	}
+	[class*="-white"] & {
+		background-color: $w;
+	}
+	&--left {
+		left: 0;
+		right: $f;
+		transition: left $speed, right $speed $speed/2;
+		[class*="--active"] & {
+			right: 0;
+			left: $f;
+			transition: right $speed, left $speed $speed/2;
+		}
+	}
+	&--right {
+		right: 0;
+		left: $f;
+		transition: right $speed, left $speed $speed/2;
+		[class*="--active"] & {
+			right: 0;
+			left: $f;
+			transition: left $speed, right $speed $speed/2;
+		}
+	}
+}
+
 @import "*";

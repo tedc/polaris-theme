@@ -92,6 +92,10 @@
 				transition: right $speed, left $speed $speed/2;
 			}
 		}
+		strong {
+			position: relative;
+			z-index: 1;
+		}
 	}
 }
 
