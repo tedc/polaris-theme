@@ -12,12 +12,7 @@
 ?>
 <style type="text/css">
 	#store_row_<?php echo $row; ?> {
-		background-image: url(<?php the_post_thumbnail_url('medium'); ?>);
-	}
-	@media screen and (min-width: <?php echo 480/16; ?>em) {
-		#store_row_<?php echo $row; ?> {
-			background-image: url(<?php the_post_thumbnail_url('large'); ?>);
-		}
+		background-image: url(<?php the_post_thumbnail_url('large'); ?>);
 	}
 	@media screen and (min-width: <?php echo 850/16; ?>em) {
 		#store_row_<?php echo $row; ?> {
