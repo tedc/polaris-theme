@@ -16,12 +16,16 @@
 		}
 	}
 	&__svg {
+		display: none;
 		position: absolute;
 		top: em($p*2);
 		left: em($p*2);
 		width: calc(#{$f} - #{em($p*4)});
 		height: calc(#{$f} - #{em($p*4)});
 		overflow: visible !important;
+		@include breakpoint($bp) {
+			display: inherit;
+		}
 	}
 	&__text {
 		text-transform: uppercase;
@@ -42,6 +46,7 @@
 				@include full;
 				content: '';
 				transition: width $speed;
+				transition-delay: $speed*;
 				[class*="-gray"] & {
 					background-color: $lighter-color;
 				}
@@ -50,7 +55,6 @@
 				}
 				.slick-current & {
 					width: 0;
-					transition-delay: $speed;
 				}
 			}
 		}
