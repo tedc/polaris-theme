@@ -39,6 +39,29 @@
 			}
 		}
 	}
+	&__mask {
+		top: 0;
+		left: 0;
+		right: 0;
+		height: $f;
+		position: absolute;
+		z-index: 2;
+		transition: left $speed, right $speed;
+		display: none;
+		[class*="-gray"] & {
+			background-color: $lighter-color;
+		}
+		[class*="-white"] & {
+			background-color: $w;
+		}
+		.slick-current & {
+			right: $f;
+			transition: left $speed*2  $speed*2, right $speed*2  $speed*2;
+		}
+		@include breakpoint($bp) {
+			display: block;
+		}
+	}
 	&__title {
 		&--huge {
 			overflow: hidden;

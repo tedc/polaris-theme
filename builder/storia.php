@@ -22,6 +22,7 @@
 			<div class="story__item story__item--grid" id="story_<?php the_sub_field('anno'); ?>" data-title="<?php the_sub_field('anno'); ?>">
 				<figure class="story__cell story__cell--s7 story__cell--figure">
 					<img src="<?php echo get_sub_field('foto')['sizes']['large']; ?>" alt="<?php echo get_sub_field('foto')['alt']; ?>">
+					<div class="story__mask"></div>
 				</figure>
 				<div class="story__cell story__cell--grow-lg story__cell--shrink story__cell--s5 story__cell--text">
 					<div class="story__header story__header--shrink-right-only">
