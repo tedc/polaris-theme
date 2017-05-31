@@ -173,6 +173,7 @@
 		wp_dequeue_style( 'cff' );
 		wp_dequeue_style( 'cff-font-awesome' );
 		wp_deregister_style( 'contact-form-7' );
+		wp_deregister_style( 'wpsl-styles' );
 	}
 	add_action( 'wp_print_styles', 'removeSocialCSS', 100);
 	
