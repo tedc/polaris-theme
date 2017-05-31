@@ -55,12 +55,17 @@
 		[class*="-white"] & {
 			background-color: $w;
 		}
-		.slick-current &, .story--active & {
+		.slick-current & {
 			right: $f;
 			transition: left $speed*2  $speed*2, right $speed*2  $speed*2;
 		}
 		@include breakpoint($bp) {
 			display: block;
+		}
+	}
+	&__mask-mask {
+		.story--active & {
+			right: $f;
 		}
 	}
 	&__title {
