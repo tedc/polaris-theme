@@ -92,10 +92,12 @@
         .on('afterChange', function(event, slick, currentSlide) {
             var transformOrigin = ($('.hcd__group[data-element="'+currentSlide+'"]').hasClass('hcd__group--top')) ? '50% 0%' : '50% 100%';
             var y = ($('.hcd__group[data-element="'+currentSlide+'"]').hasClass('hcd__group--top')) ? 10 : -10;
-            TweenMax.to('.hcd__group--active text', .5, {
-              scale: 1
+            TweenMax.to('.hcd__group--active text', .25, {
+              scale: 1,
+              onComplete : function() {
+                TweenMax.killChildTweensOf($('.hcd__group--active text'));
+              }
             })
-            TweenMax.kill({y:true}, '.hcd__group--active text');
             $('.hcd__group--active').removeClass('hcd__group--active');
             $('.hcd__group[data-element="'+currentSlide+'"]').addClass('hcd__group--active');
             TweenMax.to('.hcd__group--active text', .5, {
