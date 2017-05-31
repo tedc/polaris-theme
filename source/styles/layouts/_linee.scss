@@ -149,6 +149,9 @@
 		margin: 0;
 		@include grow('lg');
 		@include grow('lg', 'top');
+		@include breakpoint($bp) {
+			padding-bottom: em(120px);
+		}
 	}
 	&__content {
 		@include grow();
@@ -159,9 +162,6 @@
 			padding-top: em($p*2, $p);
 			font-size: em($p);
 			line-height: percentage(30px/$p);
-		}
-		@include breakpoint($bp) {
-			padding-bottom: em(120px);
 		}
 	}
 	&-header {
