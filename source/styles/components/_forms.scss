@@ -19,6 +19,9 @@
 			color: $brand-light !important;
 		}
 	}
+	&:focus {
+		font-size: em($p);
+	}
 }
 
 .wpcf7 {
