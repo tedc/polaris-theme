@@ -47,6 +47,10 @@
 		transform: translate3d(0, -50%, 0);
 		.linee--grow-lg-top & {
 			margin-top: em($p * 4) / 2;
+			transform: none;
+		}
+		.hcd & {
+			top: 0;
 		}
 	}
 }
