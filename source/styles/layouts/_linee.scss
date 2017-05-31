@@ -220,7 +220,7 @@
 		height: $f;
 		position: absolute;
 		z-index: 2;
-		transition: left $speed*2, right $speed*2;
+		transition: left $speed, right $speed;
 		display: none;
 		[class*="-gray"] & {
 			background-color: $lighter-color;
@@ -230,7 +230,7 @@
 		}
 		.slick-current & {
 			right: $f;
-			transition-delay: $speed*1.8;
+			transition: left $speed*2  $speed*2, right $speed*2  $speed*2;
 		}
 		@include breakpoint($bp) {
 			display: block;
