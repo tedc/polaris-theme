@@ -8,6 +8,7 @@
 	<div class="linee__item linee--grid">
 		<figure class="linee__cell linee__cell--s7 linee__cell--figure" style="background-image:url(<?php the_post_thumbnail_url('large'); ?>)"<?php scrollmagic('"tween":{"backgroundPosition" : "50% 10%"}, "duration" : "200vh", "triggerHook" : "onEnter", "triggerElement" : "#linee_slider_'.$row.'"'); ?>>
 			<?php the_post_thumbnail('large', array('class'=>'thumb--hidden')); ?>
+			<div class="linee__mask"></div>
 		</figure>
 		<div class="linee__cell linee__cell--grow-lg-top linee__cell--shrink linee__cell--s5 linee__cell--text">
 			<h3 class="linee__title linee__title--huge linee__title--huge-upper"><strong><?php the_title(); ?></strong></h3>

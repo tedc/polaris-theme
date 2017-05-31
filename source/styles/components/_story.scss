@@ -124,6 +124,8 @@
 				background-color: $gray;
 				flex: 0 0 auto;
 				margin-left: em($p);
+				backface-visibility: hidden;
+				perspective: 1000px;
 			}
 			&:hover {
 				&:after {
