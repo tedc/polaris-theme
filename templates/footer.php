@@ -1,4 +1,4 @@
-<footer class="footer footer--grow-lg footer--shrink">
+<footer class="footer footer--grow-md footer--shrink">
 	<div class="footer__content footer__content--grid footer__content--shrink">
 		<div class="footer__item">
 			<a class="footer__logo" href="<?= esc_url(home_url('/')); ?>" title="<?php bloginfo('name'); ?>">

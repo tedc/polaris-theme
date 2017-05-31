@@ -1,5 +1,6 @@
 .footer {
-	background-color: $light-color;	@include grow('lg');
+	background-color: $light-color;
+	@include grow();
 	a {
 		color: $main-color;
 		font-weight: bold;
@@ -8,7 +9,7 @@
 		}
 	}
 	p {
-		padding-bottom: em($p*2, 12px);
+		padding-bottom: em($p, 12px);
 		font-size: em(12px);
 	}
 	&__logo {

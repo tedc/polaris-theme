@@ -52,6 +52,10 @@
 		.hcd & {
 			top: 0;
 		}
+		.full-slider & {
+			top: auto;
+			bottom: 0;
+		}
 	}
 }
 
