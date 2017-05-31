@@ -96,11 +96,27 @@
                 scale: 1.3, 
                 transformOrigin: '50% 50%',
                 onComplete: function() {
-                  TweenMax.to('.hcd__group--active text', 1, {
-                    y : -10,
+                  var Tl = new TimelineMax({
                     repeat: -1,
-                    yoyo : true,
                     repeatDelay: 1
+                  })
+                  Tl.to('.hcd__group--active text', .25, {
+                    y : -10
+                  })
+                  .to('.hcd__group--active text', .25, {
+                    y : 0
+                  })
+                  .to('.hcd__group--active text', .25, {
+                    y : -10
+                  })
+                  .to('.hcd__group--active text', .25, {
+                    y : 0
+                  })
+                  .to('.hcd__group--active text', .25, {
+                    y : -10
+                  })
+                  .to('.hcd__group--active text', .25, {
+                    y : 0
                   });
                 }
             });
