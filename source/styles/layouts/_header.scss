@@ -208,6 +208,7 @@
 		font-size: em(40px);
 		line-height: percentage(50px/40px);
 		position: relative;
+		display: block;
 	}
 	.menu__item--active a {
 		color: $main-color;
@@ -218,11 +219,11 @@
 		transform: translate3d(0, $f, 0);
 		opacity: 0;
 		&:before {
-			height: 20px;
+			height: em(20px);
 			width: em(80px);
 			left: $p*-1.8;
 			top: auto;
-			bottom: -2px;
+			bottom: 0px;
 			transform-origin: left center;
 			transform: scaleX(0) translateZ(0);
 		}
