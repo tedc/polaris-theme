@@ -215,22 +215,24 @@
 				top: 0;
 				height: $f;
 				right: 0;
-				width: 0;
+				left: $f;
 				content: '';
-				transition: width $speed*2;
+				transition: left $speed*2, right $speed*2;
+				background-color: $brand-main;
 			}
 			.section--active & {
 				&:before {
 					transform: scaleX(1) translateZ(0);
-					transition-delay: $speed;
-					transition-duration: $speed*4;
+					transition-delay: $speed*4;
+					transition-duration: $speed*2;
 				}
 				strong {
 					color: $main-color;
 				}
 				&:after {
-					width: $f;
-					transition-delay: $speed*2;
+					right: $f;
+					left: 0;
+					transition: left $speed*2, right $speed*2 $speed*2;
 				}
 			}
 		}
