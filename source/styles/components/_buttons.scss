@@ -71,26 +71,25 @@
 		}
 	}
 	&--more {
-		//overflow: hidden;
 		display: inline-block;
 		position: relative;
-		&:after {
+		&:before {
 			content: '';
 			position: absolute;
 			top: 0;
 			left: $p*-1;
 			height: $f;
 			right: calc(#{$f} + #{$p});
-			z-index: 2;
+			z-index: 0;
 			background-color: $brand-light;
-			transition: right $speed/2 $speed/2, left $speed/2;
+			transition: right $speed $speed/2, left $speed;
 		}
 		&:hover {
 			color: $main-color;
-			&:after {
+			&:before {
 				left: calc(#{$f} + #{$p});
 				right: $p*-1;
-				transition: right $speed/2, left $speed/2 $speed/2;
+				transition: right $speed, left $speed $speed/2;
 			}
 		}
 	}
