@@ -39,16 +39,17 @@
 		&--anim {
 			opacity: 0;
 			z-index: 3;
-			transition: opacity $speed*2 $speed, transform $speed*2 $speed;
+			transition: opacity $speed*2, transform $speed*2;
 			.section__cell--even & {
 				transform: translate3d($p*2, 0, 0);
 			}
-			.section__cell--even & {
+			.section__cell--odd & {
 				transform: translate3d($p*-2, 0, 0);
 			}
 			.section--active & {
 				opacity: 1;
 				transform: translate3d(0, 0, 0);
+				transition-delay: $speed;
 			}
 		}
 		&--move {
