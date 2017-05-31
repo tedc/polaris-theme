@@ -71,25 +71,26 @@
 		}
 	}
 	&--more {
-		overflow: hidden;
+		//overflow: hidden;
 		display: inline-block;
 		position: relative;
 		&:after {
 			content: '';
-			@include full;
+			position: absolute;
+			top: 0;
+			left: $p*-1;
+			height: $f;
+			right: calc(#{$f} + #{$p});
 			z-index: 2;
 			background-color: $brand-light;
-			transform: scaleX(0) translate3d(0, 0, 0);
-			transform-origin: right center;
-			transition: transform $speed $speed, left $speed $speed;
+			transition: right $speed/2 $speed/2, left $speed/2;
 		}
 		&:hover {
 			color: $main-color;
 			&:after {
-				transform: scaleX(1) translate3d(0, 0, 0);
-				left: $f;
-				transform-origin: left center;
-				transition: transform $speed, left $speed $speed;
+				left: calc(#{$f} + #{$p});
+				right: $p*-1;
+				transition: right $speed/2, left $speed/2 $speed/2;
 			}
 		}
 	}
