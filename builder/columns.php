@@ -10,10 +10,10 @@
 <?php 
 endif;
 $col = 0;
-$anim = (get_sub_field('anim'));
-if($anim == 0) : ?>
+$is_anim = (get_sub_field('anim'));
+if($is_anim == 0) : ?>
 	<div class="section__mask section__mask--left"></div>
-<?php elseif($anim == 1) : ?>
+<?php elseif($is_anim == 1) : ?>
 	<div class="section__mask section__mask--right"></div>
 <?php endif;
 while(have_rows('column')) : the_row('column'); ?>
