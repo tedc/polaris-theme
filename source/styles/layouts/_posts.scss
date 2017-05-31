@@ -1,6 +1,7 @@
 .blog {
 	.header {
-		margin-bottom: em($p*-2);
+		margin-bottom: percentage(($p*2)/1286px)*-1;
+		width: $f;
 		z-index: 20;
 		position: relative;
 	}

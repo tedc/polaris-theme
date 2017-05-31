@@ -85,7 +85,10 @@ figure {
     //transform: translate3d(#{em(12px*-1, 40px)}, 0, 0);
 }
 [class*="-big"] {
-    font-size: em(60px);
+    font-size: vw(120px);
+    @include breakpoint($bp) {
+        font-size: em(60px);
+    }
     //transform: translate3d(#{em(12px*-1, 60px)}, 0, 0);
 }
 [class*="-huge"] {  
