@@ -178,12 +178,14 @@ figure {
         visibility: hidden;
         .slick-track & {
             position: absolute;
+            top: 0;
         }
         .single-post .post & {
             visibility: visible;
         }
         @include breakpoint($bp) {
             position: absolute;
+            top: 0;
             .single-post .post & {
                 position: relative;
             }
@@ -193,7 +195,7 @@ figure {
         &:before {
             content: '';
             display: block;
-            padding-top: 3px/4px * $f;
+            padding-top: 3px/4px * 100vw;
         }
     }
 }
