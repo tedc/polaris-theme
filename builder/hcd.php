@@ -15,7 +15,7 @@
 				$x = ($mask%2==0) ? 140 : 546-140-273;
 				$width = ($mask%2==0) ? 273 - $x : 546 - $x;
 				$y = ($mask>1) ? 610-165-305 : 165;
-				$translate = ($mask>1) ? -100 : 100;
+ 				$translate = ($mask>1) ? -100 : 100;
 				$height = ($mask>1) ? 610 - $y : 305 - $y;
 			}
 			if($mask > 3 && $mask <=7) {
@@ -53,8 +53,7 @@
 	  	<?php $mask++; endwhile; ?>
 	  	</defs>
 		<?php $e = 0; while(have_rows('elements')) : the_row('elements'); ?>
-		<g class="hcd__group<?php echo ($e==0) ? ' hcd__group--active' : ''; ?>" data-element="<?php echo $e; ?>">
-			<?php
+		<?php
 				if($e <=3) {
 					if($e <= 1) {
 						$angle = ($e%2==0) ? 0 : 1;
@@ -64,6 +63,7 @@
 					
 					$x = ($e%2==0) ? 140 : 546-140;
 					$y = ($e>1) ? 610-165 : 165;
+					$classTo = ($mask>1) ? 'top' : 'bottom';
 					$path = 'M'.$x.','.($y + 26).' A180,180,0 0 '.$angle.' 273,305';
 				}
 				if($e > 3 && $e <=7) {
@@ -74,6 +74,7 @@
 					}	
 					$x = ($e%2==0) ? 75 : 546-75;
 					$y = ($e>5) ? 610-95 : 95;
+					$classTo = ($mask>5) ? 'top' : 'bottom';
 					$path = 'M'.$x.','.($y + 26).' A200,220,0 0 '.$angle.' 273,305';
 				}
 				if($e > 7) {
@@ -112,9 +113,12 @@
 					}
 
 					$y = ($e>11) ? 610 : 0;
+					$classTo = ($mask>11) ? 'top' : 'bottom';
 					$path = 'M'.$x.','.($y + 26).' A280,'.$arc.',0 0 '.$angle.' 273,305';
 				}
 			?>
+		<g class="hcd__group<?php echo ($e==0) ? ' hcd__group--active' : ''; ?> hcd__group--<?php echo $classTo; ?>" data-element="<?php echo $e; ?>">
+			
 			<text data-item="<?php echo $e; ?>" fill="<?php the_sub_field('colore'); ?>" class="hcd__text" text-anchor="middle" x="<?php echo $x; ?>" y="<?php 
 			$plus = 20;
 			if($e < 2) {

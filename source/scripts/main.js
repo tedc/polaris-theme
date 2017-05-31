@@ -90,30 +90,36 @@
           nextArrow: '.hcd .arrows__next'
         })
         .on('afterChange', function(event, slick, currentSlide) {
+            var transformOrigin = ($('.hcd__group[data-element="'+currentSlide+'"]').hasClass('hcd__group--top')) ? '50% 0%' : '50% 100%';
+            var y = ($('.hcd__group[data-element="'+currentSlide+'"]').hasClass('hcd__group--top')) ? 10 : -10;
+            TweenMax.to('.hcd__group--active text', .5, {
+              scale: 1
+            })
+            TweenMax.kill({y:true}, '.hcd__group--active text');
             $('.hcd__group--active').removeClass('hcd__group--active');
             $('.hcd__group[data-element="'+currentSlide+'"]').addClass('hcd__group--active');
             TweenMax.to('.hcd__group--active text', .5, {
                 scale: 1.3, 
-                transformOrigin: '50% 100%',
+                transformOrigin: transformOrigin,
                 onComplete: function() {
                   var Tl = new TimelineMax({
                     repeat: -1,
                     repeatDelay: 2.5
                   })
                   Tl.to('.hcd__group--active text', .5, {
-                    y : -10
+                    y : y
                   })
                   .to('.hcd__group--active text', .5, {
                     y : 0
                   })
                   .to('.hcd__group--active text', .5, {
-                    y : -10
+                    y : y
                   })
                   .to('.hcd__group--active text', .5, {
                     y : 0
                   })
                   .to('.hcd__group--active text', .5, {
-                    y : -10
+                    y : y
                   })
                   .to('.hcd__group--active text', .5, {
                     y : 0
