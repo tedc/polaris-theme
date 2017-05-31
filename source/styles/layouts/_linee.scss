@@ -230,7 +230,7 @@
 		}
 		.slick-current & {
 			right: $f;
-			transition-delay: $speed;
+			transition-delay: $speed*1.8;
 		}
 		@include breakpoint($bp) {
 			display: block;
