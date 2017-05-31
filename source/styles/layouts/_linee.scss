@@ -156,11 +156,6 @@
 		margin: 0;
 		@include grow('lg');
 		@include grow('lg', 'top');
-		&--text {
-			.linee__slider & {
-				padding-bottom: em(126px);
-			}
-		}
 	}
 	&__content {
 		@include grow();
