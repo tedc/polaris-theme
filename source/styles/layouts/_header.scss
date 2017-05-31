@@ -207,6 +207,7 @@
 	a {
 		font-size: em(40px);
 		line-height: percentage(50px/40px);
+		position: relative;
 	}
 	.menu__item--active a {
 		color: $main-color;
@@ -218,18 +219,18 @@
 		opacity: 0;
 		&:before {
 			height: 20px;
-			width: $f*0.55;
+			width: em(80px);
 			left: $p*-4;
 			top: auto;
-			bottom: -5px;
+			bottom: -2px;
 			transform-origin: left center;
 			transform: scaleX(0) translateZ(0);
-			transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
 		}
 		&:hover {
 			&:before {
 				left: $p*-1.5;
 				transform: scaleX(1) translateZ(0);
+				transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
 			}
 		}
 		// transition: transform $speed, opacity $speed;
