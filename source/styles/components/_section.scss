@@ -164,6 +164,7 @@
 		height: $f;
 		position: absolute;
 		z-index: 10;
+		transition: left $speed, right $speed;
 		[class*="-gray"] & {
 			background-color: $lighter-color;
 		}
@@ -171,23 +172,13 @@
 			background-color: $w;
 		}
 		&--left {
-			left: 0;
-			right: $f;
-			transition: left $speed, right $speed $speed/2;
 			[class*="--active"] & {
-				right: 0;
 				left: $f;
-				transition: right $speed, left $speed $speed/2;
 			}
 		}
 		&--right {
-			right: 0;
-			left: $f;
-			transition: right $speed, left $speed $speed/2;
 			[class*="--active"] & {
-				right: 0;
-				left: $f;
-				transition: left $speed, right $speed $speed/2;
+				right: $f;
 			}
 		}
 	}
