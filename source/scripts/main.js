@@ -95,7 +95,7 @@
             TweenMax.to('.hcd__group--active text', .25, {
               scale: 1,
               onComplete : function() {
-                TweenMax.killChildTweensOf($('.hcd__group--active text'));
+                TweenMax.killTweensOf($('.hcd__group--active text'));
               }
             })
             $('.hcd__group--active').removeClass('hcd__group--active');
