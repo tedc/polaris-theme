@@ -191,9 +191,9 @@
 				position: relative;
 				z-index: 1;
 				display: inline-block;
-				transition: color $speed;
+				transition: color $speed/2;
 				color: transparent;
-				transition-delay: $speed;
+				transition-delay: $speed*1.5;
 			}
 			&:before {
 				width: 180px;
