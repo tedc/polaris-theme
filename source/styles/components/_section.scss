@@ -218,7 +218,8 @@
 				left: $f;
 				content: '';
 				transition: left $speed*2, right $speed*2;
-				background-color: $brand-main;
+				background-color: $brand-light;
+				z-index: 10;
 			}
 			.section--active & {
 				&:before {
