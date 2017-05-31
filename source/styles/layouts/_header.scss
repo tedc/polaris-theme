@@ -89,10 +89,15 @@
 				transition: opacity $speed;
 			}
 			.banner--active & {
-				color: transparent;
+				color: transparent !important;
 				&:before {
-					color: $main-color;
+					color: $main-color !important;
 					opacity: 1;
+				}
+				&:hover {
+					&:before {
+						color: $main-color !important;
+					}
 				}
 			}
 		}
