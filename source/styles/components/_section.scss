@@ -36,6 +36,20 @@
 			line-height: percentage(25px/16px);
 			z-index: 1;
 		}
+		&--anim {
+			opacity: 0;
+			transition: opacity $speed*2 $speed, transform $speed*2 $speed;
+			.section__cell--even & {
+				transform: translate3d($p*2, 0, 0);
+			}
+			.section__cell--even & {
+				transform: translate3d($p*-2, 0, 0);
+			}
+			.section--active & {
+				opacity: 1;
+				transform: translate3d(0, 0, 0);
+			}
+		}
 		&--move {
 			@include breakpoint($bp) {	
 				.section__title {
@@ -164,7 +178,7 @@
 		height: $f;
 		position: absolute;
 		z-index: 10;
-		transition: left $speed, right $speed;
+		transition: left $speed*2, right $speed*2;
 		[class*="-gray"] & {
 			background-color: $lighter-color;
 		}
