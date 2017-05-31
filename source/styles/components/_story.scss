@@ -45,10 +45,9 @@
 		right: 0;
 		height: $f;
 		position: absolute;
-		z-index: 2;
 		transition: left $speed, right $speed;
 		display: none;
-		z-index: 20;
+		z-index: 2;
 		[class*="-gray"] & {
 			background-color: $lighter-color;
 		}
@@ -63,7 +62,8 @@
 			display: block;
 		}
 	}
-	&__mask-mask {
+	&__main-mask {
+		z-index: 9993;
 		.story--active & {
 			right: $f;
 		}
