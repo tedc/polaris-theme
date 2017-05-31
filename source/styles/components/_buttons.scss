@@ -8,9 +8,6 @@
 
 .button {
 	@extend %button;
-	&:hover {
-		color: $brand-main;
-	}
 	&__label {
 		font-size: em(20px);
 		position: relative;
@@ -77,9 +74,9 @@
 			content: '';
 			position: absolute;
 			top: 0;
-			left: $p*-1;
+			left: -2%;
 			height: $f;
-			right: calc(#{$f} + #{$p});
+			right: 102%;
 			z-index: 0;
 			background-color: $brand-light;
 			transition: right $speed $speed/2, left $speed;
@@ -87,8 +84,8 @@
 		&:hover {
 			color: $main-color;
 			&:before {
-				left: calc(#{$f} + #{$p});
-				right: $p*-1;
+				left: 102%;
+				right: -2%;
 				transition: right $speed, left $speed $speed/2;
 			}
 		}

@@ -1,4 +1,4 @@
-<div class="section section--grid section--grow-lg section<?php the_sub_field('background_color'); ?>"<?php scrollmagic('"class":"section--active","triggerHook":0.45,"duration":0,"reverse":false'); ?>>
+<div class="section section--grid section--grow-lg section<?php the_sub_field('background_color'); ?>"<?php scrollmagic('"class":"section--active","triggerHook":0.65,"duration":0,"reverse":false'); ?>>
 <?php $anim = get_sub_field('is_not_animated'); if(get_sub_field('title_columns')) : ?>
 <header class="section__cell section__cell--shrink section__cell-grow<?php echo (get_sub_field('title_columns_border_bottom')) ? ' section__cell--border-bottom' : ''; ?>"<?php if(get_sub_field('title_columns_border_bottom')): scrollmagic('"class":"section__cell--border-bottom-active"'); endif; ?>>
 	<?php if(get_sub_field('title_columns')) { ?>
