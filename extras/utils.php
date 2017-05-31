@@ -28,7 +28,5 @@
 	}
 
 	function scrollmagic($val) {
-		if(!is_handheld()) {
-			echo ' data-scrollmagic=\'{'.$val.'}\'';
-		}
+		echo ' data-scrollmagic=\'{'.$val.'}\'';
 	}

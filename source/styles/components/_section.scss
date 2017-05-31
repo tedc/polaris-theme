@@ -37,21 +37,23 @@
 			z-index: 1;
 		}
 		&--anim {
-			opacity: 0;
-			z-index: 3;
-			transition: opacity $speed*2, transform $speed*2;
-			&:not(.section__content--move){
-				.section__cell--even & {
-					transform: translate3d($p*2, 0, 0);
+			@include breakpoint($bp) {
+				opacity: 0;
+				z-index: 3;
+				transition: opacity $speed*2, transform $speed*2;
+				&:not(.section__content--move){
+					.section__cell--even & {
+						transform: translate3d($p*2, 0, 0);
+					}
+					.section__cell--odd & {
+						transform: translate3d($p*-2, 0, 0);
+					}
 				}
-				.section__cell--odd & {
-					transform: translate3d($p*-2, 0, 0);
+				.section--active & {
+					opacity: 1;
+					transform: translate3d(0, 0, 0);
+					transition-delay: $speed*2;
 				}
-			}
-			.section--active & {
-				opacity: 1;
-				transform: translate3d(0, 0, 0);
-				transition-delay: $speed*2;
 			}
 		}
 		&--move {
@@ -222,6 +224,7 @@
 		position: absolute;
 		z-index: 2;
 		transition: left $speed*2, right $speed*2;
+		display: none;
 		[class*="-gray"] & {
 			background-color: $lighter-color;
 		}
@@ -240,6 +243,9 @@
 			[class*="--active"] & {
 				right: $f;
 			}
+		}
+		@include breakpoint($bp) {
+			display: block;
 		}
 	}
 }
