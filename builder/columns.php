@@ -10,12 +10,6 @@
 <?php 
 endif;
 $col = 0;
-$is_anim = (get_sub_field('anim'));
-if($is_anim == 0) : ?>
-	<div class="section__mask section__mask--left"></div>
-<?php elseif($is_anim == 1) : ?>
-	<div class="section__mask section__mask--right"></div>
-<?php endif;
 while(have_rows('column')) : the_row('column'); ?>
 	<div class="section__cell section__cell--<?php echo get_row_layout(); ?> section__cell--<?php echo ($col%2==0) ? 'even' : 'odd'; ?> section__cell--s<?php the_sub_field('size'); ?><?php if(get_sub_field('align')): echo ' section__cell--s'. get_sub_field('size').'-align-'.get_sub_field('align'); endif;?>" id="col_<?php echo $col; ?>_<?php echo $row; ?>">
 	

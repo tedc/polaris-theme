@@ -101,38 +101,38 @@
                 scale: 1.3, 
                 transformOrigin: transformOrigin,
                 onComplete: function() {
-                  var Tl = new TimelineMax({
-                    repeat: -1,
-                    onRepeat: function() {
-                      if(!$('.hcd__group[data-element="'+currentSlide+'"]').hasClass('hcd__group--active')) {
-                        Tl
-                          .pause()
-                          .kill()
-                      }
-                    }
-                  })
-                  Tl.to('.hcd__group--active text', 2, {
-                    y : y
-                  })
-                  .to('.hcd__group--active text', 2, {
-                    x : -8
-                  })
-                  .to('.hcd__group--active text', 2, {
-                    x : y + 2
-                  })
-                   .to('.hcd__group--active text', 2, {
-                    x : -4
-                  })
-                  .to('.hcd__group--active text', 2, {
-                    x : y * -1
-                  })
-                  .to('.hcd__group--active text', 2, {
-                    x : 3
-                  })
-                  .to('.hcd__group--active text', 2, {
-                    x : 0,
-                    y : 0
-                  });
+                  // var Tl = new TimelineMax({
+                  //   repeat: -1,
+                  //   onRepeat: function() {
+                  //     if(!$('.hcd__group[data-element="'+currentSlide+'"]').hasClass('hcd__group--active')) {
+                  //       Tl
+                  //         .pause()
+                  //         .kill()
+                  //     }
+                  //   }
+                  // })
+                  // Tl.to('.hcd__group--active text', 2, {
+                  //   y : y
+                  // })
+                  // .to('.hcd__group--active text', 2, {
+                  //   x : -8
+                  // })
+                  // .to('.hcd__group--active text', 2, {
+                  //   x : y + 2
+                  // })
+                  //  .to('.hcd__group--active text', 2, {
+                  //   x : -4
+                  // })
+                  // .to('.hcd__group--active text', 2, {
+                  //   x : y * -1
+                  // })
+                  // .to('.hcd__group--active text', 2, {
+                  //   x : 3
+                  // })
+                  // .to('.hcd__group--active text', 2, {
+                  //   x : 0,
+                  //   y : 0
+                  // });
                 }
             });
           });
