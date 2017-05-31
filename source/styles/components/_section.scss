@@ -191,6 +191,9 @@
 				position: relative;
 				z-index: 1;
 				display: inline-block;
+				transition: color $speed;
+				color: transparent;
+				transition-delay: $speed;
 			}
 			&:before {
 				width: 180px;
@@ -207,11 +210,27 @@
 					left: auto;
 				}
 			}
-			&.section__title--active {
+			&:after {
+				position: absolute;
+				top: 0;
+				height: $f;
+				right: 0;
+				width: 0;
+				content: '';
+				transition: width $speed*2;
+			}
+			.section--active & {
 				&:before {
 					transform: scaleX(1) translateZ(0);
 					transition-delay: $speed;
-					transition-duration: $speed*2;
+					transition-duration: $speed*4;
+				}
+				strong {
+					color: $main-color;
+				}
+				&:after {
+					width: $f;
+					transition-delay: $speed*2;
 				}
 			}
 		}

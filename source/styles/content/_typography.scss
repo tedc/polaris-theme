@@ -85,7 +85,7 @@ figure {
     //transform: translate3d(#{em(12px*-1, 40px)}, 0, 0);
 }
 [class*="-big"] {
-    font-size: vw(100px);
+    font-size: vw(80px);
     @include breakpoint($bp) {
         font-size: em(60px);
     }
