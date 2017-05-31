@@ -220,7 +220,7 @@
 		&:before {
 			height: 20px;
 			width: em(80px);
-			left: $p*-4;
+			left: $p*-1.8;
 			top: auto;
 			bottom: -2px;
 			transform-origin: left center;
@@ -231,6 +231,9 @@
 				left: $p*-1.5;
 				transform: scaleX(1) translateZ(0);
 				transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+			}
+			a {
+				color: $main-color;
 			}
 		}
 		// transition: transform $speed, opacity $speed;
