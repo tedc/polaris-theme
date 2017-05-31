@@ -50,22 +50,20 @@
 	&-input {
 		margin: 0 !important;
 		width: percentage(555px/645px) !important;
-		margin-top: em($p*2) !important;
 		label{
 			&[for="wpsl-search-input"] {
 				display: none !important;
 			}
 		}
-		@include breakpoint($bp) {
-			margin-top: 0 !important;
-		}
 	}
-	&-directions {
-		color: $main-color;
-		font-weight: bold;
-		text-transform: uppercase;
-		&:hover {
-			color: $brand-main;
+	&-direction{
+		&s {
+			color: $main-color;
+			font-weight: bold;
+			text-transform: uppercase;
+			&:hover {
+				color: $brand-main;
+			}
 		}
 		&-wrap {
 			padding-top: em($p*2);
@@ -88,8 +86,10 @@
 		width: $f;
 		flex: 0 0 auto;
 		display: flex !important;
+		margin-top: em($p*2) !important;
 		@include breakpoint($bp) {
 			width: $f/2;
+			margin-top: 0 !important;
 		}
 	}
 }
