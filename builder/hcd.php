@@ -63,7 +63,7 @@
 					
 					$x = ($e%2==0) ? 140 : 546-140;
 					$y = ($e>1) ? 610-165 : 165;
-					$classTo = ($mask>1) ? 'top' : 'bottom';
+					$classTo = ($e>1) ? 'top' : 'bottom';
 					$path = 'M'.$x.','.($y + 26).' A180,180,0 0 '.$angle.' 273,305';
 				}
 				if($e > 3 && $e <=7) {
@@ -74,7 +74,7 @@
 					}	
 					$x = ($e%2==0) ? 75 : 546-75;
 					$y = ($e>5) ? 610-95 : 95;
-					$classTo = ($mask>5) ? 'top' : 'bottom';
+					$classTo = ($e>5) ? 'top' : 'bottom';
 					$path = 'M'.$x.','.($y + 26).' A200,220,0 0 '.$angle.' 273,305';
 				}
 				if($e > 7) {
@@ -113,7 +113,7 @@
 					}
 
 					$y = ($e>11) ? 610 : 0;
-					$classTo = ($mask>11) ? 'top' : 'bottom';
+					$classTo = ($e>11) ? 'top' : 'bottom';
 					$path = 'M'.$x.','.($y + 26).' A280,'.$arc.',0 0 '.$angle.' 273,305';
 				}
 			?>
