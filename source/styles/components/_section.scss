@@ -1,5 +1,6 @@
 .section {
 	@include grow();
+	position: relative;
 	.blog &, .category & {
 		overflow: visible;
 	}
@@ -158,6 +159,8 @@
 	}
 	&__mask {
 		top: 0;
+		left: 0;
+		right: 0;
 		height: $f;
 		position: absolute;
 		z-index: 10;
