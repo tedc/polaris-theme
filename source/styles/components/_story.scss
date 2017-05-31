@@ -127,7 +127,7 @@
 			}
 			&:hover {
 				&:after {
-					transform: scaleX(1.5) scaleY(1) translate3d(0,0,0);
+					transform: scaleX(1.5) scaleY(3) translate3d(0,0,0);
 					background-color: $brand-light;
 				}
 			}
