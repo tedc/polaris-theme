@@ -13,5 +13,6 @@
 <?php else : ?>
 <figure class="section__figure section__figure--full" style="background-image: url(<?php echo $image['url']; ?>)"<?php //scrollmagic('"tween":{"backgroundPosition" : "50% 10%"}, "duration" : "200vh", "triggerHook" : "onEnter", "triggerElement" : "#col_'.$col.'_'.$row.'"'); ?>>
 	<div class="section__figure-container"><img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>"></div>
+	<div class="section__mask section__mask--<?php echo ($col%2==0) ? 'left' : 'right'; ?>"></div>
 </figure>
 <?php endif;  endif; ?>
