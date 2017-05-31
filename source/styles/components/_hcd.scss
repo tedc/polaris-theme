@@ -39,7 +39,11 @@
 				display: inline-block;
 			}
 			&:before {
-				@include full;
+				position: absolute;
+				top: 0;
+				height: $f;
+				left: 0;
+				right: 0;
 				content: '';
 				transition: right $speed;
 				[class*="-gray"] & {
@@ -67,7 +71,11 @@
 			line-height: percentage(30px/$p);
 		}	
 		&:before {
-			@include full;
+			position: absolute;
+			top: 0;
+			height: $f;
+			left: 0;
+			right: 0;
 			content: '';
 			transition: right $speed;
 			[class*="-gray"] & {
