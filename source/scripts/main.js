@@ -91,12 +91,9 @@
         })
         .on('afterChange', function(event, slick, currentSlide) {
             var transformOrigin = ($('.hcd__group[data-element="'+currentSlide+'"]').hasClass('hcd__group--top')) ? '50% 0%' : '50% 100%';
-            var y = ($('.hcd__group[data-element="'+currentSlide+'"]').hasClass('hcd__group--top')) ? 10 : -10;
+            var y = ($('.hcd__group[data-element="'+currentSlide+'"]').hasClass('hcd__group--top')) ? 5 : -5;
             TweenMax.to('.hcd__group--active text', .25, {
-              scale: 1,
-              onComplete : function() {
-                TweenMax.killTweensOf($('.hcd__group--active text'));
-              }
+              scale: 1
             })
             $('.hcd__group--active').removeClass('hcd__group--active');
             $('.hcd__group[data-element="'+currentSlide+'"]').addClass('hcd__group--active');
@@ -106,25 +103,34 @@
                 onComplete: function() {
                   var Tl = new TimelineMax({
                     repeat: -1,
-                    repeatDelay: 2.5,
-                    delay: .5
+                    onRepeat: function() {
+                      if(!$('.hcd__group[data-element="'+currentSlide+'"]').hasClass('hcd__group--active')) {
+                        Tl
+                          .pause()
+                          .kill()
+                      }
+                    }
                   })
-                  Tl.to('.hcd__group--active text', .5, {
+                  Tl.to('.hcd__group--active text', 2, {
                     y : y
                   })
-                  .to('.hcd__group--active text', .5, {
-                    y : 0
+                  .to('.hcd__group--active text', 2, {
+                    x : -8
                   })
-                  .to('.hcd__group--active text', .5, {
-                    y : y
+                  .to('.hcd__group--active text', 2, {
+                    x : y + 2
                   })
-                  .to('.hcd__group--active text', .5, {
-                    y : 0
+                   .to('.hcd__group--active text', 2, {
+                    x : -4
                   })
-                  .to('.hcd__group--active text', .5, {
-                    y : y
+                  .to('.hcd__group--active text', 2, {
+                    x : y * -1
                   })
-                  .to('.hcd__group--active text', .5, {
+                  .to('.hcd__group--active text', 2, {
+                    x : 3
+                  })
+                  .to('.hcd__group--active text', 2, {
+                    x : 0,
                     y : 0
                   });
                 }
