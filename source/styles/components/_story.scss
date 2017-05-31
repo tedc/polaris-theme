@@ -110,6 +110,9 @@
 				transition-delay: $speed;
 			}
 		}
+		@include breakpoint($bp) {
+			padding-bottom: em(120px);
+		}
 	}
 	&__nav {
 		position: absolute;
