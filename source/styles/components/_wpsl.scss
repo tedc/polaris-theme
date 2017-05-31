@@ -81,9 +81,12 @@
 	float: none !important;
 	justify-content: flex-end;
 	form {
-		width: $f/2;
+		width: $f;
 		flex: 0 0 auto;
 		display: flex !important;
+		@include breakpoint($bp) {
+			width: $f/2;
+		}
 	}
 }
 
