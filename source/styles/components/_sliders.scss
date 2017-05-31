@@ -115,6 +115,8 @@
 			display: flex;
 			flex-wrap: wrap;
 			justify-content: center;
+			align-items: center;
+			align-content: center;
 			li {
 				flex: 0 0 auto;
 				width: $f/2;
@@ -145,6 +147,8 @@
 				z-index: 1;
 				transition: color $speed;
 				color: $gray;
+				font-weight: bold;
+				line-height: 1.25;
 			}
 			&:before {
 				z-index: 0;
@@ -163,7 +167,6 @@
 		.slick-active & {
 			span {
 				color: $main-color;
-				font-weight: bold;
 			}
 			&:before {
 				transform: translate3d(-20%, -50%, 0) scaleX(1);
