@@ -77,7 +77,7 @@
 				background-color: $w;
 			}
 			.slick-current & {
-				right: 0;
+				width: 0;
 				transition-delay: $speed*10;
 			}
 		}
