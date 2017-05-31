@@ -233,6 +233,7 @@
 		z-index: 9993;
 		.linee--active & {
 			right: $f;
+			transition-duration: $speed*2;
 		}
 	}
 }
