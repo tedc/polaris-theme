@@ -127,6 +127,13 @@
 		p {
 			line-height: percentage(26px/16px);
 		}
+		a {
+			color: $brand-main;
+			font-weight: bold;
+			&:hover {
+				color: $main-color;
+			}
+		}
 	}	
 	&__button {
 		@include grow('md', 'top');

@@ -50,14 +50,14 @@
 	&-input {
 		margin: 0 !important;
 		width: percentage(555px/645px) !important;
-		padding-top: em($p*2);
+		margin-top: em($p*2) !important;
 		label{
 			&[for="wpsl-search-input"] {
 				display: none !important;
 			}
 		}
 		@include breakpoint($bp) {
-			padding-top: 0;
+			margin-top: 0 !important;
 		}
 	}
 	&-directions {
