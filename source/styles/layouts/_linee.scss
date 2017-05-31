@@ -155,15 +155,14 @@
 		position: relative;
 		z-index: 1;
 		p {
-			max-width: 320px;
+			max-width: 450px;
 			padding-top: em($p*2, $p);
 			font-size: em($p);
 			line-height: percentage(30px/$p);
 		}
-	}
-	
-	&__button {
-		
+		@include breakpoint($bp) {
+			padding-bottom: em(120px);
+		}
 	}
 	&-header {
 		@include breakpoint($bp) {
