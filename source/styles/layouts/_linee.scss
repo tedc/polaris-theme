@@ -200,7 +200,7 @@
 			}
 		}
 	}
-	&__mask {
+	&__mask, &__main-mask {
 		top: 0;
 		left: 0;
 		right: 0;
@@ -215,7 +215,7 @@
 		[class*="-white"] & {
 			background-color: $w;
 		}
-		.slick-current & {
+		.slick-current &, .linee--active & {
 			right: $f;
 			transition: left $speed*2  $speed*2, right $speed*2  $speed*2;
 		}

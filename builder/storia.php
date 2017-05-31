@@ -11,7 +11,7 @@
 	}
 <?php endwhile; ?>
 </style>
-<section class="story story--grow-lg story<?php the_sub_field('background_color'); ?>">
+<section class="story story--grow-lg story<?php the_sub_field('background_color'); ?>"<?php scrollmagic('"class":"linee--active","triggerHook":0.75,"duration":0,"reverse":false'); ?>>>
 	<div class="story__for">	
 		<?php while(have_rows('anni')) : the_row('anni'); ?>
 			<div class="story__item story__item--grid" id="story_<?php the_sub_field('anno'); ?>" data-title="<?php the_sub_field('anno'); ?>">
@@ -35,6 +35,7 @@
 			</div>
 		<?php endwhile; ?>
 	</div>
+	<div class="story__mask-mask"></div>
 	<nav class="arrows">
 		<i class="icon-arrow arrows__prev"></i>
 		<i class="icon-arrow arrows__next"></i>

@@ -224,7 +224,7 @@
 			.section--active & {
 				&:before {
 					transform: scaleX(1) translateZ(0);
-					transition-delay: $speed*4;
+					transition-delay: $speed*4.5;
 					transition-duration: $speed*2;
 				}
 				strong {
