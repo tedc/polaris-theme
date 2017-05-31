@@ -36,10 +36,14 @@
 			}
 		}
 	}
+	&-street {
+		display: block;
+	}
 	&-gmap-canvas {
-		width: $f !important;
+		display: none;
 		@include breakpoint($bp) {
 			order: 2;
+			display: inherit;
 			width: $f/2 !important;
 		}
 	}
@@ -58,6 +62,9 @@
 		text-transform: uppercase;
 		&:hover {
 			color: $brand-main;
+		}
+		&-wrap {
+			padding-top: em($p*2);
 		}
 	}
 }
@@ -115,6 +122,11 @@
 		            transition: left $speed $speed/3, transform $speed;
 		        }
 		    }
+		}
+		#wpsl-stores {
+			@include breakpoint($bp, false) {
+				height: auto !important;
+			}
 		}
 	}
 	.wpsl-store-location {
