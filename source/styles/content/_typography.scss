@@ -196,6 +196,9 @@ figure {
             content: '';
             display: block;
             padding-top: 3px/4px * 100vw;
+            @include breakpoint($bp) {
+                display: none;
+            }
         }
     }
 }
