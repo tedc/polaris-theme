@@ -34,12 +34,22 @@
 	&__title {
 		&--big-upper {
 			overflow: hidden;
+			line-height: normal;
 			strong {
 				display: inline-block;
-				transform: translate3d(0,$f, 0);
-				transition: transform $speed;
+			}
+			&:before {
+				@include full;
+				content: '';
+				transition: right $speed;
+				[class*="-gray"] & {
+					background-color: $lighter-color;
+				}
+				[class*="-white"] & {
+					background-color: $w;
+				}
 				.slick-current & {
-					transform: translate3d(0, 0, 0);
+					right: $f;
 					transition-delay: $speed;
 				}
 			}
@@ -53,12 +63,21 @@
 		padding-top: em($p/2);
 		overflow: hidden;
 		p {
-			transform: translate3d(0,$f, 0);
-			transition: transform $speed;
 			font-size: em($p);
 			line-height: percentage(30px/$p);
+		}	
+		&:before {
+			@include full;
+			content: '';
+			transition: right $speed;
+			[class*="-gray"] & {
+				background-color: $lighter-color;
+			}
+			[class*="-white"] & {
+				background-color: $w;
+			}
 			.slick-current & {
-				transform: translate3d(0, 0, 0);
+				right: $f;
 				transition-delay: $speed;
 			}
 		}

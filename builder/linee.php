@@ -58,7 +58,7 @@
 	<?php 
 		while($linee->have_posts()) : $linee->the_post(); ?>
 	
-	<div class="linee__item linee__item--border linee__item--shrink linee__item--grow-lg" id="linee_<?php the_ID(); ?>"<?php scrollmagic('"tween":[{"backgroundPosition":"50% 80%"},{"backgroundPosition":"50% 20%"}],"triggerHook":1,"duration":"200vh","triggerElement":"#linee_'.get_the_ID().'"'); ?>>
+	<div class="linee__item linee__item--border linee__item--shrink linee__item--grow-lg" id="linee_<?php the_ID(); ?>">
 		<div class="linee__content linee__content--shrink linee__content--grow-lg">
 		<header class="linee__header">
 			<h2 class="linee__title linee__title--big-upper"><strong><?php the_title(); ?></strong></h2>

@@ -248,6 +248,12 @@
 	}
 }
 
+.slick-slide {
+	&:focus {
+		outline: none !important;
+	}
+}
+
 [data-scrollmagic] {
 	@include breakpoint($bp, false) {
 		opacity: 1 !important;
