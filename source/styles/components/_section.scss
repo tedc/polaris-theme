@@ -38,6 +38,7 @@
 		}
 		&--anim {
 			opacity: 0;
+			z-index: 3;
 			transition: opacity $speed*2 $speed, transform $speed*2 $speed;
 			.section__cell--even & {
 				transform: translate3d($p*2, 0, 0);
@@ -177,7 +178,7 @@
 		right: 0;
 		height: $f;
 		position: absolute;
-		z-index: 10;
+		z-index: 2;
 		transition: left $speed*2, right $speed*2;
 		[class*="-gray"] & {
 			background-color: $lighter-color;
