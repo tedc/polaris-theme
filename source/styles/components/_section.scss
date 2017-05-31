@@ -187,6 +187,9 @@
 		[class*="-white"] & {
 			background-color: $w;
 		}
+		[class*="--active"] & {
+			transition-delay: $speed;
+		}
 		&--left {
 			[class*="--active"] & {
 				left: $f;
