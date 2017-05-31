@@ -4,10 +4,14 @@
 		position: relative;
 		@include grow('lg');
 		&--svg {
+			display: none;
 			&:before {
 				content: '';
 				display: block;
 				padding-top: percentage(546px/610px);
+			}
+			@include breakpoint($bp) {
+				display: inherit;
 			}
 		}
 		.slick-track {
@@ -16,16 +20,12 @@
 		}
 	}
 	&__svg {
-		display: none;
 		position: absolute;
 		top: em($p*2);
 		left: em($p*2);
 		width: calc(#{$f} - #{em($p*4)});
 		height: calc(#{$f} - #{em($p*4)});
 		overflow: visible !important;
-		@include breakpoint($bp) {
-			display: inherit;
-		}
 	}
 	&__text {
 		text-transform: uppercase;
