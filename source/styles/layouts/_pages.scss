@@ -23,10 +23,10 @@
 				@include full;
 			}
 			&--top {
-				margin-bottom: em($p*-2);
+				margin-bottom: percentage($p/1286px)*-1;
 			}
 			&--bottom {
-				margin-top: em($p*-2);
+				margin-top: percentage($p/1286px)*-1;
 			}
 		}
 		&-content {

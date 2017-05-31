@@ -182,9 +182,11 @@
 
 .menu {
 	text-transform: uppercase;
-	min-width: $f;
+	width: $f;
+	flex: 0 0 auto;
 	@include breakpoint($bp) {
 		min-width: $f/3;
+		width: auto;
 	}
 	// opacity: 0;
 	// transition: opacity $speed;
