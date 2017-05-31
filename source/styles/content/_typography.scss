@@ -176,8 +176,24 @@ figure {
         width: $f !important;
         height: auto !important;    
         visibility: hidden;
+        .slick-track & {
+            position: absolute;
+        }
+        .single-post .post & {
+            visibility: visible;
+        }
         @include breakpoint($bp) {
             position: absolute;
+            .single-post .post & {
+                position: relative;
+            }
+        }
+    }
+    .slick-track & {
+        &:before {
+            content: '';
+            display: block;
+            padding-top: 3px/4px * $f;
         }
     }
 }
