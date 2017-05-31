@@ -40,13 +40,8 @@
 	<?php 
 		while($linee->have_posts()) : $linee->the_post(); ?>
 		#linee_<?php the_ID(); ?> {
-			background-image: url(<?php the_post_thumbnail_url('medium'); ?>);
-		}
-		@media screen and (min-width: <?php echo 640/16; ?>em) {
-			#linee_<?php the_ID(); ?> {
-				background-image: url(<?php the_post_thumbnail_url('large'); ?>);
-			}
-		}
+			background-image: url(<?php the_post_thumbnail_url('large'); ?>);
+		}		
 		@media screen and (min-width: <?php echo 850/16; ?>em) {
 			#linee_<?php the_ID(); ?> {
 				background-image: url(<?php the_post_thumbnail_url('full'); ?>);

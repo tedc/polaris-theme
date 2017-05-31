@@ -2,12 +2,7 @@
 <?php 
 	while(have_rows('anni')) : the_row('anni'); ?>
 		#story_<?php the_sub_field('anno'); ?> .story__cell--figure {
-		background-image: url(<?php echo get_sub_field('foto')['sizes']['medium']; ?>);
-	}
-	@media screen and (min-width: <?php echo 640/16; ?>em) {
-		#story_<?php the_sub_field('anno'); ?> .story__cell--figure {
-			background-image: url(<?php echo get_sub_field('foto')['sizes']['large']; ?>);
-		}
+		background-image: url(<?php echo get_sub_field('foto')['sizes']['large']; ?>);
 	}
 	@media screen and (min-width: <?php echo 850/16; ?>em) {
 		#story_<?php the_sub_field('anno'); ?> .story__cell--figure {

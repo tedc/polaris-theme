@@ -45,7 +45,7 @@
 		top: 3px/4px * 100vw;
 		bottom: auto;
 		transform: translate3d(0, -50%, 0);
-		.linee--grow-lg-top & {
+		.linee--grow-lg-top &, .hcd & {
 			margin-top: em($p * 4) / 2;
 			transform: none;
 		}
