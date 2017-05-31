@@ -74,9 +74,9 @@
 			content: '';
 			position: absolute;
 			top: 0;
-			left: -2%;
+			left: -10%;
 			height: $f;
-			right: 102%;
+			right: 110%;
 			z-index: 0;
 			background-color: $brand-light;
 			transition: right $speed $speed/2, left $speed;
@@ -84,8 +84,8 @@
 		&:hover {
 			color: $main-color;
 			&:before {
-				left: 102%;
-				right: -2%;
+				left: 110%;
+				right: -10%;
 				transition: right $speed, left $speed $speed/2;
 			}
 		}
