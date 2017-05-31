@@ -106,7 +106,8 @@
                 onComplete: function() {
                   var Tl = new TimelineMax({
                     repeat: -1,
-                    repeatDelay: 2.5
+                    repeatDelay: 2.5,
+                    delay: .5
                   })
                   Tl.to('.hcd__group--active text', .5, {
                     y : y
