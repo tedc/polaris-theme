@@ -15,10 +15,12 @@
 			<div class="linee__content linee__content--grow">
 				<?php the_field('description_text'); ?>
 			</div>
-			<a href="<?php the_permalink(); ?>" class="button">
-				<span class="button__label"><?php _e('Scopri di più', 'polaris'); ?></span>
-				<i class="icon-arrow-big"></i>
-			</a>
+			<div class="linee__button">
+				<a href="<?php the_permalink(); ?>" class="button">
+					<span class="button__label"><?php _e('Scopri di più', 'polaris'); ?></span>
+					<i class="icon-arrow-big"></i>
+				</a>
+			</div>
 		</div>
 	</div>
 	<?php $count++; endwhile; wp_reset_query(); ?>
