@@ -94,28 +94,28 @@
             $('.hcd__group[data-element="'+currentSlide+'"]').addClass('hcd__group--active');
             TweenMax.to('.hcd__group--active text', .5, {
                 scale: 1.3, 
-                transformOrigin: '50% 50%',
+                transformOrigin: '50% 100%',
                 onComplete: function() {
                   var Tl = new TimelineMax({
                     repeat: -1,
-                    repeatDelay: 1
+                    repeatDelay: 2.5
                   })
-                  Tl.to('.hcd__group--active text', .25, {
+                  Tl.to('.hcd__group--active text', .5, {
                     y : -10
                   })
-                  .to('.hcd__group--active text', .25, {
+                  .to('.hcd__group--active text', .5, {
                     y : 0
                   })
-                  .to('.hcd__group--active text', .25, {
+                  .to('.hcd__group--active text', .5, {
                     y : -10
                   })
-                  .to('.hcd__group--active text', .25, {
+                  .to('.hcd__group--active text', .5, {
                     y : 0
                   })
-                  .to('.hcd__group--active text', .25, {
+                  .to('.hcd__group--active text', .5, {
                     y : -10
                   })
-                  .to('.hcd__group--active text', .25, {
+                  .to('.hcd__group--active text', .5, {
                     y : 0
                   });
                 }
