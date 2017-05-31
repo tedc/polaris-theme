@@ -213,8 +213,25 @@
 	}
 	@include grow('lg');
 	.menu__item {
+		@extend %rect;
 		transform: translate3d(0, $f, 0);
 		opacity: 0;
+		&:before {
+			height: 20px;
+			width: $f*0.55;
+			left: $p*-4;
+			top: auto;
+			bottom: -5px;
+			transform-origin: left center;
+			transform: scaleX(0) translateZ(0);
+			transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+		}
+		&:hover {
+			&:before {
+				left: $p*-1.5;
+				transform: scaleX(1) translateZ(0);
+			}
+		}
 		// transition: transform $speed, opacity $speed;
 		// @for $i from 1 through 20 {
 		// 	&:nth-child(#{$i}) {
