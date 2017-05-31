@@ -46,7 +46,7 @@
 				@include full;
 				content: '';
 				transition: width $speed;
-				transition-delay: $speed*;
+				transition-delay: $speed;
 				[class*="-gray"] & {
 					background-color: $lighter-color;
 				}
