@@ -50,7 +50,7 @@
 			background-color: $brand-main;
 			height: 3px;
 			width: $f;
-			transition: opacity $speed, transform $speed;
+			transition: opacity $speed, transform $speed, background-color $speed;
 			&--top {
 				.banner--active & {
 					opacity: 0;
@@ -93,6 +93,16 @@
 				&:before {
 					color: $main-color;
 					opacity: 1;
+				}
+			}
+		}
+		&:hover {
+			.banner__toggle{
+				&-label {	
+					color: $brand-main;
+				}
+				&-line {
+					background-color: $main-color;
 				}
 			}
 		}
