@@ -92,12 +92,23 @@
         .on('afterChange', function(event, slick, currentSlide) {
             $('.hcd__group--active').removeClass('hcd__group--active');
             $('.hcd__group[data-element="'+currentSlide+'"]').addClass('hcd__group--active');
+            TweenMax.to('.hcd__group--active text', .5, {
+                scale: 1.3, 
+                transformOrigin: '50% 50%',
+                onComplete: function() {
+                  TweenMax.to('.hcd__group--active text', 1, {
+                    y : -10,
+                    repeat: -1,
+                    yoyo : true,
+                    repeatDelay: 1
+                  });
+                }
+            });
           });
         setTimeout(function() {
           $('.hcd__group').each(function() {
               $(this).on('click', function() {
                 var i = $(this).attr('data-element');
-                console.log(parseInt(i));
                 $('.hcd__slider').slick('slickGoTo', parseInt(i), false);
               });
             });
