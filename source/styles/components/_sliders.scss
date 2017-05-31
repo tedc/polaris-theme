@@ -41,6 +41,11 @@
 			transform: scaleX(-1);
 		}
 	}
+	@include breakpoint($bp, false) {
+		top: 3px/4px * $f;
+		bottom: auto;
+		transform: translate3d(0, -50%, 0);
+	}
 }
 
 .full-slider {
