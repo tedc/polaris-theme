@@ -245,7 +245,7 @@ function builder_acf_flexible_content_layout_title( $title, $field, $layout, $i 
 		$title = $title . ':';
 		if(get_sub_field('column')) : foreach(get_sub_field('column') as $row) :
 			if($row['acf_fc_layout'] ===  'text') {
-				if(trim($row['text']['titolo']) !='') {
+				if(trim($row['text']['title_text']) !='') {
 					$title .= ' '.$row['text']['title_text'];
 				} else {
 					$str = $row['text']['text'];
