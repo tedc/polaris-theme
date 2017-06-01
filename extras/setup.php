@@ -213,3 +213,65 @@
 	  ]);
 	}
 	add_action('widgets_init', 'searchWidget');
+
+
+	function column_acf_flexible_content_layout_title( $title, $field, $layout, $i ) {
+	$title = $title . ':';
+
+	if(get_sub_field('column')) : foreach(get_sub_field('column') as $row) :
+		if($row['acf_fc_layout'] == 'text') {
+			$title .= ' '.$row['text']['title_text'];
+		} 
+		if($row['acf_fc_layout']== 'immagine') {
+			$img = $row['immagine']['sizes']['thumbnail'];
+			$title .= ' <div class="thumbnail" style="display:inline-block; vertical-align:middle"><img src="'.$img.'" style="height:36px" /></div>';
+		}
+		if($row['acf_fc_layout']== 'page') {
+			$page = $row['title_text'];
+			$text = get_the_title($page->ID);
+			$title .= ' <div class="thumbnail" style="display:inline-block; vertical-align:middle"><img src="'.$file.'.jpg" style="height:36px" /></div>';
+		}	
+	endforeach; endif;
+	// return
+	return $title;
+	
+}
+
+// name
+add_filter('acf/fields/flexible_content/layout_title/name=columns', 'column_acf_flexible_content_layout_title', 10, 4);
+
+function builder_acf_flexible_content_layout_title( $title, $field, $layout, $i ) {
+	if($title === 'Colonne') :
+		$title = $title . ':';
+		if(get_sub_field('column')) : foreach(get_sub_field('column') as $row) :
+			if($row['acf_fc_layout'] ===  'text') {
+				if(trim($row['text']['titolo']) !='') {
+					$title .= ' '.$row['text']['title_text'];
+				} else {
+					$str = $row['text']['text'];
+					if(strlen($str) > $maxLength) {
+						$excerpt   = substr($str, $startPos, $maxLength-3);
+						$lastSpace = strrpos($excerpt, ' ');
+						$excerpt   = substr($excerpt, 0, $lastSpace);
+						$excerpt  .= '...';
+					} else {
+						$excerpt = $str;
+					}
+					$title .= ' '.$excerpt;
+				}
+			} 
+			if($row['acf_fc_layout'] === 'image') {
+				$img = $row['immagine']['sizes']['thumbnail'];
+				$title .= ' <div class="thumbnail" style="display:inline-block; vertical-align:middle"><img src="'.$img.'" style="height:36px" /></div>';
+			}
+			if($row['acf_fc_layout'] === 'page') {
+				$page = $row['page']);
+				$title .= ' '.get_the_title($page->ID);
+			}	
+		endforeach; endif;
+	endif;
+
+	return $title;
+}
+
+add_filter('acf/fields/flexible_content/layout_title/name=layout', 'builder_acf_flexible_content_layout_title', 10, 4);
