@@ -44,6 +44,7 @@
       var newPos = val - $('.banner').outerHeight(true);
       return newPos;
     });
+    console.log(StartScrollCtrl.scrollTo('#down'));
     if($(window).scrollTop() < StartScrollCtrl.scrollTo('#down')) {
       scrollTo('#down');
     }
