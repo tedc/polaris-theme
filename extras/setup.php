@@ -265,7 +265,7 @@ function builder_acf_flexible_content_layout_title( $title, $field, $layout, $i 
 				$title .= ' <div class="thumbnail" style="display:inline-block; vertical-align:middle"><img src="'.$img.'" style="height:36px" /></div>';
 			}
 			if($row['acf_fc_layout'] === 'page') {
-				$page = $row['page']);
+				$page = $row['page'];
 				$title .= ' '.get_the_title($page->ID);
 			}	
 		endforeach; endif;
