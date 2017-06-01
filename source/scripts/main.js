@@ -39,13 +39,7 @@
   }
 
   function startScroll() {
-    var StartScrollCtrl = new ScrollMagic.Controller();
-    StartScrollCtrl.scrollTo(function (val) {
-      var newPos = val - $('.banner').outerHeight(true);
-      return newPos;
-    });
-    console.log(StartScrollCtrl.scrollTo('#down'));
-    if($(window).scrollTop() < StartScrollCtrl.scrollTo('#down')) {
+    if($(window).scrollTop() < $('#down').offset().top - $('.banner').outerHeight(true)) {
       scrollTo('#down');
     }
   }
