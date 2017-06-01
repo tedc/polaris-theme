@@ -163,6 +163,19 @@
         }
       }
     },
+    'single_linee' : {
+      init: function() {
+        $('.custom__carousel').each(function() {
+          var $this = $(this);
+          $(this).on('beforeChange', function() {
+            $this.addClass('slick-animated');
+          })
+          $(this).on('afterChange', function() {
+            $this.removeClass('slick-animated');
+          })
+        });
+      }
+    },
     // Home page
     'home': {
       init: function() {
