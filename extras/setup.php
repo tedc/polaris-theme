@@ -245,10 +245,10 @@ function builder_acf_flexible_content_layout_title( $title, $field, $layout, $i 
 		$title = $title . ':';
 		if(get_sub_field('column')) : foreach(get_sub_field('column') as $row) :
 			if($row['acf_fc_layout'] ===  'text') {
-				if(trim($row['text']['title_text']) !='') {
-					$title .= ' '.$row['text']['title_text'];
+				if(trim($row['title_text']) !='') {
+					$title .= ' '.$row['title_text'];
 				} else {
-					$str = $row['text']['text'];
+					$str = $row['text'];
 					if(strlen($str) > $maxLength) {
 						$excerpt   = substr($str, $startPos, $maxLength-3);
 						$lastSpace = strrpos($excerpt, ' ');
@@ -262,7 +262,7 @@ function builder_acf_flexible_content_layout_title( $title, $field, $layout, $i 
 			} 
 			if($row['acf_fc_layout'] === 'image') {
 				$img = $row['immagine']['sizes']['thumbnail'];
-				$title .= ' <div class="thumbnail" style="display:inline-block; vertical-align:middle"><img src="'.$img.'" style="height:36px" /></div>';
+				$title .= ' <div class="thumbnail" style="display:inline-block; vertical-align:middle"><img src="'.$img.'" style="height:36px !important; width: auto !important;" /></div>';
 			}
 			if($row['acf_fc_layout'] === 'page') {
 				$page = $row['page'];
