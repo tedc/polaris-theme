@@ -38,6 +38,17 @@
     );
   }
 
+  function startScroll() {
+    var StartScrollCtrl = new ScrollMagic.Controller();
+    StartScrollCtrl.scrollTo(function (val) {
+      var newPos = val - $('.banner').outerHeight(true);
+      return newPos;
+    });
+    if($(window).scrollTop() < StartScrollCtrl.scrollTo('#down')) {
+      scrollTo('#down');
+    }
+  }
+
   var MenuTL = new TimelineMax({
     pause: true,
     onStart : function() {
@@ -71,6 +82,7 @@
             }
           });
         });
+        setTimeout(startScroll, 3000);
         $('[data-slick]').slick();
         $('[data-ps]').perfectScrollbar();
         $('[data-scroll-to]').each(function() {
