@@ -50,7 +50,5 @@
             }
         }
         $langs.="</ul>";
-        if(apply_filters( 'wpml_element_has_translations',  NULL, $post->ID, get_post_type()) ) {
-            echo $langs;
-        }
+        echo $langs;
     }
