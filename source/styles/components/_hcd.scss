@@ -4,15 +4,15 @@
 		position: relative;
 		@include grow('lg');
 		&--svg {
-			display: none;
+			//display: none;
 			&:before {
 				content: '';
 				display: block;
 				padding-top: percentage(546px/610px);
 			}
-			@include breakpoint($bp) {
-				display: inherit;
-			}
+			// @include breakpoint($bp) {
+			// 	display: inherit;
+			// }
 		}
 		.slick-track {
 			overflow: hidden;
