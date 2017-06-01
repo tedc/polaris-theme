@@ -163,6 +163,25 @@
 		justify-content: center;
 		margin: auto;
 	}
+	&__lang {
+		color: $light-color;
+		a {
+			color: $main-color;
+			&:hover {
+				color: $brand-main;
+			}
+			&.active {
+				color: $brand-main;
+				&:hover {
+					color: $main-color;
+				}
+			}
+		}
+		.sep {
+			display: inline-block;
+			padding: 0 em($p/2);
+		}
+	}
 }
 
 .breadcrumb {
