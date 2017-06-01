@@ -9,7 +9,7 @@
         <?php get_template_part('templates/breadcrumb'); ?>
     </div>
     <div class="banner__container banner__container--shrink">
-        <?php icl_language_selector(); ?>
+        <?php lang_menu(); ?>
         <span class="banner__toggle" data-open='{"el":"#banner","class":"banner--active"}'>
             <span class="banner__toggle-label" data-close="<?php _e('Chiudi', 'polaris'); ?>"><?php _e('Menu', 'polaris'); ?></span>
             <span class="banner__toggle-lines">
