@@ -274,3 +274,10 @@
 		background-position: center !important;
 	}
 }
+
+[tabindex] {
+	&:focus {
+		outline: none !important;
+		box-shadow: 0 !important;
+	}
+}

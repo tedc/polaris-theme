@@ -21,6 +21,8 @@
 	}
 	&:focus {
 		font-size: em($p);
+		outline: none !important;
+		box-shadow: 0 !important;
 	}
 }
 
