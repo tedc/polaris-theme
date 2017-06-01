@@ -259,26 +259,6 @@
 			line-height: percentage(26px/16px);
 		}
 	}
-	&__carousel {
-		&:after {
-			position: absolute;
-			left: 0;
-			width: $f;
-			background-color: $lighter-color;
-			content: '';
-			top: 0;
-			bottom: $f;
-			transition: bottom $speed $speed, top $speed;
-			z-index: 9992;
-		}
-		&--animated {
-			&:after{
-				top: $f;
-				bottom: 0;
-				transition: bottom $speed, top $speed $speed;
-			}
-		}
-	}
 }
 
 .slick-slide {
