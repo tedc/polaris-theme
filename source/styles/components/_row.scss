@@ -105,6 +105,10 @@
 				color: $main-color;
 				font-family: $main-font;
 			}
+			&:focus {
+				outline: none !important;
+				box-shadow: 0 !important;
+			}
 		}
 		.button {
 			flex: 0 0 auto;
