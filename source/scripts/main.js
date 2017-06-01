@@ -39,7 +39,7 @@
   }
 
   function startScroll() {
-    if($(window).scrollTop() < $('#down').offset().top - $('.banner').outerHeight(true)) {
+    if($(window).scrollTop() < $('#down').offset().top) {
       scrollTo('#down');
     }
   }
