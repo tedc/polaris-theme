@@ -168,10 +168,10 @@
         $('.custom__carousel').each(function() {
           var $this = $(this);
           $(this).on('beforeChange', function() {
-            $this.addClass('slick-animated');
+            $this.addClass('custom__carousel--animated');
           })
           $(this).on('afterChange', function() {
-            $this.removeClass('slick-animated');
+            $this.removeClass('custom__carousel--animated');
           })
         });
       }
