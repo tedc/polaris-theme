@@ -246,7 +246,7 @@ function builder_acf_flexible_content_layout_title( $title, $field, $layout, $i 
 		if(get_sub_field('column')) : foreach(get_sub_field('column') as $row) :
 			if($row['acf_fc_layout'] ===  'text') {
 				if(trim($row['title_text']) !='') {
-					$title .= ' <strong>'.$row['title_text'].'</strong>';
+					$title .= ' <strong style="color:#f9535d">'.$row['title_text'].'</strong>';
 				} else {
 					$str = $row['text'];
 					if(strlen($str) > $maxLength) {
