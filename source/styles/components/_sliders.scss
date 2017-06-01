@@ -235,13 +235,13 @@
 			height: auto !important;
 			display: block;
 			margin: 0 auto;
-			transition: transform $speed, opacity $speed;
+			transition: transform .3s, opacity .3s;
 			transform: scale(.75) translateZ(0);
 			opacity: .5;
 		}
 		figcaption {
 			opacity: 0;
-			transition: transform $speed $speed, opacity $speed;
+			transition: transform $speed .3s, opacity .3s;
 			transform: translate3d(0, $f, 0);
 		}
 		&.slick-center {
@@ -258,6 +258,9 @@
 		p {
 			line-height: percentage(26px/16px);
 		}
+	}
+	&__carousel {
+		transition-duration: .3s;
 	}
 }
 
