@@ -67,5 +67,5 @@
             $count++;
         }
         $langs .= '</div>';
-        echo $langs;
+        //echo $langs;
     }
