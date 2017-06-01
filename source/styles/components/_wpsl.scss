@@ -81,6 +81,10 @@
 	display: block !important;
 	width: $f !important;
 	height: 50px;
+	&:focus {
+		outline: none !important;
+		box-shadow: 0 !important;
+	}
 }
 #wpsl-search-wrap {
 	display: flex !important;

@@ -4,18 +4,15 @@
 		display: none;
 	}
 	.ps-scrollbar-y {
-		width: 10px;
+		width: 5px;
 		background-color: $light-color;
 		position: relative;
 		transition: background-color $speed;
-		.banner & {
-			background-color: $main-color;
-		}
 		&:hover {
 			background-color: $brand-main;
 		}
 		&-rail {
-			width: 10px;
+			width: 5px;
 			position: absolute;
 			right: 0;
 			background-color: $lighter-color;
