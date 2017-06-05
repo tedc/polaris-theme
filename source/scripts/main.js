@@ -150,7 +150,12 @@
                 $('.hcd__slider').slick('slickGoTo', parseInt(i), false);
               });
             });
-        }, 20)
+        }, 20);
+        $(window).on('wpcf7mailsent', function() {
+          if(window.ga) {
+            ga('send', 'event', 'form contatti', 'submit');
+          }
+        });
       },
       finalize: function() {
         // JavaScript to be fired on all pages, after page specific JS is fired
