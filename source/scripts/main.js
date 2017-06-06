@@ -22,7 +22,8 @@
   }
   function customSlick(c) {
     $('.'+c+'__for').on('init', function(event, slick) {
-      $(slick.slider).find('.'+c+'__carousel').slick('setPosition');
+      console.log($(slick.slider).find('.'+c+'__carousel'));
+      $(slick.slider).find('.'+c+'__carousel').slick('slickGoTo', 1, false);
     })
     $('.'+c+'__for').slick(
         {
