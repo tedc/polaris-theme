@@ -26,8 +26,8 @@
         console.log(slick.$slider);
         $(slick.$slider).find('.'+c+'__carousel').slick('slickGoTo', 1, false);
       })
-      .on('reInit', function(event, slick) {
-        console.log(slick.$slider);
+      .on('afterChange', function(event, slick, currentSlide) {
+        console.log(currentSlide);
         $(slick.$slider).find('.'+c+'__carousel').slick('slickGoTo', 1, false);
       })
     $('.'+c+'__for').slick(
