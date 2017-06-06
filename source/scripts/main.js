@@ -40,7 +40,7 @@
       $(this).find('.'+c+'__carousel').each(function() {
         $(this).slick('slickGoTo', 1, false);
       });
-    })
+    }, 200);
     $('.'+c+'__for').on('afterChange beforeChange', function() {
       console.log($(this));
       $(this).find('.'+c+'__carousel').each(function() {
