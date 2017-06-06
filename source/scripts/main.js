@@ -36,7 +36,7 @@
           }
         }
     );
-    $('.'+c+'__for').on('init reInit', function() {
+    $('.'+c+'__for').on('afterChange beforeChange', function() {
       console.log($this);
       $(this).find('.'+c+'__carousel').each(function() {
         $(this).slick('setPosition');
