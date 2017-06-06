@@ -158,18 +158,19 @@
               });
             });
         }, 20);
-        $(window).on('wpcf7submit', function() {
+        $('.wpcf7').find('.button').on('click', function() {
           $('.wpcf7 .wpcf7__loader').addClass('wpcf7__loader--active');
         });
-        $(window).on('wpcf7mailsent', function() {
-          console.log('sent');
-
-          if(window.ga) {
-            ga('send', 'event', 'form contatti', 'submit');
-          }
+        $(window).on('wpcf7submit', function() {
           setTimeout(function() {
             $('.wpcf7 .wpcf7__loader').removeClass('wpcf7__loader--active');
           }, 250);
+        });
+        $(window).on('wpcf7mailsent', function() {
+          if(window.ga) {
+            ga('send', 'event', 'form contatti', 'submit');
+          }
+          
         });
       },
       finalize: function() {
