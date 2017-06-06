@@ -36,11 +36,16 @@
           }
         }
     );
+    setTimeout(function() {
+      $(this).find('.'+c+'__carousel').each(function() {
+        $(this).slick('slickGoTo', 1, false);
+      });
+    })
     $('.'+c+'__for').on('afterChange beforeChange', function() {
       console.log($(this));
       $(this).find('.'+c+'__carousel').each(function() {
-        $(this).slick('setPosition');
-      })
+        $(this).slick('slickGoTo', 1, false);
+      });
     })
   }
 
