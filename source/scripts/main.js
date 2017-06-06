@@ -21,6 +21,9 @@
     scrollController.scrollTo(val);
   }
   function customSlick(c) {
+    $('.'+c+'__for').on('init', function(event, slick) {
+      console.log(event, slick);
+    })
     $('.'+c+'__for').slick(
         {
           slidesToShow: 1,
@@ -36,17 +39,6 @@
           }
         }
     );
-    setTimeout(function() {
-      $(this).find('.'+c+'__carousel').each(function() {
-        $(this).slick('slickGoTo', 1, false);
-      });
-    }, 200);
-    $('.'+c+'__for').on('afterChange beforeChange', function() {
-      console.log($(this));
-      $(this).find('.'+c+'__carousel').each(function() {
-        $(this).slick('slickGoTo', 1, false);
-      });
-    })
   }
 
   function startScroll() {
