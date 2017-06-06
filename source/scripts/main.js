@@ -37,7 +37,7 @@
         }
     );
     $('.'+c+'__for').on('afterChange beforeChange', function() {
-      console.log($this);
+      console.log($(this));
       $(this).find('.'+c+'__carousel').each(function() {
         $(this).slick('setPosition');
       })
