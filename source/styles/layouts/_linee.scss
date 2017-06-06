@@ -203,7 +203,7 @@
 				transform: translate3d($per*-1, 0, 0);
 			}
 			&--dm {
-				$per: percentage(200px/400px);
+				$per: percentage(300px/400px);
 				@include breakpoint($bp) {
 					transform: translate3d($per*-1, 0, 0);
 				}
