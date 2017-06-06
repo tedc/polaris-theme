@@ -27,6 +27,33 @@
 }
 
 .wpcf7 {
+	&__loader {
+		@include full;
+		transform: scaleY(1) translate3d(0, 0, 0);
+		transition: transform $speed $speed;
+		transform-origin: center top;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		text-align: center;
+		align-content: center;
+		z-index: 9992;
+		background-color: $w;
+		[class*="gray"] & {
+			background-color: $lighter-color;
+		}
+		p {
+			opacity: 0;
+			transition: opacity $speed;
+		}
+		&--active {
+			transform-origin: center bottom;
+			transition-delay: 0;
+			p {
+				transition-delay: $speed;
+			}
+		}
+	}
 	&-form{
 		&.invalid {
 			.required {

@@ -23,11 +23,9 @@
   function customSlick(c) {
     $('.'+c+'__for')
       .on('init', function(event, slick) {
-        console.log(slick.$slider);
         $(slick.$slider).find('.'+c+'__carousel').slick('slickGoTo', 1, false);
       })
       .on('afterChange', function(event, slick, currentSlide) {
-        console.log(currentSlide);
         $(slick.$slider).find('.'+c+'__carousel').slick('slickGoTo', 1, false);
       })
     $('.'+c+'__for').slick(
@@ -160,10 +158,14 @@
               });
             });
         }, 20);
+        $(window).on('wpcf7submit', function() {
+          $('.wpcf7 .wpcf7__loader').removeClass('wpcf7__loader--active');
+        });
         $(window).on('wpcf7mailsent', function() {
           if(window.ga) {
             ga('send', 'event', 'form contatti', 'submit');
           }
+          $('.wpcf7 .wpcf7__loader').removeClass('wpcf7__loader--active');
         });
       },
       finalize: function() {
