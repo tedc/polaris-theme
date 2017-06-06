@@ -36,6 +36,11 @@
           }
         }
     );
+    $('.'+c+'__for').on('init reInit', function() {
+      $(this).find('.'+c+'__carousel').each(function() {
+        $(this).slick('setPosition');
+      })
+    })
   }
 
   function startScroll() {
