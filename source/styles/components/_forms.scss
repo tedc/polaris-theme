@@ -29,7 +29,7 @@
 .wpcf7 {
 	&__loader {
 		@include full;
-		transform: scaleY(1) translate3d(0, 0, 0);
+		transform: scaleY(0) translate3d(0, 0, 0);
 		transition: transform $speed $speed;
 		transform-origin: center top;
 		display: flex;
@@ -49,6 +49,7 @@
 		&--active {
 			transform-origin: center bottom;
 			transition-delay: 0;
+			transform: scaleY(1s) translate3d(0, 0, 0);
 			p {
 				transition-delay: $speed;
 			}
