@@ -159,8 +159,7 @@
             });
         }, 20);
         $(window).on('wpcf7submit', function() {
-          console.log('submit');
-          $('.wpcf7 .wpcf7__loader').removeClass('wpcf7__loader--active');
+          $('.wpcf7 .wpcf7__loader').addClass('wpcf7__loader--active');
         });
         $(window).on('wpcf7mailsent', function() {
           console.log('sent');
@@ -168,7 +167,9 @@
           if(window.ga) {
             ga('send', 'event', 'form contatti', 'submit');
           }
-          $('.wpcf7 .wpcf7__loader').removeClass('wpcf7__loader--active');
+          setTimeout(function() {
+            $('.wpcf7 .wpcf7__loader').removeClass('wpcf7__loader--active');
+          }, 250);
         });
       },
       finalize: function() {
