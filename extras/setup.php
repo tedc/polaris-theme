@@ -1,6 +1,6 @@
 <?php
 	function ng_app($html) {
-		$html =  $html . ' class="no-js" ng-app="polaris"';
+		$html =  $html . ' class="no-js"';
 		return $html;
 	}
 
