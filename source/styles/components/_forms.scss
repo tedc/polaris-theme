@@ -53,6 +53,7 @@
 			transform: scaleY(1) translate3d(0, 0, 0);
 			p {
 				transition-delay: $speed;
+				opacity: 1;
 			}
 		}
 	}
