@@ -16,7 +16,7 @@
 		}
 		.slick-track {
 			overflow: hidden;
-			@include breakpoint($bp) {
+			@include breakpoint(1100px) {
 				display: flex;
 			}
 		}

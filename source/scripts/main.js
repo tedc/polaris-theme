@@ -104,7 +104,7 @@
           nextArrow: '.hcd .arrows__next',
           responsive: [
             {
-              breakpoint: 850,
+              breakpoint: 1100,
               settings : {
                 adaptiveHeight: true
               }
