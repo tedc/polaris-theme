@@ -118,11 +118,10 @@
 		}
 	}
 	a {
-		color: $w;
+		color: $main-color;
 		font-weight: bold;
-		transition: opacity $speed;
 		&:hover {
-			opacity: .9;
+			color: $brand-main;
 		}
 	}
 }

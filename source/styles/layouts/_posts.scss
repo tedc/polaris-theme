@@ -188,6 +188,16 @@
 		@include grow('small', 'top');
 		@include grow('lg');
 	}
+	&__title {
+		&--big-upper{
+			a {
+				color: $main-color;
+				&:hover {
+					color: $brand-main;
+				}
+			}
+		}
+	}
 }
 
 .cff {
