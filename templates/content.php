@@ -7,7 +7,7 @@ if(!isset($blog)) {
 		 if($count == 0) {
 			$cell = 'news__cell';
 		} else {
-			$cell = ($count%2==0) ? 'news__cell news__cell--shrink-left-only news__cell--grow-lg news__cell--s6' : 'news__cell news__cell--grow-lg news__cell--s6';
+			$cell = ($count%2==0) ? 'news__cell news__cell--shrink-left-half news__cell--grow-lg news__cell--s6' : 'news__cell news__cell--grow-lg news__cell--s6 news__cell--shrink-right-half';
 		}
 	}
     
