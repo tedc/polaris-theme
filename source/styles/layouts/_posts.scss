@@ -377,19 +377,22 @@
 #sbi_load {
 	padding-top: 0 !important;
 	margin-top: em($p*2);
+	@include normalize_padding;
 	.fa {
 		display: none;
 	}
 	.sbi_follow_btn {
-		@include normalize_padding;
 		text-transform: uppercase;
 		font-weight: bold;
+		display: inline-block;
+		@extend .button--more;
+		a {
+			position: relative;
+			z-index: 1;
+		}
 	}
 	@include breakpoint($bp) {
 		text-align: center;
-	}
-	a {
-		@extend .button--more;
 	}
 }
 
