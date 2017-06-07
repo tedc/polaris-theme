@@ -26,7 +26,7 @@
 
     $query = new WP_Query(
         array(
-            'post__in' => array($posts__in),
+            'post__in' => $posts__in,
             'posts_per_page' => 2
         )
     ); 
