@@ -82,7 +82,7 @@
 		@include grow('md');
 		p {
 			font-size: em(18px);
-			line-height: percentage(22px/18px);
+			line-height: percentage(32px/18px);
 		}
 	}
 	&__cell {
