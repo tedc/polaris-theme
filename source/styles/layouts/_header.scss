@@ -167,6 +167,7 @@
 			align-items: center;
 			font-size: em(14px);
 			color: $brand-main !important;
+			text-transform: uppercase;
 			strong {
 				display: inline-block;
 				margin-right: em($p/2, 14px);
@@ -174,7 +175,7 @@
 			.icon-arrow-big {
 				transform: rotate(90deg) translate3d(0,0,0);
 				color: $main-color;
-				font-size: em($p, 14px);
+				font-size: em(16px, 14px);
 				transition: transform $speed, color $speed;
 			}
 			&:hover {
