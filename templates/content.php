@@ -28,7 +28,7 @@ if(!isset($blog)) {
 		<h2 class="post__title"><a href="<?php the_permalink(); ?>" class="post__link post__link--normal"><?php the_title(); ?></a></h2>
 		</div>
 	</header>
-	<div class="post__summary post__summary--grow-md<?php echo (!isset($related)) ? ' post__summary--shrink' : ''; ?>">
+	<div class="post__summary post__summary--grow-md post__summary--shrink">
 		<?php the_excerpt(); ?>
 	</div>
 	<footer class="post__footer post__footer--shrink">
