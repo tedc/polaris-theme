@@ -20,7 +20,7 @@
 			margin: 0 em($p*-1);
 		}
 		@include breakpoint($bp) {
-			margin: 0 0 0 em($p*-2);
+			margin: 0 em($p*-2);
 		}
 		img {
 			width: $f !important;
