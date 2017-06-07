@@ -212,10 +212,12 @@
 					padding-top: em($p, 22px);
 				}
 				opacity: 0;
-				transition: opacity $speed;
+				transform: translate3d($p*2, 0, 0);
+				transition: opacity $speed, transform $speed;
 				.linee-header--active & {
 					opacity: 1;
-					transition-delay: $speed*2;
+					transition-delay: $speed;
+					transform: translate3d(0, 0, 0);
 				}
 			}
 		}
