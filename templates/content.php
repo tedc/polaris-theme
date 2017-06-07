@@ -14,7 +14,7 @@ if(!isset($blog)) {
 	<header>
 		<?php if(!isset($related)) : ?>
 		<figure class="post__thumbnail<?php if($count>0) {
-				echo ($count%2==0) ' post__thumbnail--shrink-left-only' : ' post__thumbnail--shrink-right-only';
+				echo ($count%2==0) ? ' post__thumbnail--shrink-left-only' : ' post__thumbnail--shrink-right-only';
 			} ?>">
 			<?php 
 			$kind = ($count > 0) ? 'news' : 'full';
