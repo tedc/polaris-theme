@@ -386,8 +386,10 @@
 		font-weight: bold;
 	}
 	@include breakpoint($bp) {
-		width: $f/2;
-		margin-left: $f/2;
+		text-align: center;
+	}
+	a {
+		@extend .button--more;
 	}
 }
 
