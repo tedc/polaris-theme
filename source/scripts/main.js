@@ -40,15 +40,7 @@
           customPaging: function(slider,i){
             var title = $(slider.$slides[i]).attr("data-title");
             return '<h4 class=\"'+c+'__title '+c+'__title--upper\"><span>'+title+'</span></h4>';
-          },
-          responsive: [
-            {
-              breakpoint: 850,
-              settings : {
-                adaptiveHeight: (c == 'story') ? true : false
-              }
-            }
-          ]
+          }
         }
     );
   }
@@ -109,7 +101,15 @@
           dots:false,
           fade: true,
           prevArrow: '.hcd .arrows__prev',
-          nextArrow: '.hcd .arrows__next'
+          nextArrow: '.hcd .arrows__next',
+          responsive: [
+            {
+              breakpoint: 850,
+              settings : {
+                adaptiveHeight: true
+              }
+            }
+          ]
         })
         .on('afterChange', function(event, slick, currentSlide) {
             var transformOrigin = ($('.hcd__group[data-element="'+currentSlide+'"]').hasClass('hcd__group--top')) ? '50% 0%' : '50% 100%';
