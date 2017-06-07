@@ -40,7 +40,15 @@
           customPaging: function(slider,i){
             var title = $(slider.$slides[i]).attr("data-title");
             return '<h4 class=\"'+c+'__title '+c+'__title--upper\"><span>'+title+'</span></h4>';
-          }
+          },
+          responsive: [
+            {
+              breakpoint: 850,
+              settings : {
+                adaptiveHeight: (c == 'story') ? true : false
+              }
+            }
+          ]
         }
     );
   }

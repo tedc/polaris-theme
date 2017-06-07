@@ -51,6 +51,9 @@
 		}
 		.hcd & {
 			top: 0;
+			left: 50%;
+			transform: translate3d(-50%, -50%, 0);
+			margin-top: em($p) * -1;
 		}
 		.full-slider & {
 			top: auto;
