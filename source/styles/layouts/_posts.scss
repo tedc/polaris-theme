@@ -45,6 +45,7 @@
 	}
 	&__title {
 		position: relative;
+		line-height: 1.1;
 		@extend %rect;
 		&:before {
 			transform-origin: left center;
@@ -81,6 +82,7 @@
 		@include grow('md');
 		p {
 			font-size: em(18px);
+			line-height: percentage(22px/18px);
 		}
 	}
 	&__cell {
