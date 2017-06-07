@@ -257,6 +257,8 @@
 		@extend %rect;
 		transform: translate3d(0, $f, 0);
 		opacity: 0;
+		backface-visibility: hidden;
+		perspective: 1000px;
 		&:before {
 			height: em(20px);
 			width: em(80px);
@@ -265,6 +267,8 @@
 			bottom: 0px;
 			transform-origin: left center;
 			transform: scaleX(0) translateZ(0);
+			backface-visibility: hidden;
+			perspective: 1000px;
 		}
 		&:hover {
 			&:before {
