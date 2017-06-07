@@ -175,7 +175,7 @@
 			.icon-arrow-big {
 				transform: rotate(90deg) translate3d(0,0,0);
 				color: $main-color;
-				font-size: em(16px, 14px);
+				font-size: em(11px, 14px);
 				transition: transform $speed, color $speed;
 			}
 			&:hover {
