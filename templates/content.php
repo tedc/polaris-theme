@@ -13,7 +13,9 @@ if(!isset($blog)) {
 <article <?php post_class($cell); ?>>
 	<header>
 		<?php if(!isset($related)) : ?>
-		<figure class="post__thumbnail">
+		<figure class="post__thumbnail<?php if($count>0) {
+				echo ($count%2==0) ' post__thumbnail--shrink-left-only' : ' post__thumbnail--shrink-right-only';
+			} ?>">
 			<?php 
 			$kind = ($count > 0) ? 'news' : 'full';
 			the_post_thumbnail($kind); ?>
@@ -26,5 +28,7 @@ if(!isset($blog)) {
 	<div class="post__summary post__summary--grow-md<?php echo (!isset($related)) ? ' post__summary--shrink' : ''; ?>">
 		<?php the_excerpt(); ?>
 	</div>
+	<footer class="post__footer post__footer--shrink">
 	<a href="<?php the_permalink(  ); ?>" class="button button--more"><strong><?php _e('Scopri di più', 'polaris'); ?></strong></a>
+	</footer>
 </article>
