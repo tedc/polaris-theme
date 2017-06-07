@@ -11,7 +11,7 @@
 	        </a>
 			<?php the_field('footer_text', 'options'); ?>
 		</div>
-		<div class="footer__item">
+		<div class="footer__item footer__item--credits">
 			<em><?php _e('Design & Development by', 'polaris'); ?></em><br/>
 			<a class="icon-credits" href="http://www.bspkn.it" rel="nofollow" target="_blank"></a>
 		</div>

@@ -42,4 +42,12 @@
 	em {
 		font-size: 10px;
 	}
+	&__item {
+		&--credits {
+			text-align: center;
+			a {
+				font-size: $p;
+			}
+		}
+	}
 }
