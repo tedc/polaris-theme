@@ -196,9 +196,9 @@
 				transition-delay: $speed*1.5;
 			}
 			&:before {
-				width: 180px;
+				width: 160px;
 				height: $p;
-				left: -90px;
+				left: -40px;
 				bottom: -10px;
 				top: auto !important;
 				transform: scaleX(0) translateZ(0);
