@@ -4,7 +4,11 @@ if(!isset($blog)) {
 	if(isset($related)) {
 		$cell = 'related__cell related__cell--grow-top related__cell--shrink related__cell--s6';
 	} else {
-		$cell = ($count > 0) ? 'news__cell news__cell--grow-lg news__cell--s6' : 'news__cell';
+		 if($count > 0) {
+			$cell = 'news__cell';
+		} else {
+			$cell = ($count%2==0) ? 'news__cell news__cell--shrink-left-only news__cell--grow-lg news__cell--s6' : 'news__cell news__cell--grow-lg news__cell--s6';
+		}
 	}
     
 } else {
@@ -13,9 +17,7 @@ if(!isset($blog)) {
 <article <?php post_class($cell); ?>>
 	<header>
 		<?php if(!isset($related)) : ?>
-		<figure class="post__thumbnail<?php if($count>0) {
-				echo ($count%2==0) ? '' : ' post__thumbnail--shrink-right-half';
-			} ?>">
+		<figure class="post__thumbnail">
 			<?php 
 			$kind = ($count > 0) ? 'news' : 'full';
 			the_post_thumbnail($kind); ?>
