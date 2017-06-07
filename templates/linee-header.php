@@ -5,12 +5,7 @@
 <header id="header" class="linee-header linee-header--full linee-header--grid">
 	<style>
 		.linee-header__cell--figure {
-			background-image: url(<?php the_post_thumbnail_url('medium'); ?>);
-		}
-		@media screen and (min-width: <?php echo 640/16; ?>em) {
-			.linee-header__cell--figure {
-				background-image: url(<?php the_post_thumbnail_url('large'); ?>);
-			}
+			background-image: url(<?php the_post_thumbnail_url('large'); ?>);
 		}
 		@media screen and (min-width: <?php echo 850/16; ?>em) {
 			.linee-header__cell--figure {
