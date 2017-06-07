@@ -212,7 +212,7 @@
 					padding-top: em($p, 22px);
 				}
 				opacity: 0;
-				transition: left $speed;
+				transition: opacity $speed;
 				.linee-header--active & {
 					opacity: 1;
 					transition-delay: $speed*2;
