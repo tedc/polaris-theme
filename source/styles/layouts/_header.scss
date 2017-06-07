@@ -387,9 +387,10 @@
 				animation: scrollAnim infinite 6s;
 			}
 			&:hover {
-				.icon-arrow {
-					transform: translate3d(-5px,0,0) scaleX(-1);
-				}
+				color: $main-color;
+				// .icon-arrow {
+				// 	transform: translate3d(-5px,0,0) scaleX(-1);
+				// }
 			}
 		}
 		&--up {
