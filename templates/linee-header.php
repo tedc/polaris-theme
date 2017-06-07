@@ -2,7 +2,7 @@
 	use Roots\Sage\Titles; 
 	$kind = get_field('header_kind');
 ?>
-<header id="header" class="linee-header linee-header--full linee-header--grid"<?php scrollmagic('"class":"linee--active","triggerHook":0.75,"duration":0,"reverse":false'); ?>>
+<header id="header" class="linee-header linee-header--full linee-header--grid"<?php scrollmagic('"class":"linee-header--active","triggerHook":0.75,"duration":0,"reverse":false'); ?>>
 	<style>
 		.linee-header__cell--figure {
 			background-image: url(<?php the_post_thumbnail_url('large'); ?>);
