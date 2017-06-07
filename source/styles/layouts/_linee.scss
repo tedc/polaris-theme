@@ -178,6 +178,25 @@
 		@include breakpoint($bp) {
 			min-height: mh($p*4);
 		}
+		&__mask {
+			top: 0;
+			left: 0;
+			right: 0;
+			height: $f;
+			position: absolute;
+			transition: left $speed, right $speed;
+			display: none;
+			z-index: 2;
+			background-color: $lighter-color;
+			@include breakpoint($bp) {
+				display: block;
+			}
+			z-index: 9993;
+			.linee--active & {
+				right: $f;
+				transition-duration: $speed*2;
+			}
+		}
 		&__cell {
 			@include grow();
 			&--content {
