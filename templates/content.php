@@ -2,7 +2,7 @@
 <?php 
 if(!isset($blog)) {
 	if(isset($related)) {
-		$cell = 'related__cell related__cell--grow-top related__cell--shrink related__cell--s6';
+		$cell = 'related__cell related__cell--grow-top related__cell--s6';
 	} else {
 		 if($count == 0) {
 			$cell = 'news__cell';
