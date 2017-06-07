@@ -117,14 +117,12 @@
 			@include breakpoint($bp) {
 				padding-left: em($p*2, $p);
 				max-width: percentage(225px/360px);
+				padding-bottom: em(120px, $p);
 			}
 			.slick-current & {
 				transform: translate3d(0, 0, 0);
 				transition-delay: $speed;
 			}
-		}
-		@include breakpoint($bp) {
-			padding-bottom: em(120px);
 		}
 	}
 	&__nav {

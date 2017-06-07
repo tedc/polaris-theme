@@ -16,7 +16,9 @@
 		}
 		.slick-track {
 			overflow: hidden;
-			display: flex;
+			@include breakpoint($bp) {
+				display: flex;
+			}
 		}
 	}
 	&__svg {
@@ -70,6 +72,9 @@
 		p {
 			font-size: em($p);
 			line-height: percentage(30px/$p);
+			@include breakpoint($bp) {
+				padding-bottom: em(100px);
+			}
 		}	
 		&:before {
 			@include full;
@@ -85,9 +90,6 @@
 				width: 0;
 				transition-delay: $speed*1.8;
 			}
-		}
-		@include breakpoint($bp, false) {
-			padding-bottom: em(100px);
 		}
 	}
 	&__group {
