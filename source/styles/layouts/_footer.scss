@@ -47,6 +47,8 @@
 			text-align: center;
 			a {
 				font-size: $p;
+				display: inline-block;
+				margin-top: $p/2;
 			}
 		}
 	}
