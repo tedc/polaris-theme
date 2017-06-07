@@ -5,7 +5,7 @@ if(!isset($blog)) {
 		$cell = 'related__cell related__cell--grow-top related__cell--s6';
 	} else {
 		 if($count == 0) {
-			$cell = 'news__cell';
+			$cell = 'news__cell news__cell--first';
 		} else {
 			$cell = ($count%2==0) ? 'news__cell news__cell--shrink-left-half news__cell--grow-lg news__cell--s6' : 'news__cell news__cell--grow-lg news__cell--s6 news__cell--shrink-right-half';
 		}
@@ -14,9 +14,21 @@ if(!isset($blog)) {
 } else {
 	$cell = ($blog) ? 'news__cell news__cell--grow-top news__cell--shrink news__cell--s6' : '';
 } ?>
-<article <?php post_class($cell); ?>>
+<article <?php post_class($cell); ?> id="post_<?php the_ID(); ?>">
 	<header>
 		<?php if(!isset($related)) : ?>
+		<?php if($count == 0) : ?>
+		<style type="text/css">
+			#post_<?php the_ID(); ?> .post__thumbnail {
+				background-image: url(<?php the_post_thumbnail_url('large'); ?>);
+			}
+			@media screen and (min-width: <?php echo 850/16; ?>em) {
+				#post_<?php the_ID(); ?> .post__thumbnail {
+					background-image: url(<?php the_post_thumbnail_url('full'); ?>);
+				}
+			}
+		</style>
+		<?php endif; ?>
 		<figure class="post__thumbnail">
 			<?php 
 			$kind = ($count > 0) ? 'news' : 'full';

@@ -8,7 +8,7 @@
 	if($q->have_posts()) : ?>
 <div class="news news--shrink news--grow-lg news--grid">
 <header class="news__cell news__cell--shrink news__cell--s12">
-	<h2 class="news__title news__title--big-upper"><?php _e('Life', 'polaris'); ?></h2>
+	<h2 class="news__title news__title--big-upper"><a href="<?php echo get_permalink( get_option( 'page_for_posts' )); ?>"><?php _e('Life', 'polaris'); ?></a></h2>
 </header>
 <?php 
 	while($q->have_posts()) : $q->the_post();

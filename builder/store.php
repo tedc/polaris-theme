@@ -23,7 +23,7 @@
 <div class="store-row store-row--shrink store-row--grow-lg store-row--grid-center" id="store_row_<?php echo $row; ?>">
 	<div class="store-row__cell store-row__cell--grow-md store-row__cell--s6-shrink"<?php scrollmagic($sm); ?>>
 	<h3 class="store-row__title store-row__title--big-upper">
-		<strong><?php _e('Store', 'polaris'); ?></strong>
+		<a href="<?php the_permalink(  ); ?>"><?php _e('Store', 'polaris'); ?></a>
 	</h3>
 	<div class="store-row__content store-row__content--grow-top">
 		<p><?php _e('Trova il rivenditore Polaris più vicino a te.', 'polaris'); ?></p>

@@ -117,6 +117,14 @@
 			justify-content: center;
 		}
 	}
+	a {
+		color: $w;
+		font-weight: bold;
+		transition: opacity $speed;
+		&:hover {
+			opacity: .9;
+		}
+	}
 }
 
 .container {

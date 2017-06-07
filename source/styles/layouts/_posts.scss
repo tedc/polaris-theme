@@ -35,6 +35,21 @@
 				height: 90%;
 			}
 		}
+		.news__cell--first & {
+			position: relative;
+			background: {
+				position: center;
+				size: cover;
+				repeat: no-repeat;
+			}
+			padding-top: percentage(290px/1286px);
+			img {
+				position: absolute;
+				visibility: hidden;
+				top: 0;
+				left: 0;
+			}
+		}
 	}
 	&__title {
 		position: relative;
