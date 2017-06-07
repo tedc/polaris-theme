@@ -84,7 +84,7 @@
             }
           });
         });
-        setTimeout(startScroll, 3000);
+        //setTimeout(startScroll, 3000);
         $('[data-slick]').slick();
         $('[data-ps]').perfectScrollbar();
         $('[data-scroll-to]').each(function() {
