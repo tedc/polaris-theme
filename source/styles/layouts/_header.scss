@@ -162,14 +162,14 @@
 			visibility: visible;
 			opacity: 1;
 		}
-		.footer__download {
+		.banner__download {
 			display: inline-flex;
 			align-items: center;
 			font-size: em(14px);
 			color: $brand-main !important;
 			strong {
 				display: inline-block;
-				margin-right: em($p/2);
+				margin-right: em($p/2, 14px);
 			}
 			.icon-arrow-big {
 				transform: rotate(90deg) translate3d(0,0,0);
