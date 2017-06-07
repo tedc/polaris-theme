@@ -15,13 +15,6 @@
 		font-weight: bold;
 	}
 	&__thumbnail {
-		margin: 0 -10px;
-		@include breakpoint(640px) {
-			margin: 0 em($p*-1);
-		}
-		@include breakpoint($bp) {
-			margin: 0 em($p*-2);
-		}
 		img {
 			width: $f !important;
 			height: auto !important;
