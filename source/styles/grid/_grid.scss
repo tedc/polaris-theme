@@ -277,6 +277,30 @@ $unit: $p;
             }
         }
     }
+    [class*="shrink-right-half"] {
+        padding: {
+            left: 0;
+            right: 0;
+        }
+        @include breakpoint($breakpoint) {
+            padding: {
+                left: 0;
+                right: em($unit);
+            }
+        }
+    }
+    [class*="shrink-left-half"] {
+        padding: {
+            left: 0;
+            right: 0;
+        }
+        @include breakpoint($breakpoint) {
+            padding: {
+                left: em($unit);
+                right: 0;
+            }
+        }
+    }
     [class*="shrink-right-double"] {
         @include breakpoint($breakpoint) {
             padding: {
