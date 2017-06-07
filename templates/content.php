@@ -4,7 +4,7 @@ if(!isset($blog)) {
 	if(isset($related)) {
 		$cell = 'related__cell related__cell--grow-top related__cell--shrink related__cell--s6';
 	} else {
-		 if($count > 0) {
+		 if($count == 0) {
 			$cell = 'news__cell';
 		} else {
 			$cell = ($count%2==0) ? 'news__cell news__cell--shrink-left-only news__cell--grow-lg news__cell--s6' : 'news__cell news__cell--grow-lg news__cell--s6';
