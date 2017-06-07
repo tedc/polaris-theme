@@ -81,6 +81,7 @@
 	display: block !important;
 	width: $f !important;
 	height: 50px;
+	padding: 0 $p/2;
 	&:focus {
 		outline: none !important;
 		box-shadow: 0 !important;
