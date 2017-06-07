@@ -73,10 +73,11 @@
 		overflow: hidden;
 		position: relative;
 		p {
-			font-size: em($p);
+			font-size: em(15px);
 			line-height: percentage(30px/$p);
 			@include breakpoint($bp) {
-				padding-bottom: em(100px);
+				font-size: em($p);
+				padding-bottom: em(100px, $p);
 			}
 		}	
 		&:before {
