@@ -166,21 +166,23 @@
 	&__download {
 		display: inline-flex;
 		align-items: center;
-		color: $brand-main;
+		font-size: em(14px);
+		color: $brand-main !important;
 		strong {
 			display: inline-block;
 			margin-right: em($p/2);
 		}
-		.icon-arrow {
+		.icon-arrow-big {
 			transform: rotate(90deg) translate3d(0,0,0);
 			color: $main-color;
+			font-size: em($p, 14px);
 			transition: transform $speed, color $speed;
 		}
 		&:hover {
-			color: $main-color;
-			.icon-arrow {
-				color: $brand-main;
-				transform: rotate(90deg) translate3d(20px,0,0);
+			color: $main-color !important;
+			.icon-arrow-big {
+				color: $brand-main !important;
+				transform: rotate(90deg) translate3d(3px,0,0);
 			}
 		}
 	}
