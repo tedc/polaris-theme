@@ -30,7 +30,6 @@
             'posts_per_page' => 2
         )
     ); 
-    var_dump($posts__in);
     if($query->have_posts()) : 
 ?>
 <div class="related related--shrink related--grid related--grow-lg">

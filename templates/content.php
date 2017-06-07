@@ -22,8 +22,9 @@ if(!isset($blog)) {
 			$kind = ($count > 0) ? 'news' : 'full';
 			the_post_thumbnail($kind); ?>
 		</figure>
+		<?php endif; ?>
 		<div class="post__header post__header--shrink">
-		<?php endif; get_template_part('templates/entry-meta'); ?>
+		<?php get_template_part('templates/entry-meta'); ?>
 		<h2 class="post__title"><a href="<?php the_permalink(); ?>" class="post__link post__link--normal"><?php the_title(); ?></a></h2>
 		</div>
 	</header>
