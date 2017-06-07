@@ -195,11 +195,15 @@
 			}
 		}
 		&__title {
-			$per: percentage(137px/400px);
 			strong {
 				display: inline-block;
 			}
 			@include breakpoint($bp) {
+				$per: percentage(200px/400px);
+				transform: translate3d($per*-1, 0, 0);
+			}
+			@include breakpoint(1100px) {
+				$per: percentage(137px/400px);
 				transform: translate3d($per*-1, 0, 0);
 			}
 			&--dm {

@@ -1,5 +1,6 @@
 .section {
 	@include grow();
+	overflow: hidden;
 	position: relative;
 	.blog &, .category & {
 		overflow: visible;
