@@ -7,6 +7,12 @@
 			min-height: mh(80px);
 			display: flex;
 			flex-direction: column;
+			.home & {
+				@include breakpoint($bp, false) {
+					height: 3/4 * 100vw;
+					min-height: 0;
+				}
+			}
 		}
 		&-figure {
 			position: relative;
