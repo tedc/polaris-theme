@@ -142,20 +142,46 @@
 	}
 	&__footer {
 		width: $f;
-		text-align: right;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
 		visibility: hidden;
-			opacity: 0;
+		opacity: 0;
 		transform: translate3d(0, 100%, 0);
 		transition: $speed;
 		@include grow('small');
 		a {
 			font-size: em(22px);
 			padding: 0 em(10px);
+			&:hover {
+				color: $brand-main;
+			}
 		}
 		.banner--active & {
 			transform: translate3d(0, 0, 0);
 			visibility: visible;
 			opacity: 1;
+		}
+	}
+	&__download {
+		display: inline-flex;
+		align-items: center;
+		color: $brand-main;
+		strong {
+			display: inline-block;
+			margin-right: em($p/2);
+		}
+		.icon-arrow {
+			transform: rotate(90deg) translate3d(0,0,0);
+			color: $main-color;
+			transition: transform $speed, color $speed;
+		}
+		&:hover {
+			color: $main-color;
+			.icon-arrow {
+				color: $brand-main;
+				transform: rotate(90deg) translate3d(20px,0,0);
+			}
 		}
 	}
 	&__scroller {

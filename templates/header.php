@@ -33,7 +33,10 @@
             </div>
         </div>
         <div class="banner__footer banner__footer--grow banner__footer--shrink">
-            <?php get_template_part( 'templates/social' ); ?>
+            <a class="banner__download" href="<?php the_field('catalogo', 'options'); ?>"><strong><?php _e('Scarica il catalogo', 'polaris'); ?></strong><i class="icon-arrow"></i></a>
+            <div class="banner__footer-item">
+                <?php get_template_part( 'templates/social' ); ?>
+            </div>
         </div>
     </nav>
 </header>
