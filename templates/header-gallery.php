@@ -1,4 +1,4 @@
-<div class="slider" data-slick='{"fade":true,"dots":true,"arrows":false,"infinite":true,"autoplay":true,"autoplaySpeed":5000}'>
+<div class="slider" data-slick='{"fade":true,"dots":true,"arrows":false,"infinite":true,"autoplay":true,"autoplaySpeed":3000,"pauseOnHover":false}'>
 	<?php $images = get_field('slider');
 		foreach ($images as $image):
 			$full = is_mobile() ? $image['sizes']['large'] : $image['url'];
