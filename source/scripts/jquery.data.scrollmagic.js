@@ -100,7 +100,8 @@
         var scene = new ScrollMagic.Scene({
             triggerElement: triggerElement,
             triggerHook: options.triggerHook || 0,
-            duration: options.duration
+            duration: options.duration,
+            reverse: options.reverse || false
         });
         if (options.events) {
             addSceneEvents(scene, options.events);

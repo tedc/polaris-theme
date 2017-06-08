@@ -1,5 +1,5 @@
 <?php 
-	$linee = new WP_Query(array('post_type'=>'linee', 'posts_per_page'=>-1, 'orderby'=>'title', 'order'=>'ASC')); 	
+	$linee = new WP_Query(array('post_type'=>'linee', 'posts_per_page'=>-1, 'orderby'=>'menu_order')); 	
 	if(get_sub_field('linee_kind') > 0) :
 ?>
 <section class="linee linee--grow-lg-top linee<?php the_sub_field('background_color'); ?>" id="linee_slider_<?php echo $row; ?>"<?php scrollmagic('"class":"linee--active","triggerHook":0.75,"duration":0,"reverse":false'); ?>>
