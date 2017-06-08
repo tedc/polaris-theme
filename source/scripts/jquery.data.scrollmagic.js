@@ -101,7 +101,7 @@
             triggerElement: triggerElement,
             triggerHook: options.triggerHook || 0,
             duration: options.duration,
-            reverse: options.reverse || false
+            reverse: options.reverse || true
         });
         if (options.events) {
             addSceneEvents(scene, options.events);
