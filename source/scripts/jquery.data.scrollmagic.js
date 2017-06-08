@@ -83,6 +83,7 @@
     }
 
     function createScene(element, options) {
+        console.log(options.reverse);
         var triggerElement = options.triggerElement || element;
         if (typeof triggerElement == "function") {
             triggerElement = triggerElement.call(element);
