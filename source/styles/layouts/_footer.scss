@@ -52,7 +52,7 @@
 		&--credits {
 			text-align: center;
 			a {
-				font-size: $base_font_size;
+				font-size: $base_font_size - 2px;
 				display: inline-block;
 				margin-top: $p/4;
 			}
