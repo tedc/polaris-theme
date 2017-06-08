@@ -83,7 +83,7 @@
     }
 
     function createScene(element, options) {
-        console.log(options.reverse);
+        var reverse = (typeof options.reverse != "undefined") ? options.reverse : true;
         var triggerElement = options.triggerElement || element;
         if (typeof triggerElement == "function") {
             triggerElement = triggerElement.call(element);
@@ -102,7 +102,7 @@
             triggerElement: triggerElement,
             triggerHook: options.triggerHook || 0,
             duration: options.duration,
-            reverse: options.reverse || true
+            reverse: reverse
         });
         if (options.events) {
             addSceneEvents(scene, options.events);
