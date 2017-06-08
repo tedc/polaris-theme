@@ -1,4 +1,4 @@
-<?php $sm = '"tween":[{"opacity":0,"y":20},{"opacity":1,"y":0}],"triggerHook":0.85,"duration":0'; ?>
+<?php $sm = '"tween":[{"opacity":0,"y":20},{"opacity":1,"y":0}],"triggerHook":0.85,"duration":0,"reverse":false'; ?>
 <section class="sheet sheet--grow-lg sheet--shrink">
 	<header class="sheet__header sheet__header--shrink"<?php scrollmagic('"tween":{"y": -100},"triggerHook":1,"triggerElement":".sheet","duration":"200vh"'); ?>>
 		<h2 class="sheet__title sheet__title--huge-upper"><?php the_title(); ?></h2>
@@ -37,7 +37,7 @@
 				<figure class="sheet__cell sheet__cell--image sheet__cell--grow-md-top"<?php 
 				$hook = 1 - ($m/20);
 				$hook = 0.9;
-				scrollmagic('"tween":[{"opacity":0},{"opacity":1}],"triggerHook":'.$hook.',"duration":0'); ?>>
+				scrollmagic('"tween":[{"opacity":0},{"opacity":1}],"triggerHook":'.$hook.',"duration":0,"reverse":false'); ?>>
 					<img src="<?php echo get_sub_field('materiale')['sizes']['medium']; ?>" alt="<?php the_sub_field('descrizione'); ?>">
 					<figcaption>
 					<?php the_sub_field('descrizione'); ?>
