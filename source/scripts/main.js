@@ -84,6 +84,11 @@
             }
           });
         });
+        $('#wpsl-widget-form').find('.button').on('click', function() {
+          if($('[name="wpsl-search-input"]').val()) {
+            ga('send', 'event', 'ricerca', $('[name="wpsl-search-input"]').val());
+          }
+        });
         //setTimeout(startScroll, 3000);
         $('[data-slick]').slick();
         $('[data-ps]').perfectScrollbar();
@@ -188,6 +193,11 @@
     'store' : {
       init: function() {
         $('#wpsl-stores').perfectScrollbar();
+        $('#wpsl-search-btn').on('click', function() {
+          if($('#wpsl-search-input').val() != '') {
+            ga('send', 'event', 'ricerca', $('#wpsl-search-input').val());
+          }
+        });
         var qs = window.location.href;
         if(qs.indexOf('?') !== -1) {
           qs = qs.split('?');
@@ -195,7 +205,7 @@
           $('[name="'+qs[0]+'"]').val(decodeURIComponent(qs[1])).trigger('change');
           setTimeout(function() {
             $('#wpsl-search-btn').trigger('click');
-          }, 200)
+          }, 200);
         }
       }
     },

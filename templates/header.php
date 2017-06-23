@@ -33,7 +33,7 @@
             </div>
         </div>
         <div class="banner__footer banner__footer--grow banner__footer--shrink">
-            <a class="banner__download" href="<?php acf_set_language_to_default(); the_field('catalogo', 'options'); acf_unset_language_to_default(); ?>" target="_blank" title="<?php _e('Scarica il catalogo', 'polaris'); ?>"><strong><?php _e('Scarica il catalogo', 'polaris'); ?></strong><i class="icon-arrow-big"></i></a>
+            <a class="banner__download" href="<?php acf_set_language_to_default(); the_field('catalogo', 'options'); acf_unset_language_to_default(); ?>" target="_blank" title="<?php _e('Scarica il catalogo', 'polaris'); ?>" onclick="ga('send', 'event', 'download', 'cataloghi');"><strong><?php _e('Scarica il catalogo', 'polaris'); ?></strong><i class="icon-arrow-big"></i></a>
             <div class="banner__footer-item">
                 <?php get_template_part( 'templates/social' ); ?>
             </div>
