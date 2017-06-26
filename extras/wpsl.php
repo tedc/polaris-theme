@@ -40,12 +40,11 @@
 	    return $templates;
 	}
 
-add_filter( 'wpsl_store_meta', 'custom_store_meta', 10, 2 );
+// add_filter( 'wpsl_store_meta', 'custom_store_meta', 10, 2 );
 
-function custom_store_meta( $store_meta, $store_id ) {
+// function custom_store_meta( $store_meta, $store_id ) {
     
-    $meta_fields['etichetta'] = get_field('etichetta', $store_id);
+//     $meta_fields['etichetta'] = get_field('etichetta', $store_id);
 
-    return $meta_fields;
-}
-;
+//     return $meta_fields;
+// }
