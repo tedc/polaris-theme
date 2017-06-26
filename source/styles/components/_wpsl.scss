@@ -3,6 +3,15 @@
 		display: flex;
 		flex-wrap: wrap;
 	}
+	&-label {
+		font-size: em(15px);
+		font-weight: bold;
+		position: relative;
+		z-index: 1;
+		text-transform: uppercase;
+		transition: color $speed;
+		color: $brand-light;
+	}
 	&-search {
 		width: $f;
 		flex: 0 0 auto;
@@ -136,6 +145,9 @@
 		            left: 0;
 		            transform: scaleX(1) translateZ(0);
 		            transition: left $speed $speed/3, transform $speed;
+		        }
+		        .wpsl-label {
+		        	color: $main-color;
 		        }
 		    }
 		}
