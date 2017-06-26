@@ -107,4 +107,5 @@
         $listing_template .= "\t\t\t" . '<%= createDirectionUrl() %>' . "\r\n"; 
         $listing_template .= "\t\t" . '</div>' . "\r\n";
         $listing_template .= "\t" . '</li>';
+        return $listing_template;
 	}
