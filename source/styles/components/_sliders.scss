@@ -40,6 +40,10 @@
 		&.arrows__prev {
 			transform: scaleX(-1);
 		}
+		.section__slider & {
+			width: em(40px);
+			height: em(40px);
+		}
 	}
 	@include breakpoint($bp, false) {
 		top: 3px/4px * 100vw;
