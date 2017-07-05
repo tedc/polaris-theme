@@ -43,6 +43,8 @@
 		.section__slider & {
 			@include breakpoint($bp) {
 				width: auto;
+				height: auto;
+				font-size: $p*2;
 				background-color: transparent;
 				color: $main-color;
 				&:hover {
@@ -56,6 +58,7 @@
 		.section__slider--contain & {
 			bottom: auto;
 			top: 50%;
+			left: 0;
 			transform: translate3d(0, -50%, 0);
 			justify-content: space-between;
 			display: flex;
