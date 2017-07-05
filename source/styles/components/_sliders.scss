@@ -41,8 +41,24 @@
 			transform: scaleX(-1);
 		}
 		.section__slider & {
-			width: em(40px);
-			height: em(40px);
+			@include breakpoint($bp) {
+				width: auto;
+				background-color: transparent;
+				color: $main-color;
+				&:hover {
+					background-color: transparent;
+					color: $brand-main;
+				}
+			}
+		}
+	}
+	@include breakpoint($bp) {
+		.section__slider--contain & {
+			bottom: auto;
+			top: 50%;
+			transform: translate3d(0, -50%, 0);
+			justify-content: space-between;
+			display: flex;
 		}
 	}
 	@include breakpoint($bp, false) {

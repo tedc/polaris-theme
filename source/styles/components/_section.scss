@@ -28,6 +28,7 @@
 	}
 	&__slider {
 		width: $f;
+		position: relative;
 	}
 	&__content {
 		@include grow();
@@ -251,7 +252,7 @@
 		right: 0;
 		height: $f;
 		position: absolute;
-		z-index: 2;
+		z-index: 9992;
 		transition: left $speed*2, right $speed*2;
 		display: none;
 		[class*="-gray"] & {
