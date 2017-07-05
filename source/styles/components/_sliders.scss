@@ -64,6 +64,11 @@
 		.story & {
 			margin-top: em($p);
 		}
+		.section__slider & {
+			bottom: 0;
+			top: auto;
+			transform: none;
+		}
 	}
 }
 
