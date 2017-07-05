@@ -11,7 +11,7 @@
 endif;
 $col = 0;
 while(have_rows('column')) : the_row('column'); ?>
-	<div class="section__cell section__cell--<?php echo get_row_layout(); ?> section__cell--<?php echo ($col%2==0) ? 'even' : 'odd'; ?> section__cell--s<?php the_sub_field('size'); ?><?php if(get_sub_field('align')): echo ' section__cell--s'. get_sub_field('size').'-align-'.get_sub_field('align'); endif;?>" id="col_<?php echo $col; ?>_<?php echo $row; ?>">
+	<div class="section__cell<?php echo (get_row_layout() == 'slider' && get_sub_field('background_size') == 'contain') ? ' section__cell--shrink' : ''; ?> section__cell--<?php echo get_row_layout(); ?> section__cell--<?php echo ($col%2==0) ? 'even' : 'odd'; ?> section__cell--s<?php the_sub_field('size'); ?><?php if(get_sub_field('align')): echo ' section__cell--s'. get_sub_field('size').'-align-'.get_sub_field('align'); endif;?>" id="col_<?php echo $col; ?>_<?php echo $row; ?>">
 	
 	<?php 
 		include( locate_template( 'builder/columns/'.get_row_layout().'.php', false, true ) );

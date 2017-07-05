@@ -10,8 +10,9 @@
 		@include grow();
 		&--slider {
 			min-height: 100vw;
+			display: flex;
 			@include breakpoint($bp) {
-				min-height: mh(80px);
+				min-height: mh(160px);
 			}
 		}
 		&--odd, &--even {
@@ -24,6 +25,9 @@
 		// 		}
 		// 	}
 		// }
+	}
+	&__slider {
+		width: $f;
 	}
 	&__content {
 		@include grow();
