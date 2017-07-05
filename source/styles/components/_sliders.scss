@@ -44,7 +44,7 @@
 			@include breakpoint($bp) {
 				width: auto;
 				height: auto;
-				font-size: $p*2;
+				font-size: $p;
 				background-color: transparent;
 				color: $main-color;
 				&:hover {

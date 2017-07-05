@@ -252,7 +252,7 @@
 		right: 0;
 		height: $f;
 		position: absolute;
-		z-index: 9992;
+		z-index: 9996;
 		transition: left $speed*2, right $speed*2;
 		display: none;
 		[class*="-gray"] & {
