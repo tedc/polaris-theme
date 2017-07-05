@@ -10,6 +10,9 @@
 		@include grow();
 		&--slider {
 			min-height: 100vw;
+			@include breakpoint($bp) {
+				min-height: mh(80px);
+			}
 		}
 		&--odd, &--even {
 			order: 0;
