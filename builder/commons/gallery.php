@@ -1,4 +1,5 @@
-<div class="slider" data-slick='{"fade":true,"speed":1000, "dots":false,"infinite":true,"prevArrow":"#slider_<?php echo $row; ?> .arrows__prev","nextArrow":"#slider_<?php echo $row; ?> .arrows__next"}'>
+<?php $opts = (get_sub_field('background_size') == 'contain') ? ',"autoplay":true,"autoplaySpeed":3000' : ''; ?>
+<div class="slider" data-slick='{"fade":true,"speed":1000, "dots":false,"infinite":true,"prevArrow":"#slider_<?php echo $row; ?> .arrows__prev","nextArrow":"#slider_<?php echo $row; ?> .arrows__next"<?php echo $opts; ?>}'>
 	<?php foreach ($images as $image) : ?>
 	<div class="slider__item" style="background-image:url(<?php echo $image['url']; ?>)"<?php //scrollmagic('"tween":{"backgroundPosition" : "50% 30%"}, "duration" : "200vh", "triggerHook" : "onEnter", "triggerElement" : "#slider_'.$row.'"'); ?>>
 		<?php echo wp_get_attachment_image( $image['ID'], 'large',false, array('class'=>'thumb--hidden')); ?>
