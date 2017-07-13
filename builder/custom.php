@@ -1,5 +1,5 @@
 <?php if(have_rows('items', 'options')) : 
-$count = (count(get_sub_field('items')) > 2) ? 3 : 2;
+$count = (count(get_sub_field('items', 'options')) > 2) ? 3 : 2;
 $responsive = ', "responsive":[{"breakpoint" : 850,"settings" :{"slidesToShow": 2}},{"breakpoint" : 480,"settings" :{"slidesToShow": 2}}]';
 ?>
 <div class="custom custom--grow-lg custom--shrink">
