@@ -1,4 +1,5 @@
 <?php if(have_rows('items', 'options')) : 
+$count = (count(get_sub_field('items')) > 2) ? 3 : 2;
 $responsive = ', "responsive":[{"breakpoint" : 850,"settings" :{"slidesToShow": 2}},{"breakpoint" : 480,"settings" :{"slidesToShow": 2}}]';
 ?>
 <div class="custom custom--grow-lg custom--shrink">
@@ -15,7 +16,7 @@ $responsive = ', "responsive":[{"breakpoint" : 850,"settings" :{"slidesToShow": 
 			<?php the_sub_field('item_text'); ?>
 		</div>
 	<div class="custom__bottom">
-	<div class="custom__carousel" data-slick='{"slidesToShow": 3, "slidesToScroll": 1,"centerMode" : true,"infinite":true, "speed" : 300, "cssEase" : "linear","prevArrow":"#<?php echo sanitize_title(get_sub_field('item_title')); ?>_<?php echo $item; ?> .custom__arrow--prev","nextArrow":"#<?php echo sanitize_title(get_sub_field('item_title')); ?>_<?php echo $item; ?>  .custom__arrow--next", "responsive":[{"breakpoint" : 640,"settings" :{"slidesToShow": 1}}]}'>
+	<div class="custom__carousel" data-slick='{"slidesToShow": <?php echo $count; ?>, "slidesToScroll": 1,"centerMode" : true,"infinite":true, "speed" : 300, "cssEase" : "linear","prevArrow":"#<?php echo sanitize_title(get_sub_field('item_title')); ?>_<?php echo $item; ?> .custom__arrow--prev","nextArrow":"#<?php echo sanitize_title(get_sub_field('item_title')); ?>_<?php echo $item; ?>  .custom__arrow--next", "responsive":[{"breakpoint" : 640,"settings" :{"slidesToShow": 1}}]}'>
 	<?php foreach(get_sub_field('item_images') as $img) : ?>
 		<figure class="custom__figure custom__figure--shrink custom__figure--grow">
 			<div class="custom__figure-wrapper">
