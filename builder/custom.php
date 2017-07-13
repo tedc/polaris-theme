@@ -1,5 +1,4 @@
 <?php if(have_rows('items', 'options')) : 
-$count = (count(get_sub_field('items', 'options')) > 2) ? 3 : 2;
 $responsive = ', "responsive":[{"breakpoint" : 850,"settings" :{"slidesToShow": 2}},{"breakpoint" : 480,"settings" :{"slidesToShow": 2}}]';
 ?>
 <div class="custom custom--grow-lg custom--shrink">
@@ -10,7 +9,11 @@ $responsive = ', "responsive":[{"breakpoint" : 850,"settings" :{"slidesToShow": 
 	<?php endwhile; ?> -->
 	</nav>
 	<div class="custom__for custom__for--grid">
-	<?php $item = 0; while(have_rows('items', 'options')) : the_row('items', 'options'); ?>
+	<?php $item = 0; while(have_rows('items', 'options')) : the_row('items', 'options'); 
+
+
+$count = (count(get_sub_field('item_images')) > 2) ? 3 : 2;
+	?>
 		<div class="custom__cell" data-title="<?php the_sub_field('item_title'); ?>" id="<?php echo sanitize_title(get_sub_field('item_title')); ?>_<?php echo $item; ?>">
 		<div class="custom__content custom__content--shrink custom__content--grow-md">
 			<?php the_sub_field('item_text'); ?>
