@@ -34,7 +34,7 @@
 				}
 			}
 			.linee__content {
-				p {
+				> div {
 					transition: transform $speed*2;
 					transform: translate3d(0, 150%, 0) skewY(-2deg);;
 				}
@@ -48,13 +48,13 @@
 			}
 		}
 		.slick-active {
-			.linee__button .button, .linee__content p, .linee__title strong {
+			.linee__button .button, .linee__content > div, .linee__title strong {
 				transition: color $speed*2, transform $speed*2;
 			}
 			.linee__title strong {
 				transition-delay: $speed;
 			}
-			.linee__content p {
+			.linee__content > div {
 				transition-delay: $speed*1.25;
 			}
 			.linee__button .button {

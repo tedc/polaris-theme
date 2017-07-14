@@ -13,7 +13,9 @@
 		<div class="linee__cell linee__cell--grow-lg-top linee__cell--shrink linee__cell--s5 linee__cell--text">
 			<h3 class="linee__title linee__title--huge linee__title--huge-upper"><strong><?php the_title(); ?></strong></h3>
 			<div class="linee__content linee__content--grow">
+				<div>
 				<?php the_field('description_text'); ?>
+				</div>
 			</div>
 			<div class="linee__button">
 				<a href="<?php the_permalink(); ?>" class="button">
