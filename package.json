@@ -26,12 +26,12 @@
     "node": ">= 4.5"
   },
   "devDependencies": {
-    "angular": "^1.6.3",
-    "angular-animate": "^1.6.3",
+    "angular": "^1.6.5",
+    "angular-animate": "^1.6.5",
     "angular-lazy-img": "^1.2.0",
-    "angular-resource": "^1.6.3",
-    "angular-sanitize": "^1.6.3",
-    "angular-touch": "^1.6.3",
+    "angular-resource": "^1.6.5",
+    "angular-sanitize": "^1.6.5",
+    "angular-touch": "^1.6.5",
     "asset-builder": "^1.1.0",
     "async": "^2.1.5",
     "autoprefixer": "^6.7.7",
