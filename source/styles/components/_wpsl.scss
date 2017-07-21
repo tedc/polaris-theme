@@ -78,6 +78,17 @@
 			padding-top: em($p*2);
 		}
 	}
+	&-contact {
+		&-details {
+			span {
+				display: block;
+				strong {
+					font-size: 1em !important;
+					padding-bottom: 0 !important;
+				}
+			}
+		}
+	}
 }
 
 #wpsl-direction-details {
