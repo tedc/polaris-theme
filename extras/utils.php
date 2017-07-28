@@ -1,5 +1,6 @@
 <?php
 	function print_svg($file) {
+        $file = str_replace(array('?lang=en','/en'), '', $file);
 		$svg = file_get_contents($file); 
         $svg = preg_replace('/(<[^>]+) id=".*?"/', '$1', $svg);
         $svg = preg_replace('/(<[^>]+) data-name=".*?"/', '$1', $svg);
