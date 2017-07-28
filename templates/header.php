@@ -7,7 +7,7 @@
             acf_set_language_to_default();
             $home = get_bloginfo('url');
             acf_unset_language_to_default();
-            echo print_svg(get_bloginfo('url') . $image[0]);?>
+            echo print_svg($home . $image[0]);?>
         </a>
         <?php get_template_part('templates/breadcrumb'); ?>
     </div>
