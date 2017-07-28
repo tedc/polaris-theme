@@ -4,7 +4,7 @@
         <?php 
             $custom_logo_id = get_theme_mod( 'custom_logo' );
             $image = wp_get_attachment_image_src( $custom_logo_id , 'full' );
-            $src = get_site_url() . $image[0];
+            $src = get_home_url() . $image[0];
             echo print_svg($src);?>
         </a>
         <?php get_template_part('templates/breadcrumb'); ?>
