@@ -4,9 +4,7 @@
         <?php 
             $custom_logo_id = get_theme_mod( 'custom_logo' );
             $image = wp_get_attachment_image_src( $custom_logo_id , 'full' );
-            acf_set_language_to_default();
-            $src = get_bloginfo('url') . $image[0];
-            acf_unset_language_to_default();
+            $src = get_site_url() . $image[0];
             echo print_svg($src);?>
         </a>
         <?php get_template_part('templates/breadcrumb'); ?>
