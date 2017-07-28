@@ -50,7 +50,7 @@
             }
         }
         $langs.="</ul>";
-        echo $langs;
+        //echo $langs;
     }
 
     function lang_nav() {
@@ -67,7 +67,7 @@
             $count++;
         }
         $langs .= '</div>';
-        echo $langs;
+        //echo $langs;
     }
 
     define('ICL_DONT_LOAD_NAVIGATION_CSS', true);
