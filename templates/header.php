@@ -1,13 +1,13 @@
 <header class="banner" id="banner">
     <div class="banner__container banner__container--shrink">
-        <a class="banner__logo" href="<?= echo get_bloginfo('url'); ?>" title="<?php bloginfo('name'); ?>">
+        <a class="banner__logo" href="<?= esc_url(home_url('/')); ?>" title="<?php bloginfo('name'); ?>">
         <?php 
             $custom_logo_id = get_theme_mod( 'custom_logo' );
             $image = wp_get_attachment_image_src( $custom_logo_id , 'full' );
             acf_set_language_to_default();
-            $home = get_bloginfo('url');
+            $src = get_bloginfo('url') . $image[0];
             acf_unset_language_to_default();
-            echo print_svg(get_home_url('/') . $image[0]);?>
+            echo print_svg($src);?>
         </a>
         <?php get_template_part('templates/breadcrumb'); ?>
     </div>
