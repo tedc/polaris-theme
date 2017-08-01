@@ -27,9 +27,9 @@ $responsive = ', "responsive":[{"breakpoint" : 850,"settings" :{"slidesToShow": 
 			<div class="custom__figure-wrapper">
 			<?php echo wp_get_attachment_image($img['ID'], 'large'); ?>
 			</div>
-			<figcaption>
+			<!-- <figcaption>
 				<?php echo $img['alt']; ?>
-			</figcaption>
+			</figcaption> -->
 		</figure>
 	<?php endforeach; ?>
 	</div>
