@@ -196,9 +196,9 @@
 			overflow: hidden;
 		}
 		&-track {
-			//display: flex;
-			display: block;
+			display: flex;
 			overflow: hidden;
+			align-items: flex-start;
 		}
 	}
 	&__title {
@@ -242,9 +242,6 @@
 				transform: translate3d(-20%, -50%, 0) scaleX(1);
 			}
 		}
-	}
-	&__cell {
-		float: left;
 	}
 	&__nav {
 		@include grow('lg', 'top');
