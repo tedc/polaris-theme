@@ -9,7 +9,7 @@
 
 	        ?>
 	        </a>
-			<?php the_field('footer_text', 'options'); ?>
+			<?php acf_set_language_to_default(); the_field('footer_text', 'options'); acf_unset_language_to_default();?>
 		</div>
 		<div class="footer__item footer__item--credits">
 			<em><?php _e('Design & Development by', 'polaris'); ?></em><br/>
