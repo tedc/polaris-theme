@@ -36,6 +36,7 @@
 			width: percentage((645px-555px)/645px);
 			input {
 				@include full;
+				appearance: none;
 				opacity: 0;
 			}
 			&:before {

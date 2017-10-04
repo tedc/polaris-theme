@@ -205,6 +205,13 @@
             ga('send', 'event', 'ricerca', $('#wpsl-search-input').val());
           }
         });
+        $('#wpsl-search-btn').closest('form').on('submit', function() {
+          console.log($('#wpsl-search-input').val());
+          var value = $.trim($('#wpsl-search-input').val());
+          if(value.length > 0) {
+            ga('send', 'event', 'ricerca', $('#wpsl-search-input').val());
+          }
+        });
         var qs = window.location.href;
         if(qs.indexOf('?') !== -1) {
           qs = qs.split('?');
