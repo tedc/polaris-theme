@@ -87,6 +87,8 @@
         });
         $('#wpsl-widget-form').find('.button').on('click', function() {
           var value = $.trim($('[name="wpsl-widget-search"]').val());
+          console.log($('[name="wpsl-widget-search"]').val());
+            
           if(value.length > 0) {
             console.log($('[name="wpsl-widget-search"]').val());
             ga('send', 'event', 'ricerca', $('[name="wpsl-widget-search"]').val());
