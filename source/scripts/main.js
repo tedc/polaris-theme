@@ -199,9 +199,9 @@
       init: function() {
         $('#wpsl-stores').perfectScrollbar();
         $('#wpsl-search-btn').on('click', function() {
+          console.log($('#wpsl-search-input').val());
           var value = $.trim($('#wpsl-search-input').val());
           if(value.length > 0) {
-            console.log($('#wpsl-search-input').val());
             ga('send', 'event', 'ricerca', $('#wpsl-search-input').val());
           }
         });
