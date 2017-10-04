@@ -88,6 +88,7 @@
         $('#wpsl-widget-form').find('.button').on('click', function() {
           var value = $.trim($('[name="wpsl-widget-search"]').val());
           if(value.length > 0) {
+            console.log($('[name="wpsl-widget-search"]').val());
             ga('send', 'event', 'ricerca', $('[name="wpsl-widget-search"]').val());
           }
         });
@@ -198,6 +199,7 @@
         $('#wpsl-search-btn').on('click', function() {
           var value = $.trim($('#wpsl-search-input').val());
           if(value.length > 0) {
+            console.log($('#wpsl-search-input').val());
             ga('send', 'event', 'ricerca', $('#wpsl-search-input').val());
           }
         });
