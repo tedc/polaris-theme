@@ -38,6 +38,7 @@
 				@include full;
 				appearance: none;
 				opacity: 0;
+				cursor: pointer;
 			}
 			&:before {
 				font-family: "polaris-icons";
