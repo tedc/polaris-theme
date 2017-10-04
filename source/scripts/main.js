@@ -198,14 +198,16 @@
     'store' : {
       init: function() {
         $('#wpsl-stores').perfectScrollbar();
-        $('#wpsl-search-btn').on('click', function() {
-          console.log($('#wpsl-search-input').val());
-          var value = $.trim($('#wpsl-search-input').val());
-          if(value.length > 0) {
-            ga('send', 'event', 'ricerca', $('#wpsl-search-input').val());
-          }
-        });
-        $('#wpsl-search-btn').closest('form').on('submit', function() {
+        // $('#wpsl-search-btn').on('click', function() {
+        //   console.log($('#wpsl-search-input').val());
+        //   var value = $.trim($('#wpsl-search-input').val());
+        //   if(value.length > 0) {
+        //     ga('send', 'event', 'ricerca', $('#wpsl-search-input').val());
+        //   }
+        // });
+        var form = $('#wpsl-search-wrap').find('form:first');
+        console.log(form);
+        form.on('submit', function() {
           console.log($('#wpsl-search-input').val());
           var value = $.trim($('#wpsl-search-input').val());
           if(value.length > 0) {
