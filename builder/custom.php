@@ -1,4 +1,4 @@
-<?php $lang = (ICL_LAGUAGE_CODE != 'it') ? '_'.ICL_LAGUAGE_CODE : ''; ?>
+<?php $lang = (ICL_LANGUAGE_CODE != 'it') ? '_'.ICL_LANGUAGE_CODE : ''; ?>
 <?php acf_set_language_to_default(); if(have_rows('items'.$lang, 'options')) : 
 $responsive = ', "responsive":[{"breakpoint" : 850,"settings" :{"slidesToShow": 2}},{"breakpoint" : 480,"settings" :{"slidesToShow": 2}}]';
 ?>
