@@ -10,13 +10,13 @@ $responsive = ', "responsive":[{"breakpoint" : 850,"settings" :{"slidesToShow": 
 	<?php endwhile; ?> -->
 	</nav>
 	<div class="custom__for custom__for--grid">
-	<?php $item = 0; while(have_rows('items'.$lang, 'options')) : the_row('items', 'options'); 
+	<?php $item = 0; while(have_rows('items'.$lang, 'options')) : the_row('items'.$lang, 'options'); 
 
 
 		$count = (count(get_sub_field('item_images')) > 2) ? 3 : 2;
 		$center = (count(get_sub_field('item_images')) > 3) ? '"centerMode" : true,' : '';
 	?>
-		<div class="custom__cell" data-title="<?php the_sub_field('item_title'); ?>" id="custom_slider_<?php echo $item; ?>">
+	<div class="custom__cell" data-title="<?php the_sub_field('item_title'); ?>" id="custom_slider_<?php echo $item; ?>">
 		<div class="custom__content custom__content--shrink custom__content--grow-md">
 			<?php the_sub_field('item_text'); ?>
 		</div>
