@@ -61,7 +61,7 @@
         foreach($languages as $l){
             $language_link = $l['url'];
             $language_code = $l['language_code'];
-            $sep = ($count >= 0) ? '<span class="sep">|</span>' : '';
+            $sep = ($count > 0) ? '<span class="sep">|</span>' : '';
             $active = ($language_code == ICL_LANGUAGE_CODE) ? ' active' : '';
             $langs .= $sep.'<a href="'.$language_link.'" class="lang'.$active.'">'.$language_code.'</a>';
             $count++;
