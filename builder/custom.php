@@ -10,7 +10,7 @@ $responsive = ', "responsive":[{"breakpoint" : 850,"settings" :{"slidesToShow": 
 	<?php endwhile; ?> -->
 	</nav>
 	<div class="custom__for custom__for--grid">
-	<?php $item = 0; while(have_rows('items_en', 'options')) : the_row('items', 'options'); 
+	<?php $item = 0; while(have_rows('items'.$lang, 'options')) : the_row('items', 'options'); 
 
 
 		$count = (count(get_sub_field('item_images')) > 2) ? 3 : 2;

@@ -238,7 +238,7 @@
 }
 
 // name
-add_filter('acf/fields/flexible_content/layout_title/name=columns', 'column_acf_flexible_content_layout_title', 10, 4);
+//add_filter('acf/fields/flexible_content/layout_title/name=columns', 'column_acf_flexible_content_layout_title', 10, 4);
 
 function builder_acf_flexible_content_layout_title( $title, $field, $layout, $i ) {
 	if($title === 'Colonne') :
@@ -274,4 +274,4 @@ function builder_acf_flexible_content_layout_title( $title, $field, $layout, $i 
 	return $title;
 }
 
-add_filter('acf/fields/flexible_content/layout_title/name=layout', 'builder_acf_flexible_content_layout_title', 10, 4);
+//add_filter('acf/fields/flexible_content/layout_title/name=layout', 'builder_acf_flexible_content_layout_title', 10, 4);
