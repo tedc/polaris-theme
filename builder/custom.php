@@ -21,7 +21,7 @@ $responsive = ', "responsive":[{"breakpoint" : 850,"settings" :{"slidesToShow": 
 			<?php the_sub_field('item_text'); ?>
 		</div>
 	<div class="custom__bottom">
-	<div class="custom__carousel<?php echo (count(get_sub_field('item_images')) > 3) ? ' custom__carousel--centered' : ''; ?>" data-slick='{"slidesToShow": <?php echo $count; ?>, "slidesToScroll": 1,<?php echo $center; ?>"infinite":true, "speed" : 300, "cssEase" : "linear","prevArrow":"#custom_slider__<?php echo $item; ?> .custom__arrow--prev","nextArrow":"#custom_slider__<?php echo $item; ?>  .custom__arrow--next", "responsive":[{"breakpoint" : 640,"settings" :{"slidesToShow": 1}}]}'>
+	<div class="custom__carousel<?php echo (count(get_sub_field('item_images')) > 3) ? ' custom__carousel--centered' : ''; ?>" data-slick='{"slidesToShow": <?php echo $count; ?>, "slidesToScroll": 1,<?php echo $center; ?>"infinite":true, "speed" : 300, "cssEase" : "linear","prevArrow":"#custom_slider_<?php echo $item; ?> .custom__arrow--prev","nextArrow":"#custom_slider_<?php echo $item; ?>  .custom__arrow--next", "responsive":[{"breakpoint" : 640,"settings" :{"slidesToShow": 1}}]}'>
 	<?php foreach(get_sub_field('item_images') as $img) : ?>
 		<figure class="custom__figure custom__figure--shrink custom__figure--grow">
 			<div class="custom__figure-wrapper">
